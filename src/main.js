@@ -10,6 +10,7 @@ import 'popper.js';
 import './assets/app.scss';
 
 Vue.component('Sidebar',require('./components/sidebar.vue').default);  
+Vue.component('Footer',require('./components/Footer.vue').default);
 
 
 Vue.config.productionTip = false;
