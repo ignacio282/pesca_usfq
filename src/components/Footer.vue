@@ -50,7 +50,7 @@ section .section-title {
     text-transform: uppercase;
 }
 #footer {
-    background: #a5dbcf !important;
+    background: #012B50 !important;
 }
 #footer h5{
 	padding-left: 10px;
