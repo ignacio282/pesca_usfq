@@ -19,7 +19,7 @@ Vue.use(BootstrapVueIcons)
 
 Vue.component('Footer',require('./components/Footer.vue').default);
 Vue.component('NavBar',require('./components/NavBar.vue').default);  
-o
+
 
 
 Vue.config.productionTip = false;
