@@ -3,16 +3,20 @@
     <b-container fluid id="menu">
       <b-row id="botones" align-h="center" align-v="start">
         <b-col cols="12" sm="6" md="4" lg="2">
-          Educación
-          <br />Ambiental
+          <router-link to="/secundaria">Educación <br/> Ambiental</router-link>
         </b-col>
         <b-col cols="12" sm="6" md="4" lg="2">
-          Redes
-          <br />Fantasma
+          <router-link to="/secundaria">Redes <br> Fantasma</router-link>
         </b-col>
-        <b-col cols="12" sm="6" md="4" lg="2">Plásticos</b-col>
-        <b-col cols="12" sm="6" md="4" lg="2">Reciclaje</b-col>
-        <b-col cols="12" sm="6" md="4" lg="2">Pesca</b-col>
+        <b-col cols="12" sm="6" md="4" lg="2">
+          <router-link to="/secundaria">Plásticos</router-link>
+        </b-col>
+        <b-col cols="12" sm="6" md="4" lg="2">
+          <router-link to="/secundaria">Reciclaje</router-link>
+        </b-col>
+        <b-col cols="12" sm="6" md="4" lg="2">
+          <router-link to="/secundaria">Pesca</router-link>
+        </b-col>
         <b-col cols="12" sm="6" md="4" lg="2">
           <router-link to="/media">Media</router-link>
         </b-col>

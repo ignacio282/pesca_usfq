@@ -25,6 +25,7 @@ export default {
 <style scoped>
 #logos{
   height: 10%;
+  color: #edf2ca;
 }
 
 @media (max-width: 400px){
