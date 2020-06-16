@@ -21,13 +21,6 @@ export default {
   },
   data: function(){
       return{
-          images: [
-              '@/assets/logo.png',
-              '@/assets/logo.png',
-              '@/assets/logo.png',
-              '@/assets/logo.png',
-              '@/assets/logo.png',
-          ]
       }
   }
 };
@@ -36,10 +29,13 @@ export default {
 <style lang="scss" scoped>
 .media {
   height: 100%;
+  background: linear-gradient(#399EBC, #062D40);
+  color: #EDF2CA;
 }
 
 .photo-gallery {
   width: 100%;
+  height: 100%;
 }
 
 .photo-gallery .intro {

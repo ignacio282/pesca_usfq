@@ -9,12 +9,17 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import '@/assets/css/app.scss';
+import '@/assets/css/app.scss'
+
+import VideoBackground from 'vue-responsive-video-background-player'
+
+
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 
 Vue.component('Sidebar', require('./components/sidebar.vue').default);
+Vue.component('video-background', VideoBackground);
 
 
 Vue.config.productionTip = false;
