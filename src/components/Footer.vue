@@ -1,115 +1,77 @@
 <template>
-  <div class="footer">
-      <section id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-				<hr>
-			</div>	
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-					<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-					<p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
-				</div>
-				<hr>
-			</div>	
-		</div>
-	</section>
-
-  </div>
+    <b-row id="logos" class="justify-content-md-right" align-v="end" align-h="center">
+        <b-col cols="12" md="4">
+          <img class="imagenes" src="../assets/img/logo.png">
+          <img class="imagenes" src="../assets/img/logo.png">
+          <img class="imagenes" src="../assets/img/logo.png">
+        </b-col>
+        <b-col id="contacto" cols="12" md="4">
+          Contacto
+        </b-col>
+        <b-col cols="12" md="4">
+          <img class="imagenes" src="../assets/img/logo.png">
+          <img class="imagenes" src="../assets/img/logo.png">
+          <img class="imagenes" src="../assets/img/logo.png">
+        </b-col>
+      </b-row>
 </template>
 
 <script>
 export default {
-  name: "Footer",
-  props: {
-    msg: String
-  }
-};
+    name: "Foot"
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-section {
-    padding: 20px 0;
+<style scoped>
+#logos{
+  height: 10%;
+  color: #edf2ca;
 }
 
-section .section-title {
-    text-align: center;
-    color: #007b5e;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
-#footer {
-    background: #012B50 !important;
-}
-#footer h5{
-	padding-left: 10px;
-    border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    color:#ffffff;
-}
-#footer a {
-    color: #ffffff;
-    text-decoration: none !important;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-#footer ul.social li{
-	padding: 3px 0;
-}
-#footer ul.social li a i {
-    margin-right: 5px;
-	font-size:25px;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
-}
-#footer ul.social li:hover a i {
-	font-size:30px;
-	margin-top:-10px;
-}
-#footer ul.social li a,
-#footer ul.quick-links li a{
-	color:#ffffff;
-}
-#footer ul.social li a:hover{
-	color:#eeeeee;
-}
-#footer ul.quick-links li{
-	padding: 3px 0;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
-}
-#footer ul.quick-links li:hover{
-	padding: 3px 0;
-	margin-left:5px;
-	font-weight:700;
-}
-#footer ul.quick-links li a i{
-	margin-right: 5px;
-}
-#footer ul.quick-links li:hover a i {
-    font-weight: 700;
+@media (max-width: 400px){
+  #logos{
+    margin-top: 100px;
+  }
+
+  #menu{
+    padding-top: 25px;
+  }
 }
 
-@media (max-width:767px){
-	#footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
+#contacto{
+  font-size: 100%;
+  padding-bottom: 20px;
 }
+
+.imagenes{
+  padding-right: 10px;
+  padding-bottom: 10px;
+  width: 10%;
+}
+
+@media (max-width: 576px){
+  #logos{
+    margin-top: 275px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+  #logos{
+    margin-top: 275px;
+  }
+
+  #contacto{
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px){
+  #logos{
+    margin-top: 600px;
+  }
+
+  #contacto{
+    padding-bottom: 15px;
+  }
 }
 </style>

@@ -1,34 +1,30 @@
 <template>
   <div class="media">
-    <div class="photo-gallery">
-      <b-container fluid>
-        <div class="intro">
-          <h2 class="text-center">Media</h2>
-          <p class="text-center">Galería de medios</p>
-        </div>
-        <lightbox/>
-      </b-container>
-    </div>
+    <NavBar />
+    <b-container fluid id="gallery">
+      <div class="intro">
+        <h2 class="text-center">Media</h2>
+        <p class="text-center">Galería de medios</p>
+      </div>
+      <lightbox />
+      <Foot />
+    </b-container>
   </div>
 </template>
 
 <script>
-import Lightbox from '@/components/Lightbox.vue';
+import Lightbox from "@/components/Lightbox.vue";
+import Foot from "@/components/Footer.vue";
+import NavBar from "@/components/NavBar.vue";
 export default {
   name: "Media",
   components: {
-      lightbox: Lightbox
+    lightbox: Lightbox,
+    Foot,
+    NavBar
   },
-  data: function(){
-      return{
-          images: [
-              '@/assets/logo.png',
-              '@/assets/logo.png',
-              '@/assets/logo.png',
-              '@/assets/logo.png',
-              '@/assets/logo.png',
-          ]
-      }
+  data: function() {
+    return {};
   }
 };
 </script>
@@ -36,13 +32,16 @@ export default {
 <style lang="scss" scoped>
 .media {
   height: 100%;
+  background: linear-gradient(#399ebc, #062d40);
+  color: #edf2ca;
+  margin-top: 5%;
 }
 
-.photo-gallery {
-  width: 100%;
+#gallery {
+  height: 90%;
 }
 
-.photo-gallery .intro {
+.intro {
   font-size: 16px;
   max-width: 500px;
   margin: 0 auto 40px;
@@ -52,7 +51,7 @@ export default {
   text-align: center !important;
 }
 
-.photo-gallery h2 {
+h2 {
   font-weight: bold;
   margin-bottom: 40px;
   padding-top: 40px;
@@ -60,14 +59,18 @@ export default {
 }
 
 @media (max-width: 767px) {
-  .photo-gallery h2 {
+  h2 {
     margin-bottom: 25px;
     padding-top: 25px;
     font-size: 24px;
   }
 }
 
-.photo-gallery .intro p {
+.intro p {
   margin-bottom: 0;
+}
+
+#logos {
+  padding-top: 7%;
 }
 </style>
