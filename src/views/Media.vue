@@ -34,7 +34,7 @@ export default {
   height: 100%;
   background: linear-gradient(#399ebc, #062d40);
   color: #edf2ca;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 #gallery {

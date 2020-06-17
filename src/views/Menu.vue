@@ -22,7 +22,7 @@
         </b-col>
         <b-col cols="12" sm="6" md="4" lg="2">Videojuego</b-col>
       </b-row>
-      <Foot />
+      <Footer></Footer>
     </b-container>
   </video-background>
 </template>
