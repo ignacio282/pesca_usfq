@@ -170,7 +170,7 @@ export default {
 
 <style scoped lang="scss">
 #grad1{
-  background-image: linear-gradient(#0099ff, #020024);
+  background-image: linear-gradient(#0161Af, #020024);
 }
 
 #titulo{

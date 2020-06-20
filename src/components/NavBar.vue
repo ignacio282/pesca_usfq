@@ -1,54 +1,50 @@
 <template>
-  <b-navbar fixed="top" type="light">
-    <router-link to="/" style="color:white" class="navbar-brand pl-3">titulo</router-link>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown pr-4">
-          <a
-            class="nav-link dropdown-toggle"
-            style="color:white"
-            href="#"
-            id="navbarDropdownMenuLink"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >Secciones</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown" id="secondLink">
-          <a
-            class="nav-link dropdown-toggle"
-            style="color:white"
-            href="#"
-            id="navbarDropdownMenuLink"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >Partners</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <b-navbar fixed="top" type="dark" toggleable="lg">
+    <b-navbar-brand>
+      <router-link to="/" style="color:white">NavBar</router-link>
+    </b-navbar-brand>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item-dropdown text="Menú" right>
+          <b-dropdown-item>
+            <router-link to="/menu">Menú</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/secundaria">Educación Ambiental</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/secundaria">Redes Fantasma</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/secundaria">Plásticos</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/secundaria">Reciclaje</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/secundaria">Pesca</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/media">Media</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/secundaria">Videojuego</router-link>
+          </b-dropdown-item>
+        </b-nav-item-dropdown>
+        <b-nav-item-dropdown text="Recursos" right>
+          <b-dropdown-item>
+            <router-link to="/menu">Menú</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/secundaria">Crowdfunding</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link to="/secundaria">Partners</router-link>
+          </b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+    </b-collapse>
   </b-navbar>
 </template>
 
@@ -64,16 +60,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Roboto:wght@100&display=swap");
-
-.navbar-toggler-icon {
-  width: 20px !important;
-  height: 20px !important;
-}
 .navbar {
   background: #012b50 !important;
-  height: 10%;
 }
-#secondLink {
-  padding-right: 150px;
+
+::v-deep .nav-link{
+  color: rgba($color: white, $alpha: 1.0)!important;
 }
 </style>

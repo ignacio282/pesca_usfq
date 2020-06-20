@@ -31,14 +31,12 @@ export default {
 
 <style lang="scss" scoped>
 .media {
-  height: 100%;
   background: linear-gradient(#399ebc, #062d40);
   color: #edf2ca;
-  margin-top: 5%;
 }
 
 #gallery {
-  height: 90%;
+  padding-top: 4rem;
 }
 
 .intro {
@@ -70,7 +68,7 @@ h2 {
   margin-bottom: 0;
 }
 
-#logos {
-  padding-top: 7%;
+#logos{
+  padding-top: 5%;
 }
 </style>
