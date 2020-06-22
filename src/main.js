@@ -1,15 +1,19 @@
+import '@babel/polyfill'
+import 'mutationobserver-shim'
 import Vue from "vue";
+import './plugins/bootstrap-vue'
+import './plugins/bootstrap-vue'
 import App from "./App.vue";
 import router from "./router";
-import 'bootstrap';
-import jQuery from'jquery';
-
-window.$=window.jQuery=jQuery;
 
 import 'popper.js';
-import './assets/app.scss';
+import './assets/css/app.scss';
 
-Vue.component('Sidebar',require('./components/sidebar.vue').default);  
+import VideoBackground from 'vue-responsive-video-background-player'
+
+Vue.component('video-background', VideoBackground);
+Vue.component('Footer',require('./components/Footer.vue').default);
+Vue.component('NavBar',require('./components/NavBar.vue').default); 
 
 
 Vue.config.productionTip = false;
