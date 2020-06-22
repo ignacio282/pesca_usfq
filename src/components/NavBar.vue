@@ -52,19 +52,36 @@
 export default {
   name: "NavBar",
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Roboto:wght@100&display=swap");
 .navbar {
-  background: #012b50 !important;
+  background-color: #154e64 !important;
+  height: 10%;
+  color: white !important;
 }
 
 ::v-deep .nav-link{
   color: rgba($color: white, $alpha: 1.0)!important;
+}
+.colorWhite {
+  color: white !important;
+}
+.stripe {
+  height: 200px;
+  background: rgb(180, 58, 58);
+  background: linear-gradient(
+    90deg,
+    rgba(180, 58, 58, 1) 0%,
+    rgba(145, 44, 192, 1) 25%,
+    rgba(81, 70, 169, 1) 40%,
+    rgba(29, 252, 253, 1) 57%,
+    rgba(49, 253, 144, 1) 75%,
+    rgba(184, 253, 49, 1) 89%
+  );
 }
 </style>
