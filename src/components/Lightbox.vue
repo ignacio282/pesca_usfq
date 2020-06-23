@@ -7,16 +7,19 @@
             src="@/assets//img/ConcepstBarco.jpg"
             width="100%"
             alt="Barco"
-            class="hover-shadow"
+            class="hover-shadow  image"
             @click="openModal(); currentSlide(1);"
           />
+          <div class="middle">
+            <p class="h1 mb-2"><b-icon-arrows-fullscreen></b-icon-arrows-fullscreen></p>
+          </div>
         </b-col>
         <b-col cols="12" md="4" lg="3" class="images">
           <img
             src="@/assets//img/ConcepstBG1.jpg"
             width="100%"
             alt="BG"
-            class="hover-shadow"
+            class="hover-shadow image"
             @click="openModal(); currentSlide(2);"
           />
         </b-col>
@@ -25,7 +28,7 @@
             src="@/assets//img/ConcepstCharacter.jpg"
             width="100%"
             alt="Character"
-            class="hover-shadow"
+            class="hover-shadow image"
             @click="openModal(); currentSlide(3);"
           />
         </b-col>
@@ -34,7 +37,7 @@
             src="@/assets//img/Concepts_Diver.jpg"
             width="100%"
             alt="Diver"
-            class="hover-shadow"
+            class="hover-shadow image"
             @click="openModal(); currentSlide(4);"
           />
         </b-col>
@@ -43,7 +46,7 @@
             src="@/assets//img/Concepts_Diver.jpg"
             width="100%"
             alt="Diver"
-            class="hover-shadow"
+            class="hover-shadow image"
             @click="openModal(); currentSlide(5);"
           />
         </b-col>
@@ -52,55 +55,55 @@
             src="@/assets//img/ConcepstBarco.jpg"
             width="100%"
             alt="Barco"
-            class="hover-shadow"
+            class="hover-shadow image"
             @click="openModal(); currentSlide(6);"
           />
         </b-col>
       </b-row>
     </b-container>
     <div id="myModal" class="modal">
-        <span class="close cursor" @click="closeModal">&times;</span>
-        <div class="modalContent">
-          <!-- Caption text -->
-          <div class="caption-container">
-            <p id="caption"></p>
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">1 / 6</div>
-            <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">2 / 6</div>
-            <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">3 / 6</div>
-            <img src="@/assets//img/ConcepstCharacter.jpg" alt="Character" style="width:100%" />
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">4 / 6</div>
-            <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">5 / 6</div>
-            <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-          </div>
-
-          <div class="mySlides">
-            <div class="numbertext">6 / 6</div>
-            <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-          </div>
-
-          <!-- Next/previous controls -->
-          <a class="prev" @click="plusSlides(-1);">&#10094;</a>
-          <a class="next" @click="plusSlides(1);">&#10095;</a>
+      <span class="close cursor" @click="closeModal">&times;</span>
+      <div class="modalContent">
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
         </div>
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="@/assets//img/ConcepstCharacter.jpg" alt="Character" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" @click="plusSlides(-1);">&#10094;</a>
+        <a class="next" @click="plusSlides(1);">&#10095;</a>
       </div>
+    </div>
   </div>
 </template>
 
@@ -133,7 +136,9 @@ export default {
         slides[i].style.display = "none";
       }
       slides[this.slideIndex - 1].style.display = "block";
-      captionText.innerHTML = slides[this.slideIndex - 1].getElementsByTagName("img")[0].alt;
+      captionText.innerHTML = slides[this.slideIndex - 1].getElementsByTagName(
+        "img"
+      )[0].alt;
     },
     currentSlide: function(n) {
       this.slideIndex = n;
@@ -150,6 +155,7 @@ export default {
 <style scoped lang="scss">
 .images {
   padding-bottom: 1%;
+  
 }
 
 .modal {
@@ -165,8 +171,8 @@ export default {
   background-color: black;
 }
 
-.modal::-webkit-scrollbar{
-    display: none;
+.modal::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-content {
@@ -196,8 +202,9 @@ export default {
 
 .mySlides {
   display: none;
-  padding: 5%;
+  padding: 20%;
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Next & previous buttons */
@@ -270,5 +277,30 @@ export default {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.images:hover .image {
+  opacity: 0.3;
+}
+
+.images:hover .middle {
+  opacity: 1;
+}
+.image {
+  opacity: 1;
+
+  transition: .5s ease;
+
 }
 </style>

@@ -104,7 +104,7 @@
     <div class="parallax">
       <b-container class="pt-5">
         <b-jumbotron class="jumbo" header="Conservación" lead="Cuida el mar">
-          <p>Para ams info haz click aqui</p>
+          <p>Para mas info haz click aqui</p>
           <b-button variant="primary" href="#">Info</b-button>
         </b-jumbotron>
       </b-container>
@@ -112,8 +112,8 @@
 
     <div class="pb-5" id="grad2">
       <div class="stripe"></div>
-      <h2 style="color:black" class="text-center pt-5 pb-5">GALERIA</h2>
-
+      <h2 style="color:white" class="text-center pt-5 pb-5">GALERIA</h2>
+      
       <div class="row row-cols-1 row-cols-md-3">
         <div class="col mb-4">
           <b-button v-b-modal.modal-1>

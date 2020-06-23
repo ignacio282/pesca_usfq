@@ -1,7 +1,7 @@
 <template>
   <b-navbar fixed="top" type="dark" toggleable="lg">
     <b-navbar-brand>
-      <router-link to="/" style="color:white">NavBar</router-link>
+      <router-link to="/menu" style="color:white">NavBar</router-link>
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>

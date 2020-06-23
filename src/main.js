@@ -6,8 +6,15 @@ import './plugins/bootstrap-vue'
 import App from "./App.vue";
 import router from "./router";
 
+
 import 'popper.js';
 import './assets/css/app.scss';
+
+
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
 
 import VideoBackground from 'vue-responsive-video-background-player'
 
@@ -18,6 +25,7 @@ Vue.component('NavBar',require('./components/NavBar.vue').default);
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
+
 
 new Vue({
   router,

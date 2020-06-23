@@ -42,9 +42,10 @@ export default {
 <style lang="scss" scoped>
 #menu{
   height: 100%;
-  padding-top: 100px;
+  padding-top: 200px;
   padding-left: 0;
   padding-right: 0;
+  
 }
 
 #botones {
@@ -54,11 +55,11 @@ export default {
 }
 
 #botones a{
-  color: white;
+  color: black;
 }
 
 #botones a:hover{
-  color: #2c3e50;
+  color: #496f96;
   text-decoration-line: underline;
 }
 
