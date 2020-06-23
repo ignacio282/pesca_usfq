@@ -66,7 +66,7 @@ export default {
 
 .imagen{
   padding-top: 1.5%;
-  padding-top: 1.5%!important;
+  padding-bottom: 1.5%!important;
 }
 
 #logos{

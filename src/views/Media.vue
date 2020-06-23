@@ -34,7 +34,6 @@ export default {
 <style lang="scss" scoped>
 .media {
   background: linear-gradient(#399ebc, #062d40);
-  color: #edf2ca;
   height: 100%;
 }
 
@@ -88,7 +87,8 @@ h2 {
   }
 
   .content-wrap {
-    padding-bottom: 6.2rem;
+    padding-bottom: 10%;
+
   }
 }
 </style>

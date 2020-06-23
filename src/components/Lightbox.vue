@@ -261,6 +261,7 @@ export default {
   background-color: black;
   padding: 2px 16px;
   color: white;
+  font-size: 30px;
 }
 
 .hover-shadow {
