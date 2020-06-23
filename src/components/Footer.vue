@@ -1,65 +1,25 @@
 <template>
   <section id="footer">
     <div class="container">
-      <b-row>
-        <b-row id="logos" class="justify-content-md-right" align-v="end" align-h="center">
-        <b-col cols="12" md="4" class="pb-4">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
+      <b-row id="logos" class="justify-content-md-center" align-h="center">
+        <b-col cols="12" md="4" class="pb-4 imagen">
+          <img class="imagenes" src="../assets/img/logo.png" />
+          <img class="imagenes" src="../assets/img/logo.png" />
+          <img class="imagenes" src="../assets/img/logo.png" />
         </b-col>
-        <b-col id="logos" cols="12" md="4" class="pb-4">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
-          
+        <b-col id="texto" cols="12" md="4" class="pb-4">
+          <a href="http://www.usfq.edu.ec/programas_academicos/colegios/cocoa/Paginas/default.aspx">COCOA USFQ</a>
+          <p>© Todos los derechos reservados.</p>
+          <a href="http://www.usfq.edu.ec/Paginas/Inicio.aspx">USFQ - ECUADOR</a>
         </b-col>
-        <b-col cols="12" md="4" class="pb-4">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
+        <b-col cols="12" md="4" class="pb-4 imagen">
+          <img class="imagenes" src="../assets/img/logo.png" />
+          <img class="imagenes" src="../assets/img/logo.png" />
+          <img class="imagenes" src="../assets/img/logo.png" />
         </b-col>
-      </b-row> 
       </b-row>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-          <p>
-            <u>
-              <a href="https://www.usfq.edu.ec/vinculacion/Paginas/default.aspx">COCOA USFQ</a>
-            </u> Redes fantasma, impacto ecologico
-          </p>
-          <p class="h6">
-            © Todos los derechos reservados.
-            <a
-              class="text-green ml-2"
-              href="https://www.sunlimetech.com"
-              target="_blank"
-            >USFQ - ECUADOR</a>
-          </p>
-        </div>
-        <hr />
-      </div>
     </div>
   </section>
-
-  <!--
-  <b-row id="logos" class="justify-content-md-right" align-v="end" align-h="center">
-        <b-col cols="12" md="4">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
-        </b-col>
-        <b-col id="contacto" cols="12" md="4">
-          Contacto
-        </b-col>
-        <b-col cols="12" md="4">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
-          <img class="imagenes" src="../assets/img/logo.png">
-        </b-col>
-      </b-row> 
-
-  -->
 </template>
 
 <script>
@@ -69,27 +29,11 @@ export default {
 </script>
 
 <style scoped>
-section {
-  padding: 40px 0;
-  padding-top: 60px;
-}
-
-section .section-title {
-  text-align: center;
-  color: #007b5e;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-}
 #footer {
   background: #03141d;
-}
-#footer h5 {
-  padding-left: 10px;
-  border-left: 3px solid #eeeeee;
-  padding-bottom: 6px;
-  margin-bottom: 20px;
   color: #ffffff;
 }
+
 #footer a {
   color: #ffffff;
   text-decoration: none !important;
@@ -97,19 +41,12 @@ section .section-title {
   -webkit-text-decoration-skip: objects;
 }
 
-
-@media (max-width: 767px) {
-  #footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
-  }
+#footer a:hover{
+  text-decoration-line: underline!important;
 }
 
-#logos {
-  height: 50%;
-  color: #edf2ca;
+#footer p{
+  margin-bottom: 0;
 }
 
 @media (max-width: 400px) {
@@ -122,40 +59,23 @@ section .section-title {
   }
 }
 
-#contacto {
-  font-size: 100%;
-  padding-bottom: 20px;
-}
-
 .imagenes {
-  padding-right: 10px;
-  padding-bottom: 10px;
-  width: 15%;
+  width: 12%;
+  padding-right: 2%;
 }
 
-@media (max-width: 576px) {
-  #logos {
-    margin-top: 275px;
-  }
+.imagen{
+  padding-top: 1.5%;
+  padding-top: 1.5%!important;
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
-  #logos {
-    margin-top: 275px;
-  }
-
-  #contacto {
-    padding-bottom: 10px;
-  }
+#logos{
+  padding: 1%;
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-  #logos {
-    margin-top: 600px;
-  }
-
-  #contacto {
-    padding-bottom: 15px;
-  }
+#texto{
+  font-size: 12px;
+  padding-top: 0.6%;
+  padding-bottom: 0.5%!important;
 }
 </style>

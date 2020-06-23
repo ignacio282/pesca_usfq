@@ -20,9 +20,11 @@
         <b-col cols="12" sm="6" md="4" lg="2">
           <router-link to="/media">Media</router-link>
         </b-col>
-        <b-col cols="12" sm="6" md="4" lg="2">Videojuego</b-col>
+        <b-col cols="12" sm="6" md="4" lg="2">
+          <router-link to="/menu">Videojuego</router-link>
+        </b-col>
       </b-row>
-      <Footer></Footer>
+      <Foot/>
     </b-container>
   </video-background>
 </template>
@@ -41,15 +43,26 @@ export default {
 #menu{
   height: 100%;
   padding-top: 100px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #botones {
-  min-height: 90%;
+  min-height: 86%;
   font-size: 125%;
   line-height: 90%;
 }
 
-#main .video-wrapper{
-    display: flex!important;
+#botones a{
+  color: white;
+}
+
+#botones a:hover{
+  color: #2c3e50;
+  text-decoration-line: underline;
+}
+
+#footer{
+ background: transparent;
 }
 </style>
