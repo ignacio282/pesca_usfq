@@ -114,10 +114,10 @@
       <div class="stripe"></div>
       <h2 style="color:white" class="text-center pt-5 pb-5">GALERIA</h2>
       
-      <div class="row row-cols-1 row-cols-md-3">
+      <div class="row row-cols-3">
         <div class="col mb-4">
-          <b-button v-b-modal.modal-1>
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
+          <b-button  id="boton" class="border-0" squared v-b-modal.modal-1  >
+            <img src="https://via.placeholder.com/400"  alt="..." />
             <b-modal id="modal-1" title="BootstrapVue">
               <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
             </b-modal>
@@ -125,40 +125,40 @@
         </div>
 
         <div class="col mb-4">
-          <b-button v-b-modal="'modal-2'">
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
+          <b-button id="boton" class="border-0"  v-b-modal="'modal-2'">
+            <img src="https://via.placeholder.com/400"  alt="..." />
             <b-modal id="modal-2" title="BootstrapVue">
               <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
             </b-modal>
           </b-button>
         </div>
         <div class="col mb-4">
-          <b-button v-b-modal="'modal-3'">
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
+          <b-button id="boton" class="border-0"  v-b-modal="'modal-3'">
+            <img src="https://via.placeholder.com/400"  alt="..." />
             <b-modal id="modal-3" title="BootstrapVue">
               <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
             </b-modal>
           </b-button>
         </div>
         <div class="col mb-4">
-          <b-button v-b-modal="'modal-4'">
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
+          <b-button id="boton" class="border-0"  v-b-modal="'modal-4'">
+            <img src="https://via.placeholder.com/400"  alt="..." />
             <b-modal id="modal-4" title="BootstrapVue">
               <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
             </b-modal>
           </b-button>
         </div>
         <div class="col mb-4">
-          <b-button v-b-modal="'modal-5'">
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
+          <b-button id="boton" class="border-0"  v-b-modal="'modal-5'">
+            <img src="https://via.placeholder.com/400"  alt="..." />
             <b-modal id="modal-5" title="BootstrapVue">
               <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
             </b-modal>
           </b-button>
         </div>
         <div class="col mb-4">
-          <b-button v-b-modal="'modal-6'">
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
+          <b-button id="boton" class="border-0"  v-b-modal="'modal-6'">
+            <img src="https://via.placeholder.com/400"  alt="..." />
             <b-modal id="modal-6" title="BootstrapVue">
               <img src="https://via.placeholder.com/400" class="card-img-top" alt="..." />
             </b-modal>
@@ -211,11 +211,14 @@ export default {
 <style scoped lang="scss">
 #grad1 {
   background-image: linear-gradient(#399ebc, #062d40);
+  
 }
 #grad2 {
   background-image: linear-gradient(#062d40, #010c13);
 }
-
+#boton{
+   background-color: rgba(255, 255, 255, 0);
+}
 #titulo {
   padding-top: 75px;
 }
