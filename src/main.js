@@ -6,10 +6,11 @@ import './plugins/bootstrap-vue'
 import App from "./App.vue";
 import router from "./router";
 
+import scrollAnimation from './directives/scrollanimation'
+Vue.directive('scrollanimation',scrollAnimation);
 
 import 'popper.js';
 import './assets/css/app.scss';
-
 
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
