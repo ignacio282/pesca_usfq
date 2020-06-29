@@ -19,7 +19,91 @@
         <div class="container pt-5 pb-3 child">
           <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
           <div v-scrollanimation>
-             
+            <div class="p-5">
+              <h1 style="color:black" class="pb-3">
+                Pregunta1
+              </h1>
+            <p class="description">
+              Los ALDF se refieren a los desechos de pesca abandonados, perdidos
+              o descardados (en inglés abandoned, lost or discarded fishing
+              gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
+              et al 2011). Cuando las redes de pesca se encuentran a la deriva
+              (sin control en su operación por pescadores) pueden seguir
+              atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
+              2015). En la década de 1960 se elaborarán redes de pesca
+              utilizando materiales de rápida degradación como el algodón y el
+              cáñamo (Kim et al, 2016). Posteriormente, los avances en la
+              tecnología permitieron mejorar el diseño de las artes de pesca y
+              la materia prima fue cambiando a fibras plásticas de mayor
+              durabilidad y resistencia. Por ejemplo, se elaboraron redes con
+              materiales de poliamida (nylon), polietileno y polipropileno, los
+              cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
+              al, 2016). Esto ha causado que las artes de pesca abandonadas o
+              perdidas se acumulen en grandes cantidades en los océanos y estén
+              causen impactos considerables a corto y largo plazo (Stelfox et
+              al, 2016).
+            </p>
+            </div>
+          </div>
+        </div>
+        <div class="container pt-5 pb-3 child">
+          <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
+          <div v-scrollanimation>
+            <div class="p-5">
+              <h1 style="color:black" class="pb-3">
+                Pregunta1
+              </h1>
+            <p class="description">
+              Los ALDF se refieren a los desechos de pesca abandonados, perdidos
+              o descardados (en inglés abandoned, lost or discarded fishing
+              gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
+              et al 2011). Cuando las redes de pesca se encuentran a la deriva
+              (sin control en su operación por pescadores) pueden seguir
+              atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
+              2015). En la década de 1960 se elaborarán redes de pesca
+              utilizando materiales de rápida degradación como el algodón y el
+              cáñamo (Kim et al, 2016). Posteriormente, los avances en la
+              tecnología permitieron mejorar el diseño de las artes de pesca y
+              la materia prima fue cambiando a fibras plásticas de mayor
+              durabilidad y resistencia. Por ejemplo, se elaboraron redes con
+              materiales de poliamida (nylon), polietileno y polipropileno, los
+              cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
+              al, 2016). Esto ha causado que las artes de pesca abandonadas o
+              perdidas se acumulen en grandes cantidades en los océanos y estén
+              causen impactos considerables a corto y largo plazo (Stelfox et
+              al, 2016).
+            </p>
+            </div>
+          </div>
+        </div>
+        <div class="container pt-5 pb-3 child">
+          <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
+          <div v-scrollanimation>
+            <div class="p-5">
+              <h1 style="color:black" class="pb-3">
+                Pregunta1
+              </h1>
+            <p class="description">
+              Los ALDF se refieren a los desechos de pesca abandonados, perdidos
+              o descardados (en inglés abandoned, lost or discarded fishing
+              gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
+              et al 2011). Cuando las redes de pesca se encuentran a la deriva
+              (sin control en su operación por pescadores) pueden seguir
+              atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
+              2015). En la década de 1960 se elaborarán redes de pesca
+              utilizando materiales de rápida degradación como el algodón y el
+              cáñamo (Kim et al, 2016). Posteriormente, los avances en la
+              tecnología permitieron mejorar el diseño de las artes de pesca y
+              la materia prima fue cambiando a fibras plásticas de mayor
+              durabilidad y resistencia. Por ejemplo, se elaboraron redes con
+              materiales de poliamida (nylon), polietileno y polipropileno, los
+              cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
+              al, 2016). Esto ha causado que las artes de pesca abandonadas o
+              perdidas se acumulen en grandes cantidades en los océanos y estén
+              causen impactos considerables a corto y largo plazo (Stelfox et
+              al, 2016).
+            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -158,7 +242,6 @@ export default {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     },
-
   },
 };
 </script>
@@ -213,7 +296,7 @@ export default {
 
 .child {
   scroll-snap-align: start;
-  height: 100%;
+  height: 900px;
 }
 
 #grad1 {
@@ -240,6 +323,7 @@ export default {
   column-gap: 40px;
   text-align: justify;
   text-justify: inter-word;
+  color: black;
 }
 #logos {
   padding-top: 45px;
