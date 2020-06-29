@@ -1,5 +1,5 @@
 <template>
-  <b-navbar fixed="top" type="dark" toggleable="lg">
+  <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
     <b-navbar-brand>
       <router-link to="/menu" style="color:white">NavBar</router-link>
     </b-navbar-brand>
@@ -60,8 +60,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .navbar {
-  background-color: #154e64 !important;
-  height: 8%;
+  background-color: #020D14 !important;
+  height: 10%;
   color: white !important;
 }
 
