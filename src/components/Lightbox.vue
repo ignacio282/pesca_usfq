@@ -200,13 +200,13 @@ export default {
     showInfo: function(){
       document.getElementsByClassName("activeSlide")[0].classList.remove("FadeInUp");
       document.getElementsByClassName("animate-wrap")[0].classList.remove("FadeOutBottom");
+      document.getElementsByClassName("animate-wrap")[0].classList.add("FadeInBottom");
       document.getElementsByClassName("animate-wrap")[0].style.display = "flex";
-      document.getElementsByClassName("activeSlide")[0].classList.add("FadeOutUp");
-      setTimeout(function(){
-        document.getElementsByClassName("activeSlide")[0].style.display = "none";
-        document.getElementById("cerrarInfo").style.display = "inline-block";
-      }, 900);
+      document.getElementsByClassName("activeSlide")[0].style.display = "none";
+      document.getElementById("cerrarInfo").style.display = "inline-block";
       document.getElementById("flecha").style.display = "none";
+      document.getElementsByClassName("prev")[0].style.display = "none";
+      document.getElementsByClassName("next")[0].style.display = "none";
     },
     closeInfo: function(){
       document.getElementsByClassName("activeSlide")[0].classList.remove("FadeOutUp");
@@ -217,6 +217,8 @@ export default {
       document.getElementsByClassName("activeSlide")[0].style.display = "block";
       document.getElementById("flecha").style.display = "inline-block";
       document.getElementById("cerrarInfo").style.display = "none";
+      document.getElementsByClassName("prev")[0].style.display = "block";
+      document.getElementsByClassName("next")[0].style.display = "block";
     }
   }
 };
