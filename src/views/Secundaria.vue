@@ -119,7 +119,7 @@
 
       <div class="pb-5 " id="grad2">
         <div class="stripe child"></div>
-        <h2 style="color:white" class="text-center pt-5 pb-5">GALERIA</h2>
+        <h2 style="color:white; padding-top:100px" class="text-center pb-5">GALERIA</h2>
 
         <div class="row row-cols-3">
           <div class="col mb-4">
