@@ -300,7 +300,7 @@ export default {
 }
 
 #grad1 {
-  background-image: linear-gradient(#399ebc, #062d40);
+  background-image: linear-gradient(white, #062d40);
 }
 #grad2 {
   background-image: linear-gradient(#062d40, #010c13);
