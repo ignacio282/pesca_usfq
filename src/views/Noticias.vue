@@ -115,7 +115,7 @@ export default {
 .navbar {
   background-color: white !important;
   height: 10%;
-  color: black !important;
+  color: black ;
 }
 ::v-deep .nav-link {
   color: rgba($color: black, $alpha: 1) !important;
@@ -129,5 +129,8 @@ p {
   text-align: left;
   color: rgb(80, 80, 80);
   font-family: "Roboto Light";
+}
+::v-deep .colorWhite{
+    color: black !important;
 }
 </style>

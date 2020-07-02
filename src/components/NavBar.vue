@@ -43,6 +43,9 @@
             <router-link to="/secundaria">Partners</router-link>
           </b-dropdown-item>
         </b-nav-item-dropdown>
+        <b-nav-item text="Notícias" right>
+          <router-link to="/noticias" class="colorWhite">Noticias</router-link>
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -69,7 +72,7 @@ export default {
   color: rgba($color: white, $alpha: 1.0)!important;
 }
 .colorWhite {
-  color: white !important;
+  color: white ;
 }
 .stripe {
   height: 200px;
