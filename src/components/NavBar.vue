@@ -6,30 +6,30 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item-dropdown text="Menú" right>
+        <b-nav-item-dropdown text="MENÚ" right>
           <b-dropdown-item>
-            <router-link to="/menu">Menú</router-link>
+            <router-link to="/menu">MENÚ</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link to="/secundaria">Educación Ambiental</router-link>
+            <router-link to="/secundaria">EDUCACIÓN AMBIENTAL</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link to="/secundaria">Redes Fantasma</router-link>
+            <router-link to="/secundaria">REDES FANTASMA</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link to="/secundaria">Plásticos</router-link>
+            <router-link to="/secundaria">PLÁSTICOS</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link to="/secundaria">Reciclaje</router-link>
+            <router-link to="/secundaria">RECICLAJE</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link to="/secundaria">Pesca</router-link>
+            <router-link to="/secundaria">PESCA</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link to="/media">Media</router-link>
+            <router-link to="/media">MEDIA</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link to="/secundaria">Videojuego</router-link>
+            <router-link to="/secundaria">VIDEOJUEGO</router-link>
           </b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown text="Recursos" right>
@@ -43,7 +43,7 @@
             <router-link to="/secundaria">Partners</router-link>
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item text="Notícias" right>
+        <b-nav-item text="Noticias" right>
           <router-link to="/noticias" class="colorWhite">Noticias</router-link>
         </b-nav-item>
       </b-navbar-nav>

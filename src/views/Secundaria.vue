@@ -6,13 +6,7 @@
         <div class="child">
           <h1 class="text-center pb-3" id="titulo">TITULO</h1>
           <div class="container" id="video">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                class="embed-responsive-item"
-                src="https://www.youtube.com/embed/mzJj5-lubeM"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%">
           </div>
         </div>
 
@@ -344,6 +338,7 @@ export default {
 }
 #titulo {
   padding-top: 80px;
+  color: #03141d;
 }
 #video {
   padding-left: 100px;
