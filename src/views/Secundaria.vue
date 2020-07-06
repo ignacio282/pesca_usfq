@@ -2,7 +2,7 @@
   <div class="pr-0 content bodySecu">
     <NavBar></NavBar>
     <div class="snapSection pr-0">
-      <div class="pb-5 pt-2" id="grad1">
+      <div class="pb-5 pt-2" id="grad3">
         <div class="child">
           <h1 class="text-center pb-3" id="titulo">TITULO</h1>
           <div class="container" id="video">
@@ -334,6 +334,11 @@ export default {
 #grad2 {
   background-image: linear-gradient(#062d40, #010c13);
 }
+
+#grad3{
+  background: linear-gradient(white, #062d40);
+}
+
 #boton {
   background-color: rgba(255, 255, 255, 0);
 }

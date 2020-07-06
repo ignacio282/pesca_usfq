@@ -47,6 +47,10 @@ export default {
   height: 15%;
 }
 
+.row{
+  width: 100%;
+}
+
 .text-center {
   text-align: center !important;
 }
