@@ -23,6 +23,10 @@ Vue.component('video-background', VideoBackground);
 Vue.component('Footer',require('./components/Footer.vue').default);
 Vue.component('NavBar',require('./components/NavBar.vue').default); 
 
+import VueKinesis from 'vue-kinesis'
+
+Vue.use(VueKinesis)
+
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
