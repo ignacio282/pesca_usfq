@@ -10,7 +10,7 @@
           </div>
         </div>
 
-        <div class="container pt-5 pb-3 child">
+        <div class="container-fluid pt-5 pb-3 child" id="pregunta1">
           <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
           <div v-scrollanimation>
             <div class="p-5">
@@ -38,7 +38,7 @@
             </div>
           </div>
         </div>
-        <div class="container pt-5 pb-3 child">
+        <div class="container-fluid pt-5 pb-3 child" id="pregunta2">
           <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
           <div v-scrollanimation>
             <div class="p-5">
@@ -66,7 +66,7 @@
             </div>
           </div>
         </div>
-        <div class="container pt-5 pb-3 child">
+        <div class="container-fluid pt-5 pb-3 child" id="pregunta3">
           <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
           <div v-scrollanimation>
             <div class="p-5">
@@ -274,7 +274,7 @@ export default {
   width: 900px;
   height: 500px;
   margin-left: 60%;
-  margin-top: 50%;
+  margin-top: 37%;
   background-color: rgb(255, 255, 255);
   border-radius: 10px 10px 10px 10px;
   box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
@@ -331,6 +331,33 @@ export default {
 
 #grad3{
   background: linear-gradient(white, #062d40);
+}
+
+#pregunta1{
+  color: #03141d;
+  height: 100%;
+  width: 100%!important;
+  background-image: url("../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#pregunta2{
+  color: #03141d;
+  height: 100%;
+  width: 100%!important;
+  background-image: url("../assets/img/ConcepstCharacter.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#pregunta3{
+  color: #03141d;
+  height: 100%;
+  width: 100%!important;
+  background-image: url("../assets/img/ConcepstBarco.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #boton {

@@ -118,7 +118,7 @@ export default {
   padding-right: 0;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.75s ease;
+  transition: visibility 0s, opacity 1s ease;
 }
 
 #botones {
