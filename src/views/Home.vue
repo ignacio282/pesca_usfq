@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <!--
+    <div class="home" key="home">
+      <!--
       <div id="titulo" class="heading text-center">
       <h1>Regeneración de Ecosistemas</h1>
     </div>
@@ -19,66 +19,66 @@
         </b-col>
       </b-row>
     </div>
-    -->
-    <kinesis-container class="contenedor">
-      <kinesis-element type="depth" :strength="10">
-        <p class="tituloLanding">REGENERACION</p>
-      </kinesis-element>
-      <kinesis-element style="margin:-20px" type="depth" :strength="2">
-        <p class="tituloLanding">DE</p>
-      </kinesis-element>
-      <kinesis-element type="depth_inv" :strength="10">
-        <p class="tituloLanding">ECOSISTEMAS</p>
-      </kinesis-element>
-    </kinesis-container>
+      -->
+      <kinesis-container class="contenedor">
+        <kinesis-element type="depth" :strength="10">
+          <p class="tituloLanding">REGENERACION</p>
+        </kinesis-element>
+        <kinesis-element style="margin:-20px" type="depth" :strength="2">
+          <p class="tituloLanding">DE</p>
+        </kinesis-element>
+        <kinesis-element type="depth_inv" :strength="10">
+          <p class="tituloLanding">ECOSISTEMAS</p>
+        </kinesis-element>
+      </kinesis-container>
 
-
-    <kinesis-container>
-    <kinesis-element type="depth" :strength="20">
-    
-      <b-row class="justify-content-center pregunta" >Pregunta</b-row>
-      <b-row class="justify-content-center" >
-        <b-col col lg="2" class="respuestas">
-          Respuesta 1
-          <b-form-checkbox
-            id="checkbox-1"
-            v-model="status"
-            name="checkbox-1"
-            value="accepted"
-            unchecked-value="not_accepted"
-            style="margin:5px"
-            switch
-          ></b-form-checkbox>
-        </b-col>
-        <b-col col lg="2" class="respuestas">
-          Respuesta 2 
-          <b-form-checkbox
-            id="checkbox-2"
-            v-model="status"
-            name="checkbox-2"
-            value="accepted"
-            unchecked-value="not_accepted"
-            style="margin:5px"
-            switch
-          ></b-form-checkbox>
-        </b-col>
-        <b-col col lg="2" class="respuestas">
-          Respuesta 3
-          <b-form-checkbox
-            id="checkbox-3"
-            v-model="status"
-            name="checkbox-3"
-            value="accepted"
-            unchecked-value="not_accepted"
-            style="margin:5px"
-            switch
-          ></b-form-checkbox>
-        </b-col>
-      </b-row>
-      </kinesis-element>
-    
-    </kinesis-container>
-  </div>
+      <kinesis-container>
+        <kinesis-element type="depth" :strength="20">
+          <b-row class="justify-content-center pregunta">Pregunta</b-row>
+          <b-row class="justify-content-center">
+            <b-col col lg="2" class="respuestas">
+              Respuesta 1
+              <b-form-checkbox
+                id="checkbox-1"
+                v-model="status"
+                name="checkbox-1"
+                value="accepted"
+                unchecked-value="not_accepted"
+                style="margin:5px"
+                switch
+              ></b-form-checkbox>
+            </b-col>
+            <b-col col lg="2" class="respuestas">
+              Respuesta 2
+              <b-form-checkbox
+                id="checkbox-2"
+                v-model="status"
+                name="checkbox-2"
+                value="accepted"
+                unchecked-value="not_accepted"
+                style="margin:5px"
+                switch
+              ></b-form-checkbox>
+            </b-col>
+            <b-col col lg="2" class="respuestas">
+              Respuesta 3
+              <b-form-checkbox
+                id="checkbox-3"
+                v-model="status"
+                name="checkbox-3"
+                value="accepted"
+                unchecked-value="not_accepted"
+                style="margin:5px"
+                switch
+              ></b-form-checkbox>
+            </b-col>
+          </b-row>
+        </kinesis-element>
+        <b-button>
+          <router-link to="/menu">Continuar</router-link>
+        </b-button>
+      </kinesis-container>
+    </div>
 </template>
 
 <script>
@@ -112,7 +112,7 @@ export default {
 .respuestas {
   color: #9b6500;
 }
-.pregunta{
+.pregunta {
   color: #9b6500;
   font-size: 150%;
   margin-bottom: 3%;
@@ -123,7 +123,7 @@ export default {
   height: 15%;
 }
 
-.row{
+.row {
   width: 100%;
 }
 

@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view />
+    <transition name="fade-home" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -12,5 +14,14 @@
   text-align: center;
   color: white;
   height: 100%;
+}
+
+.fade-home-enter-active,
+.fade-home-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-home-enter,
+.fade-home-leave-to {
+  opacity: 0;
 }
 </style>
