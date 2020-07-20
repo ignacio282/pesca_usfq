@@ -3,10 +3,10 @@
     <NavBar></NavBar>
     <div class="snapSection pr-0">
       <div class="pt-2">
-        <div class="child"  id="grad3">
+        <div class="child" id="grad3">
           <div class="container pt-5" id="video">
-            <br>
-            <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%">
+            <br />
+            <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%" />
           </div>
         </div>
         <div class="stripe"></div>
@@ -14,8 +14,8 @@
         <div class="container-fluid pt-5 pb-3 child" id="pregunta1">
           <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
-            <div class="p-5">
-              <h1 style="color:black" class="pb-3">Pregunta1</h1>
+            <div class="fondoTarjeta">
+              <h1 class="pb-3">Pregunta1</h1>
               <p class="description">
                 Los ALDF se refieren a los desechos de pesca abandonados, perdidos
                 o descardados (en inglés abandoned, lost or discarded fishing
@@ -42,8 +42,8 @@
         <div class="container-fluid pt-5 pb-3 child" id="pregunta2">
           <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
-            <div class="p-5">
-              <h1 style="color:black" class="pb-3">Pregunta1</h1>
+            <div class="fondoTarjeta">
+              <h1 class="pb-3">Pregunta1</h1>
               <p class="description">
                 Los ALDF se refieren a los desechos de pesca abandonados, perdidos
                 o descardados (en inglés abandoned, lost or discarded fishing
@@ -70,8 +70,8 @@
         <div class="container-fluid pt-5 pb-3 child" id="pregunta3">
           <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
-            <div class="p-5">
-              <h1 style="color:black" class="pb-3">Pregunta1</h1>
+            <div class="fondoTarjeta">
+              <h1 class="pb-3">Pregunta1</h1>
               <p class="description">
                 Los ALDF se refieren a los desechos de pesca abandonados, perdidos
                 o descardados (en inglés abandoned, lost or discarded fishing
@@ -107,8 +107,7 @@
       </div>
 
       <div class="pb-5" id="grad2">
-        
-        <div id="myModal" class="modal  child">
+        <div id="myModal" class="modal child">
           <div class="modalContent">
             <div class="mySlides activeSlide" style="display: block;">
               <div class="numbertext">1 / 6</div>
@@ -169,11 +168,15 @@ export default {
   props: {
     msg: String
   },
-  mounted: function(){
-    document.getElementsByClassName("snapSection")[0].addEventListener('scroll', this.onScroll);
+  mounted: function() {
+    document
+      .getElementsByClassName("snapSection")[0]
+      .addEventListener("scroll", this.onScroll);
   },
-  beforeDestroy: function(){
-    document.getElementsByClassName("snapSection")[0].removeEventListener('scroll', this.onScroll);
+  beforeDestroy: function() {
+    document
+      .getElementsByClassName("snapSection")[0]
+      .removeEventListener("scroll", this.onScroll);
   },
   data: function() {
     return {
@@ -230,9 +233,15 @@ export default {
     },
     showInfo: function() {
       this.showSlides(1);
-      document.getElementsByClassName("activeSlide")[0].classList.remove("FadeInUp");
-      document.getElementsByClassName("animate-wrap")[0].classList.remove("FadeOutBottom");
-      document.getElementsByClassName("animate-wrap")[0].classList.add("FadeInBottom");
+      document
+        .getElementsByClassName("activeSlide")[0]
+        .classList.remove("FadeInUp");
+      document
+        .getElementsByClassName("animate-wrap")[0]
+        .classList.remove("FadeOutBottom");
+      document
+        .getElementsByClassName("animate-wrap")[0]
+        .classList.add("FadeInBottom");
       document.getElementsByClassName("animate-wrap")[0].style.display = "flex";
       document.getElementsByClassName("activeSlide")[0].style.display = "none";
       document.getElementById("cerrarInfo").style.display = "inline-block";
@@ -241,11 +250,19 @@ export default {
       document.getElementsByClassName("next")[0].style.display = "none";
     },
     closeInfo: function() {
-      document.getElementsByClassName("activeSlide")[0].classList.remove("FadeOutUp");
-      document.getElementsByClassName("animate-wrap")[0].classList.remove("FadeInBottom");
-      document.getElementsByClassName("animate-wrap")[0].classList.add("FadeOutBottom");
+      document
+        .getElementsByClassName("activeSlide")[0]
+        .classList.remove("FadeOutUp");
+      document
+        .getElementsByClassName("animate-wrap")[0]
+        .classList.remove("FadeInBottom");
+      document
+        .getElementsByClassName("animate-wrap")[0]
+        .classList.add("FadeOutBottom");
       document.getElementsByClassName("animate-wrap")[0].style.display = "none";
-      document.getElementsByClassName("activeSlide")[0].classList.add("FadeInUp");
+      document
+        .getElementsByClassName("activeSlide")[0]
+        .classList.add("FadeInUp");
       document.getElementsByClassName("activeSlide")[0].style.display = "block";
       document.getElementById("flecha").style.display = "inline-block";
       document.getElementById("cerrarInfo").style.display = "none";
@@ -254,15 +271,17 @@ export default {
     },
     isElementinViewport: function(el) {
       var rect = el.getBoundingClientRect();
-      if(rect.top <= 754 && rect.left > 0){
+      if (rect.top <= 754 && rect.left > 0) {
         return true;
       }
     },
-    onScroll: function(){
-      let visible = this.isElementinViewport(document.getElementById("myModal"));
-      if(visible){
+    onScroll: function() {
+      let visible = this.isElementinViewport(
+        document.getElementById("myModal")
+      );
+      if (visible) {
         document.getElementById("myNav").style.display = "none";
-      }else{
+      } else {
         document.getElementById("myNav").style.display = "flex";
       }
     }
@@ -273,11 +292,15 @@ export default {
 <style scoped lang="scss">
 .before-enter {
   width: 900px;
-  height: 500px;
+  height: 420px;
   margin-left: 60%;
-
   margin-top: 37%;
-  background-color: rgba(255, 255, 255, 0.678);
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10%;
+
+  background-color: rgba(255, 255, 255, 0.822);
   border-radius: 10px 10px 10px 10px;
   box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
 }
@@ -331,10 +354,9 @@ export default {
   background-image: linear-gradient(#062d40, #010c13);
 }
 
-#grad3{
+#grad3 {
   background: linear-gradient(white, #062d40);
 }
-
 
 #boton {
   background-color: rgba(255, 255, 255, 0);
@@ -351,7 +373,7 @@ export default {
   color: white;
 }
 
-.snapSection::-webkit-scrollbar{
+.snapSection::-webkit-scrollbar {
   display: none;
 }
 
@@ -361,6 +383,7 @@ export default {
   text-align: justify;
   text-justify: inter-word;
   color: black;
+  font-weight: 300;
 }
 #logos {
   padding-top: 45px;
@@ -400,6 +423,7 @@ export default {
 #pregunta1 {
   /* The image used */
   background-image: url("../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png");
+  color: Black;
 
   /* Set a specific height */
   height: 750px;
@@ -413,7 +437,7 @@ export default {
 #pregunta2 {
   /* The image used */
   background-image: url("../assets/img/ConcepstCharacter.jpg");
-
+  color: Black;
   /* Set a specific height */
   height: 750px;
 
@@ -426,7 +450,7 @@ export default {
 #pregunta3 {
   /* The image used */
   background-image: url("../assets/img/ConcepstBarco.jpg");
-
+  color: Black;
   /* Set a specific height */
   height: 750px;
 
@@ -664,16 +688,25 @@ export default {
   100% {
     opacity: 0;
   }
-  
 }
 @media only screen and (max-width: 600px) {
   #video {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-.child {
-  scroll-snap-align: start;
-  height: 900px;
-}
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .child {
+    scroll-snap-align: start;
+    height: 500px;
+  }
+  .before-enter {
+    width: 500px;
+    height: 500px;
+    margin-left: 60%;
+
+    margin-top: 37%;
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
+  }
 }
 </style>
