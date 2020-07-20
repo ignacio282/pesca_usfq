@@ -1,14 +1,14 @@
 <template>
   <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
     <b-navbar-brand>
-      <router-link to="/menu" style="color:white">NavBar</router-link>
+      <router-link to="/menu" style="color:Black">NavBar</router-link>
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item-dropdown text="MENÚ" right>
+        <b-nav-item-dropdown text="Menú" right>
           <b-dropdown-item>
-            <router-link to="/menu">MENÚ</router-link>
+            <router-link to="/menu">Menú</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
             <router-link to="/secundaria">EDUCACIÓN AMBIENTAL</router-link>
@@ -32,19 +32,17 @@
             <router-link to="/secundaria">VIDEOJUEGO</router-link>
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item-dropdown text="Recursos" right>
-          <b-dropdown-item>
-            <router-link to="/menu">Menú</router-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <router-link to="/secundaria">Crowdfunding</router-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <router-link to="/secundaria">Partners</router-link>
-          </b-dropdown-item>
-        </b-nav-item-dropdown>
+        <b-nav-item text="About" right>
+          <router-link to="/about" class="colorWhite">About</router-link>
+        </b-nav-item>
+        <b-nav-item text="Recursos" right>
+          <router-link to="/Recursos" class="colorWhite">Recursos</router-link>
+        </b-nav-item>
         <b-nav-item text="Noticias" right>
           <router-link to="/noticias" class="colorWhite">Noticias</router-link>
+        </b-nav-item>
+        <b-nav-item text="Partners" right>
+          <router-link to="/Partners" class="colorWhite">Partners</router-link>
         </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
@@ -63,16 +61,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .navbar {
-  background-color: #020D14 !important;
+  background-color: #020d1400 !important;
   height: 10%;
-  color: white !important;
+  color: black !important;
 }
 
 ::v-deep .nav-link{
-  color: rgba($color: white, $alpha: 1.0)!important;
+  color: rgba($color: black, $alpha: 1.0)!important;
 }
 .colorWhite {
-  color: white ;
+  color: black ;
 }
 .stripe {
   height: 200px;

@@ -2,16 +2,17 @@
   <div class="pr-0 content bodySecu">
     <NavBar></NavBar>
     <div class="snapSection pr-0">
-      <div class="pb-5 pt-2" id="grad3">
-        <div class="child">
-          <h1 class="text-center pb-3" id="titulo">TITULO</h1>
-          <div class="container" id="video">
+      <div class="pt-2">
+        <div class="child"  id="grad3">
+          <div class="container pt-5" id="video">
+            <br>
             <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%">
           </div>
         </div>
+        <div class="stripe"></div>
 
         <div class="container-fluid pt-5 pb-3 child" id="pregunta1">
-          <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
+          <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
             <div class="p-5">
               <h1 style="color:black" class="pb-3">Pregunta1</h1>
@@ -39,7 +40,7 @@
           </div>
         </div>
         <div class="container-fluid pt-5 pb-3 child" id="pregunta2">
-          <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
+          <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
             <div class="p-5">
               <h1 style="color:black" class="pb-3">Pregunta1</h1>
@@ -67,7 +68,7 @@
           </div>
         </div>
         <div class="container-fluid pt-5 pb-3 child" id="pregunta3">
-          <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
+          <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
             <div class="p-5">
               <h1 style="color:black" class="pb-3">Pregunta1</h1>
@@ -106,8 +107,8 @@
       </div>
 
       <div class="pb-5" id="grad2">
-        <div class="stripe child"></div>
-        <div id="myModal" class="modal">
+        
+        <div id="myModal" class="modal  child">
           <div class="modalContent">
             <div class="mySlides activeSlide" style="display: block;">
               <div class="numbertext">1 / 6</div>
@@ -274,8 +275,9 @@ export default {
   width: 900px;
   height: 500px;
   margin-left: 60%;
+
   margin-top: 37%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.678);
   border-radius: 10px 10px 10px 10px;
   box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
 }
@@ -301,7 +303,7 @@ export default {
   }
   100% {
     -webkit-transform: translateY(-400px) translateX(-400px);
-    transform: translateY(-530px) translateX(-300px);
+    transform: translateY(-530px) translateX(-400px);
   }
 }
 
@@ -319,7 +321,7 @@ export default {
 
 .child {
   scroll-snap-align: start;
-  height: 900px;
+  height: 700px;
 }
 
 #grad1 {
@@ -333,32 +335,6 @@ export default {
   background: linear-gradient(white, #062d40);
 }
 
-#pregunta1{
-  color: #03141d;
-  height: 100%;
-  width: 100%!important;
-  background-image: url("../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-#pregunta2{
-  color: #03141d;
-  height: 100%;
-  width: 100%!important;
-  background-image: url("../assets/img/ConcepstCharacter.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-#pregunta3{
-  color: #03141d;
-  height: 100%;
-  width: 100%!important;
-  background-image: url("../assets/img/ConcepstBarco.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
 
 #boton {
   background-color: rgba(255, 255, 255, 0);
@@ -410,6 +386,46 @@ export default {
 .parallax {
   /* The image used */
   background-image: url("https://imgur.com/nLylsqL.jpg");
+
+  /* Set a specific height */
+  height: 750px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pregunta1 {
+  /* The image used */
+  background-image: url("../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png");
+
+  /* Set a specific height */
+  height: 750px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#pregunta2 {
+  /* The image used */
+  background-image: url("../assets/img/ConcepstCharacter.jpg");
+
+  /* Set a specific height */
+  height: 750px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#pregunta3 {
+  /* The image used */
+  background-image: url("../assets/img/ConcepstBarco.jpg");
 
   /* Set a specific height */
   height: 750px;
@@ -648,5 +664,16 @@ export default {
   100% {
     opacity: 0;
   }
+  
+}
+@media only screen and (max-width: 600px) {
+  #video {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.child {
+  scroll-snap-align: start;
+  height: 900px;
+}
 }
 </style>

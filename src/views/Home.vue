@@ -40,6 +40,7 @@
       <b-row class="justify-content-center" >
         <b-col col lg="2" class="respuestas">
           Respuesta 1
+          <router-link to="/menu">
           <b-form-checkbox
             id="checkbox-1"
             v-model="status"
@@ -47,8 +48,11 @@
             value="accepted"
             unchecked-value="not_accepted"
             style="margin:5px"
-            switch
+            
           ></b-form-checkbox>
+          
+          </router-link>
+          
         </b-col>
         <b-col col lg="2" class="respuestas">
           Respuesta 2 
@@ -59,7 +63,7 @@
             value="accepted"
             unchecked-value="not_accepted"
             style="margin:5px"
-            switch
+            
           ></b-form-checkbox>
         </b-col>
         <b-col col lg="2" class="respuestas">
@@ -71,7 +75,7 @@
             value="accepted"
             unchecked-value="not_accepted"
             style="margin:5px"
-            switch
+            
           ></b-form-checkbox>
         </b-col>
       </b-row>
@@ -100,7 +104,7 @@ export default {
 
 .contenedor {
   height: 70%;
-  padding-top: 8%;
+  padding-top: 6%;
 }
 .tituloLanding {
   color: white;
