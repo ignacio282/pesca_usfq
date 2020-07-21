@@ -1,5 +1,5 @@
 <template>
-    <div class="home" key="home">
+    <div class="home">
       <!--
       <div id="titulo" class="heading text-center">
       <h1>Regeneración de Ecosistemas</h1>

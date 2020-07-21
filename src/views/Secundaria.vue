@@ -1,165 +1,165 @@
 <template>
-  <div class="pr-0 content bodySecu">
-    <NavBar></NavBar>
-    <div class="snapSection pr-0">
-      <div class="pb-5 pt-2" id="grad3">
-        <div class="child">
-          <h1 class="text-center pb-3" id="titulo">TITULO</h1>
-          <div class="container" id="video">
-            <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%">
-          </div>
-        </div>
-
-        <div class="container-fluid pt-5 pb-3 child" id="pregunta1">
-          <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
-          <div v-scrollanimation>
-            <div class="p-5">
-              <h1 style="color:black" class="pb-3">Pregunta1</h1>
-              <p class="description">
-                Los ALDF se refieren a los desechos de pesca abandonados, perdidos
-                o descardados (en inglés abandoned, lost or discarded fishing
-                gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
-                et al 2011). Cuando las redes de pesca se encuentran a la deriva
-                (sin control en su operación por pescadores) pueden seguir
-                atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
-                2015). En la década de 1960 se elaborarán redes de pesca
-                utilizando materiales de rápida degradación como el algodón y el
-                cáñamo (Kim et al, 2016). Posteriormente, los avances en la
-                tecnología permitieron mejorar el diseño de las artes de pesca y
-                la materia prima fue cambiando a fibras plásticas de mayor
-                durabilidad y resistencia. Por ejemplo, se elaboraron redes con
-                materiales de poliamida (nylon), polietileno y polipropileno, los
-                cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
-                al, 2016). Esto ha causado que las artes de pesca abandonadas o
-                perdidas se acumulen en grandes cantidades en los océanos y estén
-                causen impactos considerables a corto y largo plazo (Stelfox et
-                al, 2016).
-              </p>
+    <div class="pr-0 content bodySecu">
+      <NavBar></NavBar>
+      <div class="snapSection pr-0">
+        <div class="pb-5 pt-2" id="grad3">
+          <div class="child">
+            <h1 class="text-center pb-3" id="titulo">TITULO</h1>
+            <div class="container" id="video">
+              <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%" />
             </div>
           </div>
-        </div>
-        <div class="container-fluid pt-5 pb-3 child" id="pregunta2">
-          <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
-          <div v-scrollanimation>
-            <div class="p-5">
-              <h1 style="color:black" class="pb-3">Pregunta1</h1>
-              <p class="description">
-                Los ALDF se refieren a los desechos de pesca abandonados, perdidos
-                o descardados (en inglés abandoned, lost or discarded fishing
-                gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
-                et al 2011). Cuando las redes de pesca se encuentran a la deriva
-                (sin control en su operación por pescadores) pueden seguir
-                atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
-                2015). En la década de 1960 se elaborarán redes de pesca
-                utilizando materiales de rápida degradación como el algodón y el
-                cáñamo (Kim et al, 2016). Posteriormente, los avances en la
-                tecnología permitieron mejorar el diseño de las artes de pesca y
-                la materia prima fue cambiando a fibras plásticas de mayor
-                durabilidad y resistencia. Por ejemplo, se elaboraron redes con
-                materiales de poliamida (nylon), polietileno y polipropileno, los
-                cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
-                al, 2016). Esto ha causado que las artes de pesca abandonadas o
-                perdidas se acumulen en grandes cantidades en los océanos y estén
-                causen impactos considerables a corto y largo plazo (Stelfox et
-                al, 2016).
-              </p>
+
+          <div class="container-fluid pt-5 pb-3 child" id="pregunta1">
+            <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
+            <div v-scrollanimation>
+              <div class="p-5">
+                <h1 style="color:black" class="pb-3">Pregunta1</h1>
+                <p class="description">
+                  Los ALDF se refieren a los desechos de pesca abandonados, perdidos
+                  o descardados (en inglés abandoned, lost or discarded fishing
+                  gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
+                  et al 2011). Cuando las redes de pesca se encuentran a la deriva
+                  (sin control en su operación por pescadores) pueden seguir
+                  atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
+                  2015). En la década de 1960 se elaborarán redes de pesca
+                  utilizando materiales de rápida degradación como el algodón y el
+                  cáñamo (Kim et al, 2016). Posteriormente, los avances en la
+                  tecnología permitieron mejorar el diseño de las artes de pesca y
+                  la materia prima fue cambiando a fibras plásticas de mayor
+                  durabilidad y resistencia. Por ejemplo, se elaboraron redes con
+                  materiales de poliamida (nylon), polietileno y polipropileno, los
+                  cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
+                  al, 2016). Esto ha causado que las artes de pesca abandonadas o
+                  perdidas se acumulen en grandes cantidades en los océanos y estén
+                  causen impactos considerables a corto y largo plazo (Stelfox et
+                  al, 2016).
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="container-fluid pt-5 pb-3 child" id="pregunta3">
-          <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
-          <div v-scrollanimation>
-            <div class="p-5">
-              <h1 style="color:black" class="pb-3">Pregunta1</h1>
-              <p class="description">
-                Los ALDF se refieren a los desechos de pesca abandonados, perdidos
-                o descardados (en inglés abandoned, lost or discarded fishing
-                gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
-                et al 2011). Cuando las redes de pesca se encuentran a la deriva
-                (sin control en su operación por pescadores) pueden seguir
-                atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
-                2015). En la década de 1960 se elaborarán redes de pesca
-                utilizando materiales de rápida degradación como el algodón y el
-                cáñamo (Kim et al, 2016). Posteriormente, los avances en la
-                tecnología permitieron mejorar el diseño de las artes de pesca y
-                la materia prima fue cambiando a fibras plásticas de mayor
-                durabilidad y resistencia. Por ejemplo, se elaboraron redes con
-                materiales de poliamida (nylon), polietileno y polipropileno, los
-                cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
-                al, 2016). Esto ha causado que las artes de pesca abandonadas o
-                perdidas se acumulen en grandes cantidades en los océanos y estén
-                causen impactos considerables a corto y largo plazo (Stelfox et
-                al, 2016).
-              </p>
+          <div class="container-fluid pt-5 pb-3 child" id="pregunta2">
+            <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
+            <div v-scrollanimation>
+              <div class="p-5">
+                <h1 style="color:black" class="pb-3">Pregunta1</h1>
+                <p class="description">
+                  Los ALDF se refieren a los desechos de pesca abandonados, perdidos
+                  o descardados (en inglés abandoned, lost or discarded fishing
+                  gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
+                  et al 2011). Cuando las redes de pesca se encuentran a la deriva
+                  (sin control en su operación por pescadores) pueden seguir
+                  atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
+                  2015). En la década de 1960 se elaborarán redes de pesca
+                  utilizando materiales de rápida degradación como el algodón y el
+                  cáñamo (Kim et al, 2016). Posteriormente, los avances en la
+                  tecnología permitieron mejorar el diseño de las artes de pesca y
+                  la materia prima fue cambiando a fibras plásticas de mayor
+                  durabilidad y resistencia. Por ejemplo, se elaboraron redes con
+                  materiales de poliamida (nylon), polietileno y polipropileno, los
+                  cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
+                  al, 2016). Esto ha causado que las artes de pesca abandonadas o
+                  perdidas se acumulen en grandes cantidades en los océanos y estén
+                  causen impactos considerables a corto y largo plazo (Stelfox et
+                  al, 2016).
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="stripe"></div>
-      <div class="parallax child">
-        <b-container style="padding-top:120px">
-          <b-jumbotron class="jumbo" header="Conservación" lead="Cuida el mar">
-            <p>Para mas info haz click aqui</p>
-            <b-button variant="primary" href="#">Info</b-button>
-          </b-jumbotron>
-        </b-container>
-      </div>
-
-      <div class="pb-5" id="grad2">
-        <div class="stripe child"></div>
-        <div id="myModal" class="modal">
-          <div class="modalContent">
-            <div class="mySlides activeSlide" style="display: block;">
-              <div class="numbertext">1 / 6</div>
-              <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">2 / 6</div>
-              <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">3 / 6</div>
-              <img src="@/assets//img/ConcepstCharacter.jpg" alt="Character" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">4 / 6</div>
-              <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">5 / 6</div>
-              <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">6 / 6</div>
-              <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" @click="plusSlides(-1);">&#10094;</a>
-            <a class="next" @click="plusSlides(1);">&#10095;</a>
-
-            <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
-            <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
-
-            <div class="animate-wrap is-hidden">
-              <!-- Caption text -->
-              <div class="caption-container animate-item FadeInBottom">
-                <h3 id="caption"></h3>
-                <p id="description"></p>
+          <div class="container-fluid pt-5 pb-3 child" id="pregunta3">
+            <h2 class="text-center pt-5 pb-4">DESCRIPCION</h2>
+            <div v-scrollanimation>
+              <div class="p-5">
+                <h1 style="color:black" class="pb-3">Pregunta1</h1>
+                <p class="description">
+                  Los ALDF se refieren a los desechos de pesca abandonados, perdidos
+                  o descardados (en inglés abandoned, lost or discarded fishing
+                  gear) tanto en zonas costeras como ambientes submarinos (Macfadyen
+                  et al 2011). Cuando las redes de pesca se encuentran a la deriva
+                  (sin control en su operación por pescadores) pueden seguir
+                  atrapando especies marinas y provocar la ¨pesca fantasma¨ (NOAA,
+                  2015). En la década de 1960 se elaborarán redes de pesca
+                  utilizando materiales de rápida degradación como el algodón y el
+                  cáñamo (Kim et al, 2016). Posteriormente, los avances en la
+                  tecnología permitieron mejorar el diseño de las artes de pesca y
+                  la materia prima fue cambiando a fibras plásticas de mayor
+                  durabilidad y resistencia. Por ejemplo, se elaboraron redes con
+                  materiales de poliamida (nylon), polietileno y polipropileno, los
+                  cuales se demoran décadas en degradarse (Brandt 1984; Stelfox et
+                  al, 2016). Esto ha causado que las artes de pesca abandonadas o
+                  perdidas se acumulen en grandes cantidades en los océanos y estén
+                  causen impactos considerables a corto y largo plazo (Stelfox et
+                  al, 2016).
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="stripe"></div>
+        <div class="parallax child">
+          <b-container style="padding-top:120px">
+            <b-jumbotron class="jumbo" header="Conservación" lead="Cuida el mar">
+              <p>Para mas info haz click aqui</p>
+              <b-button variant="primary" href="#">Info</b-button>
+            </b-jumbotron>
+          </b-container>
+        </div>
 
-      <Footer></Footer>
+        <div class="pb-5" id="grad2">
+          <div class="stripe child"></div>
+          <div id="myModal" class="modal">
+            <div class="modalContent">
+              <div class="mySlides activeSlide" style="display: block;">
+                <div class="numbertext">1 / 6</div>
+                <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="@/assets//img/ConcepstCharacter.jpg" alt="Character" style="width:100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+              </div>
+
+              <!-- Next/previous controls -->
+              <a class="prev" @click="plusSlides(-1);">&#10094;</a>
+              <a class="next" @click="plusSlides(1);">&#10095;</a>
+
+              <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
+              <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
+
+              <div class="animate-wrap is-hidden">
+                <!-- Caption text -->
+                <div class="caption-container animate-item FadeInBottom">
+                  <h3 id="caption"></h3>
+                  <p id="description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Footer></Footer>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -168,11 +168,15 @@ export default {
   props: {
     msg: String
   },
-  mounted: function(){
-    document.getElementsByClassName("snapSection")[0].addEventListener('scroll', this.onScroll);
+  mounted: function() {
+    document
+      .getElementsByClassName("snapSection")[0]
+      .addEventListener("scroll", this.onScroll);
   },
-  beforeDestroy: function(){
-    document.getElementsByClassName("snapSection")[0].removeEventListener('scroll', this.onScroll);
+  beforeDestroy: function() {
+    document
+      .getElementsByClassName("snapSection")[0]
+      .removeEventListener("scroll", this.onScroll);
   },
   data: function() {
     return {
@@ -229,9 +233,15 @@ export default {
     },
     showInfo: function() {
       this.showSlides(1);
-      document.getElementsByClassName("activeSlide")[0].classList.remove("FadeInUp");
-      document.getElementsByClassName("animate-wrap")[0].classList.remove("FadeOutBottom");
-      document.getElementsByClassName("animate-wrap")[0].classList.add("FadeInBottom");
+      document
+        .getElementsByClassName("activeSlide")[0]
+        .classList.remove("FadeInUp");
+      document
+        .getElementsByClassName("animate-wrap")[0]
+        .classList.remove("FadeOutBottom");
+      document
+        .getElementsByClassName("animate-wrap")[0]
+        .classList.add("FadeInBottom");
       document.getElementsByClassName("animate-wrap")[0].style.display = "flex";
       document.getElementsByClassName("activeSlide")[0].style.display = "none";
       document.getElementById("cerrarInfo").style.display = "inline-block";
@@ -240,11 +250,19 @@ export default {
       document.getElementsByClassName("next")[0].style.display = "none";
     },
     closeInfo: function() {
-      document.getElementsByClassName("activeSlide")[0].classList.remove("FadeOutUp");
-      document.getElementsByClassName("animate-wrap")[0].classList.remove("FadeInBottom");
-      document.getElementsByClassName("animate-wrap")[0].classList.add("FadeOutBottom");
+      document
+        .getElementsByClassName("activeSlide")[0]
+        .classList.remove("FadeOutUp");
+      document
+        .getElementsByClassName("animate-wrap")[0]
+        .classList.remove("FadeInBottom");
+      document
+        .getElementsByClassName("animate-wrap")[0]
+        .classList.add("FadeOutBottom");
       document.getElementsByClassName("animate-wrap")[0].style.display = "none";
-      document.getElementsByClassName("activeSlide")[0].classList.add("FadeInUp");
+      document
+        .getElementsByClassName("activeSlide")[0]
+        .classList.add("FadeInUp");
       document.getElementsByClassName("activeSlide")[0].style.display = "block";
       document.getElementById("flecha").style.display = "inline-block";
       document.getElementById("cerrarInfo").style.display = "none";
@@ -253,15 +271,17 @@ export default {
     },
     isElementinViewport: function(el) {
       var rect = el.getBoundingClientRect();
-      if(rect.top <= 754 && rect.left > 0){
+      if (rect.top <= 754 && rect.left > 0) {
         return true;
       }
     },
-    onScroll: function(){
-      let visible = this.isElementinViewport(document.getElementById("myModal"));
-      if(visible){
+    onScroll: function() {
+      let visible = this.isElementinViewport(
+        document.getElementById("myModal")
+      );
+      if (visible) {
         document.getElementById("myNav").style.display = "none";
-      }else{
+      } else {
         document.getElementById("myNav").style.display = "flex";
       }
     }
@@ -329,32 +349,32 @@ export default {
   background-image: linear-gradient(#062d40, #010c13);
 }
 
-#grad3{
+#grad3 {
   background: linear-gradient(white, #062d40);
 }
 
-#pregunta1{
+#pregunta1 {
   color: #03141d;
   height: 100%;
-  width: 100%!important;
+  width: 100% !important;
   background-image: url("../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-#pregunta2{
+#pregunta2 {
   color: #03141d;
   height: 100%;
-  width: 100%!important;
+  width: 100% !important;
   background-image: url("../assets/img/ConcepstCharacter.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-#pregunta3{
+#pregunta3 {
   color: #03141d;
   height: 100%;
-  width: 100%!important;
+  width: 100% !important;
   background-image: url("../assets/img/ConcepstBarco.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -375,7 +395,7 @@ export default {
   color: white;
 }
 
-.snapSection::-webkit-scrollbar{
+.snapSection::-webkit-scrollbar {
   display: none;
 }
 
