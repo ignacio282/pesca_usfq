@@ -306,7 +306,7 @@ export default {
 
 .child {
   scroll-snap-align: start;
-  height: 630px;
+  height:100vh;
 }
 
 #grad1 {
@@ -389,7 +389,7 @@ export default {
   color: Black;
 
   /* Set a specific height */
-  height: 630px;
+  height: 100vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -402,7 +402,7 @@ export default {
   background-image: url("../assets/img/ConcepstCharacter.jpg");
   color: Black;
   /* Set a specific height */
-  height: 630px;
+  height: 100vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -415,7 +415,7 @@ export default {
   background-image: url("../assets/img/ConcepstBarco.jpg");
   color: Black;
   /* Set a specific height */
-  height: 630px;
+  height: 100vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
