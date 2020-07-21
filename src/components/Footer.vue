@@ -1,21 +1,31 @@
 <template>
   <section id="footer">
     <div class="container">
-      <b-row id="logos" class="justify-content-md-center" align-h="center">
-        <b-col cols="12" md="4" class="pb-4 imagen">
-          <img class="imagenes" src="../assets/img/logo.png" />
-          <img class="imagenes" src="../assets/img/logo.png" />
-          <img class="imagenes" src="../assets/img/logo.png" />
+      <b-row id="social" align-h="center">
+        <b-col cols="12" md="4">
+          <font-awesome-icon class="sociales" :icon="[ 'fab', 'facebook' ]"/>
+          <font-awesome-icon class="sociales" :icon="[ 'fab', 'instagram' ]"/>
+          <font-awesome-icon class="sociales" :icon="[ 'fab', 'twitter' ]"/>
         </b-col>
-        <b-col id="texto" cols="12" md="4" class="pb-4">
-          <a href="http://www.usfq.edu.ec/programas_academicos/colegios/cocoa/Paginas/default.aspx">COCOA USFQ</a>
+      </b-row>
+      <b-row id="logos" align-h="center">
+        <b-col cols="12" md="12" class="imagen">
+          <img class="imagenes" src="../assets/img/DAAD_Logo.svg" />
+          <img class="imagenes" src="../assets/img/ZMT_Logo_SMALL_cmyk_ENG.png" />
+          <img class="imagenes" src="../assets/img/LogoPlastiCo.png" />
+          <img class="imagenes" id="community" src="../assets/img/LogoCommunity.png" />
+          <img class="imagenes" src="../assets/img/LogoCocoa.png" />
+          <img class="imagenes" src="../assets/img/LogoBio.png" />
+          <img class="imagenes" id="salud" src="../assets/img/LogoSalud.png" />
+        </b-col>
+      </b-row>
+      <b-row align-h="center" id="texto">
+        <b-col cols="12" md="4" class="pb-4">
+          <a
+            href="http://www.usfq.edu.ec/programas_academicos/colegios/cocoa/Paginas/default.aspx"
+          >COCOA USFQ</a>
           <p>© Todos los derechos reservados.</p>
           <a href="http://www.usfq.edu.ec/Paginas/Inicio.aspx">USFQ - ECUADOR</a>
-        </b-col>
-        <b-col cols="12" md="4" class="pb-4 imagen">
-          <img class="imagenes" src="../assets/img/logo.png" />
-          <img class="imagenes" src="../assets/img/logo.png" />
-          <img class="imagenes" src="../assets/img/logo.png" />
         </b-col>
       </b-row>
     </div>
@@ -41,12 +51,20 @@ export default {
   -webkit-text-decoration-skip: objects;
 }
 
-#footer a:hover{
-  text-decoration-line: underline!important;
+#footer a:hover {
+  text-decoration-line: underline !important;
 }
 
-#footer p{
+#footer p {
   margin-bottom: 0;
+}
+
+#social{
+  padding-top: 3%;
+}
+
+#logos {
+  padding: 1%;
 }
 
 @media (max-width: 400px) {
@@ -61,21 +79,25 @@ export default {
 
 .imagenes {
   width: 12%;
-  padding-right: 2%;
+  padding-right: 4%;
 }
 
-.imagen{
+.imagen {
   padding-top: 1.5%;
-  padding-bottom: 1.5%!important;
+  padding-bottom: 1.5% !important;
 }
 
-#logos{
-  padding: 1%;
+#texto {
+  font-size: 9px;
+  padding-bottom: 0.5%;
 }
 
-#texto{
-  font-size: 12px;
-  padding-top: 0.6%;
-  padding-bottom: 0.5%!important;
+#salud{
+  width: 8.5%;
+}
+
+.sociales{
+  margin: 3%;
+  font-size: 28px;
 }
 </style>

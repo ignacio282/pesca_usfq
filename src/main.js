@@ -27,6 +27,18 @@ import VueKinesis from 'vue-kinesis'
 
 Vue.use(VueKinesis)
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faFacebook)
+library.add(faInstagram)
+library.add(faTwitter)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;

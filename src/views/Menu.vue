@@ -1,14 +1,17 @@
 <template>
-  <video-background
-    id="main"
-    :src="require('@/assets/video/VideoPrueba.mp4')"
-    style="height: 100%;"
-    :poster="require('@/assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png')"
-  >
-    <b-container fluid id="menu">
-      <NavBar></NavBar>
-    </b-container>
-  </video-background>
+  <div class="menu">
+    <video-background
+      id="main"
+      :src="require('@/assets/video/VideoPrueba.mp4')"
+      style="height: 100%;"
+      :poster="require('@/assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png')"
+    >
+      <b-container fluid id="menu">
+        <NavBar></NavBar>
+      </b-container>
+    </video-background>
+    <Foot></Foot>
+  </div>
 </template>
 
 <script>
@@ -33,6 +36,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.menu{
+  height: 100%;
+}
+
 #menu {
   height: 100%;
   padding-top: 100px;
@@ -62,21 +69,13 @@ export default {
   padding-bottom: 250px;
 }
 
-#footer {
-  background: transparent;
-  color: #020d14;
-}
-
-::v-deep #footer a {
-  color: #020d14 !important;
-}
-::v-deep .navbar{
+::v-deep .navbar {
   font-weight: 300;
 }
 ::v-deep .colorWhite {
-  color: white ;
+  color: white;
 }
-::v-deep .nav-link{
-  color: rgba($color: white, $alpha: 1.0)!important;
+::v-deep .nav-link {
+  color: rgba($color: white, $alpha: 1) !important;
 }
 </style>

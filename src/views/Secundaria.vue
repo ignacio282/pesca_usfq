@@ -120,6 +120,7 @@
         <Footer></Footer>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
