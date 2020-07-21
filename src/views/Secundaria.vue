@@ -8,6 +8,7 @@
             <br />
             <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%" />
           </div>
+        </div>
 
         <div class="container-fluid child" id="pregunta1">
           <h2 class="text-center pt-5 pb-4"></h2>
@@ -74,51 +75,51 @@
               <div class="numbertext">1 / 6</div>
               <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
             </div>
-              <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
-              </div>
 
-              <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="@/assets//img/ConcepstCharacter.jpg" alt="Character" style="width:100%" />
-              </div>
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
+            </div>
 
-              <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-              </div>
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+              <img src="@/assets//img/ConcepstCharacter.jpg" alt="Character" style="width:100%" />
+            </div>
 
-              <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-              </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+              <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+            </div>
 
-              <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-              </div>
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+              <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+            </div>
 
-              <!-- Next/previous controls -->
-              <a class="prev" @click="plusSlides(-1);">&#10094;</a>
-              <a class="next" @click="plusSlides(1);">&#10095;</a>
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+              <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+            </div>
 
-              <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
-              <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
+            <!-- Next/previous controls -->
+            <a class="prev" @click="plusSlides(-1);">&#10094;</a>
+            <a class="next" @click="plusSlides(1);">&#10095;</a>
 
-              <div class="animate-wrap is-hidden">
-                <!-- Caption text -->
-                <div class="caption-container animate-item FadeInBottom">
-                  <h3 id="caption"></h3>
-                  <p id="description"></p>
-                </div>
+            <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
+            <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
+
+            <div class="animate-wrap is-hidden">
+              <!-- Caption text -->
+              <div class="caption-container animate-item FadeInBottom">
+                <h3 id="caption"></h3>
+                <p id="description"></p>
               </div>
             </div>
           </div>
         </div>
-
-        <Footer></Footer>
       </div>
+
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -305,7 +306,7 @@ export default {
 
 .child {
   scroll-snap-align: start;
-  height: 630px;
+  height:100vh;
 }
 
 #grad1 {
@@ -317,33 +318,6 @@ export default {
 
 #grad3 {
   background: linear-gradient(white, #062d40);
-}
-
-#pregunta1 {
-  color: #03141d;
-  height: 100%;
-  width: 100% !important;
-  background-image: url("../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-#pregunta2 {
-  color: #03141d;
-  height: 100%;
-  width: 100% !important;
-  background-image: url("../assets/img/ConcepstCharacter.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-#pregunta3 {
-  color: #03141d;
-  height: 100%;
-  width: 100% !important;
-  background-image: url("../assets/img/ConcepstBarco.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
 }
 
 #boton {
@@ -415,7 +389,7 @@ export default {
   color: Black;
 
   /* Set a specific height */
-  height: 630px;
+  height: 100vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -428,7 +402,7 @@ export default {
   background-image: url("../assets/img/ConcepstCharacter.jpg");
   color: Black;
   /* Set a specific height */
-  height: 630px;
+  height: 100vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -441,7 +415,7 @@ export default {
   background-image: url("../assets/img/ConcepstBarco.jpg");
   color: Black;
   /* Set a specific height */
-  height: 630px;
+  height: 100vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
