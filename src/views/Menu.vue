@@ -5,6 +5,7 @@
       :src="require('@/assets/video/VideoPrueba.mp4')"
       style="height: 100%;"
       :poster="require('@/assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png')"
+      :loop="false"
     >
       <b-container fluid id="menu">
         <NavBar></NavBar>
@@ -36,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menu{
+.menu {
   height: 100%;
 }
 

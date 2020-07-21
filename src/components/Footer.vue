@@ -24,7 +24,7 @@
           <a
             href="http://www.usfq.edu.ec/programas_academicos/colegios/cocoa/Paginas/default.aspx"
           >COCOA USFQ</a>
-          <p>© Todos los derechos reservados.</p>
+          <p>© Todos los derechos reservados - 2020</p>
           <a href="http://www.usfq.edu.ec/Paginas/Inicio.aspx">USFQ - ECUADOR</a>
         </b-col>
       </b-row>
