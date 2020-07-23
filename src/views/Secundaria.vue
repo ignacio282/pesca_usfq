@@ -1,126 +1,143 @@
 <template>
   <div class="pr-0 content bodySecu">
     <NavBar></NavBar>
-    <div class="snapSection pr-0">
-      <div class="pt-5">
-        <div class="child">
-          <div class="container" id="video">
-            <br />
-            <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%" />
-          </div>
-        </div>
 
-        <div class="container-fluid child" id="pregunta1">
-          <h2 class="text-center pt-5 pb-4"></h2>
-          <div v-scrollanimation>
-            <div class="fondoTarjeta">
-              <h1 class="pb-3">Antecedentes</h1>
-              <div class="overflow-auto pr-3" style="height:300px">
-                <p class="description">
-                  El proyecto de vinculación “Restauración de Ecosistemas” es uno de los proyectos emblemáticos de la Universidad San Francisco de Quito. Este proyecto es una iniciativa de tres colegios de la Universidad San Francisco de Quito en convenio con varias organizaciones de la sociedad civil. Se enfoca en aportar a la conservación del ecosistema marino en la provincia de Esmeraldas desde varios ejes de acción como son: la investigación, comunicación y educación ambiental.
-                  El eje de educación ambiental del proyecto tiene como objetivo crear conciencia ambiental en la sociedad esmeraldeña para evitar la degradación de ecosistemas a largo plazo. La propuesta ‘Proyecto de Educación Ambiental Esmeraldas’ considera importante establecer procesos de información, educación y capacitación sobre la protección y cuidado del medio ambiente en la zona costera de la Provincia de Esmeraldas. Dentro de las actividades económicas más importantes de esta provincia, están la pesca y el turismo (GADPE, 2015). El sustento de estas actividades depende directamente de la conservación de sus recursos naturales, para lo cual, es imprescindible que las personas orienten su comportamiento hacia el cuidado de su entorno. Proyectos como este incentivan e involucran a la población en la conservación y uso sostenible de sus recursos, pilar fundamental para la supervivencia de las actuales y futuras generaciones.
-                  El proyecto tiene interés en abarcar la problemática en su conjunto. Uno de los elementos a gestionar es el manejo de los desechos, de manera específica las redes de pesca abandonadas en el mar, las cuales han ocasionado un deterioro y cambio de los ecosistemas marinos. Por otro lado, buscamos fomentar la educación sobre los impactos de la contaminación por plásticos en Ecuador y también la importancia de un cambio en el paradigma del consumo y desecho para precautelar el bienestar de nuestro entorno.
-                </p>
+    <b-container fluid class="p-0">
+      <b-row>
+        <b-col>
+          <div class="snapSection pr-0" id="nav-scroller">
+            <div class="pt-5">
+              <div class="child pb-5" id="videoSection">
+                <div class="container" id="video">
+                  <br />
+                  <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%" />
+                </div>
+              </div>
+
+              <div class="container-fluid child" id="pregunta1">
+                <h2 class="text-center pt-5 pb-4"></h2>
+                <div v-scrollanimation>
+                  <div class="fondoTarjeta">
+                    <h1 class="pb-3">Antecedentes</h1>
+                    <div class="overflow-auto pr-3" style="height:300px">
+                      <p class="description">
+                        El proyecto de vinculación “Restauración de Ecosistemas” es uno de los proyectos emblemáticos de la Universidad San Francisco de Quito. Este proyecto es una iniciativa de tres colegios de la Universidad San Francisco de Quito en convenio con varias organizaciones de la sociedad civil. Se enfoca en aportar a la conservación del ecosistema marino en la provincia de Esmeraldas desde varios ejes de acción como son: la investigación, comunicación y educación ambiental.
+                        El eje de educación ambiental del proyecto tiene como objetivo crear conciencia ambiental en la sociedad esmeraldeña para evitar la degradación de ecosistemas a largo plazo. La propuesta ‘Proyecto de Educación Ambiental Esmeraldas’ considera importante establecer procesos de información, educación y capacitación sobre la protección y cuidado del medio ambiente en la zona costera de la Provincia de Esmeraldas. Dentro de las actividades económicas más importantes de esta provincia, están la pesca y el turismo (GADPE, 2015). El sustento de estas actividades depende directamente de la conservación de sus recursos naturales, para lo cual, es imprescindible que las personas orienten su comportamiento hacia el cuidado de su entorno. Proyectos como este incentivan e involucran a la población en la conservación y uso sostenible de sus recursos, pilar fundamental para la supervivencia de las actuales y futuras generaciones.
+                        El proyecto tiene interés en abarcar la problemática en su conjunto. Uno de los elementos a gestionar es el manejo de los desechos, de manera específica las redes de pesca abandonadas en el mar, las cuales han ocasionado un deterioro y cambio de los ecosistemas marinos. Por otro lado, buscamos fomentar la educación sobre los impactos de la contaminación por plásticos en Ecuador y también la importancia de un cambio en el paradigma del consumo y desecho para precautelar el bienestar de nuestro entorno.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid child" id="pregunta2">
+                <h2 class="text-center pt-5 pb-4"></h2>
+                <div v-scrollanimation>
+                  <div class="fondoTarjeta">
+                    <h1 class="pb-3">Campaña Educación Ambiental 2019</h1>
+                    <div class="overflow-auto pr-3" style="height:300px">
+                      <p class="description">
+                        En el 2019, el proyecto realizó una campaña ambiental in-situ en el período del 5 al 8 de junio, en la cual se ejecutaron charlas educativas y talleres en colegios de la provincia de Esmeraldas. La campaña contó con la participación exitosa de 200 alumnos de los colegios UNE (Atacames) y Príncipe de Paz (Tonsupa).
+                        Además, como parte de la campaña y en conmemoración al Día Mundial de los Océanos, se organizó una limpieza ambiental en la playa de Tonsupa, cuyo objetivo era aumentar la conciencia del público general para extraer, prevenir e interceptar la contaminación de plástico en las playas y los océanos, evento en el cual participaron 40 personas voluntarias que lograron recolectar 8 costales de basura de los cuales se extrajeron datos usando una metodología de ciencia ciudadana en presencia de la representante de la Cámara de Turismo de Atacames, y con la participación y el cuidado de la Policía de Atacames. La limpieza ambiental resultó en la recolección de 8 costales de basura en 1 hora: 100 botellas de plástico, 50 botellas de vidrio, 250 sorbetes, 100 vasos, 1000 colillas de cigarrillo, tarrinas y otros. Estas cifras ponen en evidencia la necesidad de promover la educación ambiental con respecto a temas relacionados a los residuos como son la contaminación por plásticos y el reciclaje.
+                        La campaña contó con la colaboración de organizaciones de la sociedad civil (Fundación PlastiCo. Project y Fundación “Llena Una Botella de Amor”), instituciones publicas (Alcaldía del Cantón Atacames, Policía Nacional, CPU Tonsupa, Junta Parroquial de Tonsupa, Departamento de Turismo de Esmeraldas), sector privado (Keyos Bar) y medios de comunicación (Canales locales de radio y televisión).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid child" id="pregunta3">
+                <h2 class="text-center pt-5 pb-4"></h2>
+
+                <div v-scrollanimation>
+                  <div class="fondoTarjeta">
+                    <h1 class="pb-3">Campana Virtual 2020 “Del océano a tu casa”</h1>
+                    <div class="overflow-auto pr-3" style="height:250px">
+                      <p class="description">
+                        Este año, el proyecto se propuso ampliar su impacto y llegar a más colegios y escuelas de la provincia de Esmeraldas. Debido a la situación actual presentada por la emergencia sanitaria a causa del COVID-19, el proyecto ha propuesto realizar la campaña planificada de modo virtual.
+                        La campaña consiste en la difusión de material educativo; videos, hojas de trabajo e infografías; sobre temáticas relevantes para el contexto ambiental de la provincia de Esmeraldas, con el fin de informar y fomentar la reflexión sobre el cuidado del medio ambiente de la provincia en estudiantes de colegios (13 a 16 años) y escuelas (6 a 10 años).
+                        El material educativo de la campaña está siendo desarrollado por un equipo de 30 estudiantes de la Universidad San Francisco de Quito, con la supervisión de profesionales expertos en el ámbito ambiental y educativo. Actualmente, más de 1000 horas de trabajo se han invertido para este fin y seguimos contando.
+                        Este año la campaña cuenta con el apoyo de Fundación PlastiCo. Project, DAAD, Ministerio de Ambiente y Agua – Dirección Esmeraldas, ZMW – Leigniz Zentrum fùr Marine Tropenforschung y GIZ Ecuador.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="container-fluid child" id="pregunta2">
-          <h2 class="text-center pt-5 pb-4"></h2>
-          <div v-scrollanimation>
-            <div class="fondoTarjeta">
-              <h1 class="pb-3">Campaña Educación Ambiental 2019</h1>
-              <div class="overflow-auto pr-3" style="height:300px">
-                <p class="description">
-                  En el 2019, el proyecto realizó una campaña ambiental in-situ en el período del 5 al 8 de junio, en la cual se ejecutaron charlas educativas y talleres en colegios de la provincia de Esmeraldas. La campaña contó con la participación exitosa de 200 alumnos de los colegios UNE (Atacames) y Príncipe de Paz (Tonsupa).
-                  Además, como parte de la campaña y en conmemoración al Día Mundial de los Océanos, se organizó una limpieza ambiental en la playa de Tonsupa, cuyo objetivo era aumentar la conciencia del público general para extraer, prevenir e interceptar la contaminación de plástico en las playas y los océanos, evento en el cual participaron 40 personas voluntarias que lograron recolectar 8 costales de basura de los cuales se extrajeron datos usando una metodología de ciencia ciudadana en presencia de la representante de la Cámara de Turismo de Atacames, y con la participación y el cuidado de la Policía de Atacames. La limpieza ambiental resultó en la recolección de 8 costales de basura en 1 hora: 100 botellas de plástico, 50 botellas de vidrio, 250 sorbetes, 100 vasos, 1000 colillas de cigarrillo, tarrinas y otros. Estas cifras ponen en evidencia la necesidad de promover la educación ambiental con respecto a temas relacionados a los residuos como son la contaminación por plásticos y el reciclaje.
-                  La campaña contó con la colaboración de organizaciones de la sociedad civil (Fundación PlastiCo. Project y Fundación “Llena Una Botella de Amor”), instituciones publicas (Alcaldía del Cantón Atacames, Policía Nacional, CPU Tonsupa, Junta Parroquial de Tonsupa, Departamento de Turismo de Esmeraldas), sector privado (Keyos Bar) y medios de comunicación (Canales locales de radio y televisión).
-                </p>
+
+            <div class="parallax child">
+              <b-container style="padding-top:110px">
+                <b-jumbotron
+                  class="jumbo"
+                  header="Material Educativo"
+                  lead="Videos educativos, Infografías, Hojas de trabajo (PDF)"
+                >
+                  <p>Has Click Aquí Para Descargar</p>
+                  <b-button variant="primary" href="#">
+                    <b-icon-download></b-icon-download>
+                  </b-button>
+                </b-jumbotron>
+              </b-container>
+            </div>
+
+            <div class="pb-5" id="grad2">
+              <div id="myModal" class="modal child">
+                <div class="modalContent">
+                  <div class="mySlides activeSlide" style="display: block;">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img
+                      src="@/assets//img/ConcepstCharacter.jpg"
+                      alt="Character"
+                      style="width:100%"
+                    />
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+                  </div>
+
+                  <!-- Next/previous controls -->
+                  <a class="prev" @click="plusSlides(-1);">&#10094;</a>
+                  <a class="next" @click="plusSlides(1);">&#10095;</a>
+
+                  <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
+                  <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
+
+                  <div class="animate-wrap is-hidden">
+                    <!-- Caption text -->
+                    <div class="caption-container animate-item FadeInBottom">
+                      <h3 id="caption"></h3>
+                      <p id="description"></p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <Footer></Footer>
           </div>
-        </div>
-        <div class="container-fluid child" id="pregunta3">
-          <h2 class="text-center pt-5 pb-4"></h2>
-
-          <div v-scrollanimation>
-            <div class="fondoTarjeta">
-              <h1 class="pb-3">Campana Virtual 2020 “Del océano a tu casa”</h1>
-              <div class="overflow-auto pr-3" style="height:250px">
-                <p class="description">
-                  Este año, el proyecto se propuso ampliar su impacto y llegar a más colegios y escuelas de la provincia de Esmeraldas. Debido a la situación actual presentada por la emergencia sanitaria a causa del COVID-19, el proyecto ha propuesto realizar la campaña planificada de modo virtual.
-                  La campaña consiste en la difusión de material educativo; videos, hojas de trabajo e infografías; sobre temáticas relevantes para el contexto ambiental de la provincia de Esmeraldas, con el fin de informar y fomentar la reflexión sobre el cuidado del medio ambiente de la provincia en estudiantes de colegios (13 a 16 años) y escuelas (6 a 10 años).
-                  El material educativo de la campaña está siendo desarrollado por un equipo de 30 estudiantes de la Universidad San Francisco de Quito, con la supervisión de profesionales expertos en el ámbito ambiental y educativo. Actualmente, más de 1000 horas de trabajo se han invertido para este fin y seguimos contando.
-                  Este año la campaña cuenta con el apoyo de Fundación PlastiCo. Project, DAAD, Ministerio de Ambiente y Agua – Dirección Esmeraldas, ZMW – Leigniz Zentrum fùr Marine Tropenforschung y GIZ Ecuador.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="parallax child">
-        <b-container style="padding-top:110px">
-          <b-jumbotron class="jumbo" header="Material Educativo" lead="Videos educativos, Infografías, Hojas de trabajo (PDF)">
-            <p>Has Click Aquí Para Descargar</p>
-            <b-button variant="primary" href="#"><b-icon-download></b-icon-download></b-button>
-          </b-jumbotron>
-        </b-container>
-      </div>
-
-      <div class="pb-5" id="grad2">
-        <div id="myModal" class="modal child">
-          <div class="modalContent">
-            <div class="mySlides activeSlide" style="display: block;">
-              <div class="numbertext">1 / 6</div>
-              <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">2 / 6</div>
-              <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">3 / 6</div>
-              <img src="@/assets//img/ConcepstCharacter.jpg" alt="Character" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">4 / 6</div>
-              <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">5 / 6</div>
-              <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">6 / 6</div>
-              <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" @click="plusSlides(-1);">&#10094;</a>
-            <a class="next" @click="plusSlides(1);">&#10095;</a>
-
-            <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
-            <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
-
-            <div class="animate-wrap is-hidden">
-              <!-- Caption text -->
-              <div class="caption-container animate-item FadeInBottom">
-                <h3 id="caption"></h3>
-                <p id="description"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <Footer></Footer>
-    </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -297,7 +314,6 @@ export default {
   max-height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
-  border: 1px solid gray;
   scroll-snap-type: y mandatory;
   &.proximity {
     scroll-snap-type: y proximity;
@@ -306,7 +322,6 @@ export default {
 
 .child {
   scroll-snap-align: start;
-  height:100vh;
 }
 
 #grad1 {
