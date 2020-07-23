@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <!--
+    <div class="home">
+      <!--
       <div id="titulo" class="heading text-center">
       <h1>Regeneración de Ecosistemas</h1>
     </div>
@@ -19,18 +19,18 @@
         </b-col>
       </b-row>
     </div>
-    -->
-    <kinesis-container class="contenedor">
-      <kinesis-element type="depth" :strength="10">
-        <p class="tituloLanding">REGENERACION</p>
-      </kinesis-element>
-      <kinesis-element style="margin:-20px" type="depth" :strength="2">
-        <p class="tituloLanding">DE</p>
-      </kinesis-element>
-      <kinesis-element type="depth_inv" :strength="10">
-        <p class="tituloLanding">ECOSISTEMAS</p>
-      </kinesis-element>
-    </kinesis-container>
+      -->
+      <kinesis-container class="contenedor">
+        <kinesis-element type="depth" :strength="10">
+          <p class="tituloLanding">REGENERACION</p>
+        </kinesis-element>
+        <kinesis-element style="margin:-20px" type="depth" :strength="2">
+          <p class="tituloLanding">DE</p>
+        </kinesis-element>
+        <kinesis-element type="depth_inv" :strength="10">
+          <p class="tituloLanding">ECOSISTEMAS</p>
+        </kinesis-element>
+      </kinesis-container>
 
 
     <kinesis-container>
@@ -116,7 +116,7 @@ export default {
 .respuestas {
   color: #9b6500;
 }
-.pregunta{
+.pregunta {
   color: #9b6500;
   font-size: 150%;
   margin-bottom: 3%;
@@ -127,7 +127,7 @@ export default {
   height: 15%;
 }
 
-.row{
+.row {
   width: 100%;
 }
 

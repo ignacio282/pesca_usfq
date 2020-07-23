@@ -327,8 +327,9 @@ export default {
   padding-top: 80px;
   color: #03141d;
 }
+
 #video {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-left: 100px;
   padding-right: 100px;
 }
