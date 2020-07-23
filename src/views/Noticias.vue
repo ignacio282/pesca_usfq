@@ -93,6 +93,7 @@
         </b-col>
       </b-row>
     </b-container>
+    <Footer/>
   </div>
 </template>
 

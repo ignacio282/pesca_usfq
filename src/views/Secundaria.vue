@@ -6,11 +6,16 @@
         <div class="child">
           <div class="container" id="video">
             <br />
-            <img src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png" width="90%" />
+            <img
+              v-if="educacion"
+              src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png"
+              width="90%"
+            />
+            <img v-if="plastico" src="../assets/img/ConcepstCharacter.jpg" width="90%" />
           </div>
         </div>
 
-        <div class="container-fluid child" id="pregunta1">
+        <div v-if="educacion" class="container-fluid child" id="pregunta1">
           <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
             <div class="fondoTarjeta">
@@ -25,7 +30,21 @@
             </div>
           </div>
         </div>
-        <div class="container-fluid child" id="pregunta2">
+        <div v-if="plastico" class="container-fluid child" id="pregunta1">
+          <h2 class="text-center pt-5 pb-4"></h2>
+          <div v-scrollanimation>
+            <div class="fondoTarjeta">
+              <h1 class="pb-3">Introducción al problema</h1>
+              <div class="overflow-auto pr-3" style="height:300px">
+                <p class="description">
+                  En el 2018 la ONU declaró la contaminación por plásticos como uno de los problemas ambientales más graves que enfrentamos en la actualidad.
+                  El Ecuador no está obsoleto de los efectos de contaminación por plásticos, y todas las ciudades del país se han visto afectadas por la excesiva producción de basura y la ineficiente gestión de residuos, con tan solo el 30% de familias separando residuos en la base, dentro del país tenemos una crisis sanitaria.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="educacion" class="container-fluid child" id="pregunta2">
           <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
             <div class="fondoTarjeta">
@@ -40,7 +59,23 @@
             </div>
           </div>
         </div>
-        <div class="container-fluid child" id="pregunta3">
+        <div v-if="plastico" class="container-fluid child" id="pregunta1">
+          <h2 class="text-center pt-5 pb-4"></h2>
+          <div v-scrollanimation>
+            <div class="fondoTarjeta">
+              <h1 class="pb-3">¿De dónde viene y que es el plástico?</h1>
+              <div class="overflow-auto pr-3" style="height:300px">
+                <p class="description">
+                  Existe un escaso entendimiento del proceso de producción y los tipos de plásticos que existen, datos que son necesarios para comprender que no todos los plásticos se pueden reciclar y la necesidad de cambiar nuestros estilos de vida.
+                  El plástico se empezó a usar en productos desechables a partir de la era industrial, reemplazando materiales como el cobre y el metal. Según la ONU Ambiente (2018) existen 6 polímeros principales utilizados en la producción de plásticos de un solo uso, comúnmente conocidos como plásticos desechables, de los cuales solo uno se recicla con frecuencia, poniendo al resto de plásticos susceptibles a contaminar áreas naturales y urbanas.
+                  Como se menciona en el documental “The Story of Plastic”, el material plástico es contaminante desde el inicio de su cadena productiva, ya que al ser un derivado del petróleo es cómplice de los impactos socioambientales que genera la extracción de combustibles fósiles.
+                  En un país como Ecuador, el cual alberga biodiversidad y ecosistemas únicos en el mundo, comprender la conexión de la contaminación por plásticos con los efectos del cambio climático es fundamental para buscar soluciones a esta problemática.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="educacion" class="container-fluid child" id="pregunta3">
           <h2 class="text-center pt-5 pb-4"></h2>
 
           <div v-scrollanimation>
@@ -57,13 +92,51 @@
             </div>
           </div>
         </div>
+        <div v-if="plastico" class="container-fluid child" id="pregunta1">
+          <h2 class="text-center pt-5 pb-4"></h2>
+          <div v-scrollanimation>
+            <div class="fondoTarjeta">
+              <h1 class="pb-3">¿Cuál es el impacto del plástico en el ambiente?</h1>
+              <div class="overflow-auto pr-3" style="height:300px">
+                <p class="description">
+                  El consumo excesivo de plásticos de un solo uso, de la mano con sistemas de reciclaje ineficientes y una cultura de desecho inadecuada, a resultado en escenarios desastrosos
+                  A nivel mundial se han identificado 5 islas de basura flotando en nuestros mares y estudios han descubierto que el 90% de aves marinas han ingerido residuos plásticos, además se ha determinado que el 94% de agua embotellada que tomamos está contaminada con partículas de micro plásticos. Los efectos de esta problemática
+                  han sido devastadores para el medio ambiente y preocupantes para la vida humana.
+                  El informe 2019 de la organización Ecuatoriana Mingas Por El Mar, muestra que de los 9568 kg de basura que recolectaron de playas y ríos ese año, solo el 25% pertenecían a residuos reciclables. Además, da a conocer que los productos de plásticos que más se encuentran contaminando la zona costera ecuatoriana son: tapas de botellas, vasos, cubiertos, sorbetes, envoltorios y fundas plásticas. Esta información empata con las estadísticas recolectadas por la Fundación PlastiCo. Project sobre los tipos de plásticos que se encuentran contaminando ciudades en la sierra y oriente ecuatoriano.
+                  El impacto negativo de la contaminación por plásticos trasciende el ámbito ambiental al social. La contaminación por basura afecta a los sectores más vulnerables según el estudio de Soliz (AÑO), refiriéndose a los recicladores de base los cuales son los principales gestores de nuestros residuos en el país.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="plastico" class="container-fluid child" id="pregunta1">
+          <h2 class="text-center pt-5 pb-4"></h2>
+          <div v-scrollanimation>
+            <div class="fondoTarjeta">
+              <h1 class="pb-3">Llamado de atención</h1>
+              <div class="overflow-auto pr-3" style="height:300px">
+                <p class="description">
+                  La problemática de contaminación por plásticos es el resultado de un modelo de producción lineal, en la cual los productos al completar su vida útil se convierten en desechos que comúnmente terminan contaminando el ambiente.
+                  En esta problemática se podría concluir que cada sector cuenta con un poco de responsabilidad. Por una parte, los gobiernos que deben implementar políticas públicas que fomenten sistemas de gestión de residuos en el país. Por otro lado, las empresas que deben buscar alternativas a los empaques de sus productos e impulsar modelos de mercado que generen un menor porcentaje de desechos. Y, por último, la sociedad civil que tiene el poder como consumidor de decidir qué alternativa adquiere e impulsa en cada una de sus compras.
+                  Es importante saber que cada persona puede iniciar un cambio de paradigma de consumo y desecho desde sus casas y su día a día. A través de actividades simples como la separación de residuos, las limpiezas de playas y la socialización de esta problemática con sus círculos cercanos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="parallax child">
         <b-container style="padding-top:110px">
-          <b-jumbotron class="jumbo" header="Material Educativo" lead="Videos educativos, Infografías, Hojas de trabajo (PDF)">
-            <p>Has Click Aquí Para Descargar</p>
-            <b-button variant="primary" href="#"><b-icon-download></b-icon-download></b-button>
+          <b-jumbotron
+            class="jumbo"
+            header="Material Educativo"
+            lead="Videos educativos, Infografías, Hojas de trabajo (PDF)"
+          >
+            <p>Haz Click Aquí Para Descargar</p>
+            <b-button variant="primary" href="#">
+              <b-icon-download></b-icon-download>
+            </b-button>
           </b-jumbotron>
         </b-container>
       </div>
@@ -127,8 +200,81 @@
 <script>
 export default {
   name: "Secundaria",
-  props: {
-    msg: String
+  watch: {
+    $route(to, from) {
+      if (this.$route.params.nombre === "educacion") {
+        this.educacion = true;
+        this.redes = false;
+        this.plastico = false;
+        this.reciclaje = false;
+        this.pesca = false;
+      }
+      if (this.$route.params.nombre === "redes") {
+        this.educacion = false;
+        this.redes = true;
+        this.plastico = false;
+        this.reciclaje = false;
+        this.pesca = false;
+      }
+      if (this.$route.params.nombre === "plastico") {
+        this.educacion = false;
+        this.redes = false;
+        this.plastico = true;
+        this.reciclaje = false;
+        this.pesca = false;
+      }
+      if (this.$route.params.nombre === "reciclaje") {
+        this.educacion = false;
+        this.redes = false;
+        this.plastico = false;
+        this.reciclaje = true;
+        this.pesca = false;
+      }
+      if (this.$route.params.nombre === "pesca") {
+        this.educacion = false;
+        this.redes = false;
+        this.plastico = false;
+        this.reciclaje = false;
+        this.pesca = true;
+      }
+    }
+  },
+  created: function() {
+    if (this.$route.params.nombre === "educacion") {
+      this.educacion = true;
+      this.redes = false;
+      this.plastico = false;
+      this.reciclaje = false;
+      this.pesca = false;
+    }
+    if (this.$route.params.nombre === "redes") {
+      this.educacion = false;
+      this.redes = true;
+      this.plastico = false;
+      this.reciclaje = false;
+      this.pesca = false;
+    }
+    if (this.$route.params.nombre === "plastico") {
+      this.educacion = false;
+      this.redes = false;
+      this.plastico = true;
+      this.reciclaje = false;
+      this.pesca = false;
+    }
+    if (this.$route.params.nombre === "reciclaje") {
+      this.educacion = false;
+      this.redes = false;
+      this.plastico = false;
+      this.reciclaje = true;
+      this.pesca = false;
+    }
+    if (this.$route.params.nombre === "pesca") {
+      this.educacion = false;
+      this.redes = false;
+      this.plastico = false;
+      this.reciclaje = false;
+      this.pesca = true;
+    }
   },
   mounted: function() {
     document
@@ -150,7 +296,12 @@ export default {
         "Descripción Diver",
         "Descripción barco",
         "Descripción Diver"
-      ]
+      ],
+      educacion: false,
+      redes: false,
+      plastico: false,
+      reciclaje: false,
+      pesca: false
     };
   },
   methods: {
@@ -306,7 +457,7 @@ export default {
 
 .child {
   scroll-snap-align: start;
-  height:100vh;
+  height: 100vh;
 }
 
 #grad1 {
