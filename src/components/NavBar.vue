@@ -11,19 +11,19 @@
             <router-link to="/menu" class="colorGray">MENÚ</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria">EDUCACIÓN AMBIENTAL</router-link>
+            <router-link class="colorGray" to="/secundaria/educacion">EDUCACIÓN AMBIENTAL</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria">REDES FANTASMA</router-link>
+            <router-link class="colorGray" to="/secundaria/redes">REDES FANTASMA</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria">PLÁSTICOS</router-link>
+            <router-link class="colorGray" to="/secundaria/plastico">PLÁSTICOS</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria">RECICLAJE</router-link>
+            <router-link class="colorGray" to="/secundaria/reciclaje">RECICLAJE</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria">PESCA</router-link>
+            <router-link class="colorGray" to="/secundaria/pesca">PESCA</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
             <router-link class="colorGray" to="/media">MEDIA</router-link>
@@ -36,13 +36,13 @@
           <router-link to="/about" class="colorWhite">About</router-link>
         </b-nav-item>
         <b-nav-item class="text-uppercase link" text="Recursos" right>
-          <router-link  to="/Recursos" class="colorWhite">Recursos</router-link>
+          <router-link  to="/recursos" class="colorWhite">Recursos</router-link>
         </b-nav-item>
         <b-nav-item class="text-uppercase link" text="Noticias" right>
           <router-link to="/noticias" class="colorWhite">Noticias</router-link>
         </b-nav-item>
         <b-nav-item class="text-uppercase link" text="Partners" right>
-          <router-link to="/Partners" class="colorWhite">Partners</router-link>
+          <router-link to="/partners" class="colorWhite">Partners</router-link>
         </b-nav-item>
       </b-navbar-nav>
     </b-collapse>

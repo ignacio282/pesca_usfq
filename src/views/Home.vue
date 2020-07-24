@@ -114,10 +114,10 @@ export default {
   font-weight: 900;
 }
 .respuestas {
-  color: #9b6500;
+  color: #1381B5;
 }
 .pregunta {
-  color: #9b6500;
+  color: #1381B5;
   font-size: 150%;
   margin-bottom: 3%;
 }
