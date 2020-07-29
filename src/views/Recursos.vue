@@ -50,5 +50,6 @@ export default {
     padding-top: 7%;
     color: black;
     padding-bottom: 7%;
+    text-transform: uppercase;
 }
 </style>

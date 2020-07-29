@@ -169,79 +169,31 @@
               <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
             </div>
 
-            <div class="parallax child">
-              <b-container style="padding-top:110px">
-                <b-jumbotron
-                  class="jumbo"
-                  header="Material Educativo"
-                  lead="Videos educativos, Infografías, Hojas de trabajo (PDF)"
-                >
-                  <p>Has Click Aquí Para Descargar</p>
-                  <b-button variant="primary" href="#">
-                    <b-icon-download></b-icon-download>
-                  </b-button>
-                </b-jumbotron>
-              </b-container>
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+              <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
             </div>
 
-            <div class="pb-5" id="grad2">
-              <div id="myModal" class="modal child">
-                <div class="modalContent">
-                  <div class="mySlides activeSlide" style="display: block;">
-                    <div class="numbertext">1 / 6</div>
-                    <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-                  </div>
+            <!-- Next/previous controls -->
+            <a class="prev" @click="plusSlides(-1);">&#10094;</a>
+            <a class="next" @click="plusSlides(1);">&#10095;</a>
 
-                  <div class="mySlides">
-                    <div class="numbertext">2 / 6</div>
-                    <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
-                  </div>
+            <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
+            <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
 
-                  <div class="mySlides">
-                    <div class="numbertext">3 / 6</div>
-                    <img
-                      src="@/assets//img/ConcepstCharacter.jpg"
-                      alt="Character"
-                      style="width:100%"
-                    />
-                  </div>
-
-                  <div class="mySlides">
-                    <div class="numbertext">4 / 6</div>
-                    <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-                  </div>
-
-                  <div class="mySlides">
-                    <div class="numbertext">5 / 6</div>
-                    <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
-                  </div>
-
-                  <div class="mySlides">
-                    <div class="numbertext">6 / 6</div>
-                    <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
-                  </div>
-
-                  <!-- Next/previous controls -->
-                  <a class="prev" @click="plusSlides(-1);">&#10094;</a>
-                  <a class="next" @click="plusSlides(1);">&#10095;</a>
-
-                  <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
-                  <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
-
-                  <div class="animate-wrap is-hidden">
-                    <!-- Caption text -->
-                    <div class="caption-container animate-item FadeInBottom">
-                      <h3 id="caption"></h3>
-                      <p id="description"></p>
-                    </div>
-                  </div>
-                </div>
+            <div class="animate-wrap is-hidden">
+              <!-- Caption text -->
+              <div class="caption-container animate-item FadeInBottom">
+                <h3 id="caption"></h3>
+                <p id="description"></p>
               </div>
             </div>
-
-            <Footer></Footer>
           </div>
+        </div>
+      </div>
 
+      <Footer></Footer>
+    </div>
   </div>
 </template>
 
@@ -460,16 +412,17 @@ export default {
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 10%;
-
-  background-color: rgba(255, 255, 255, 0.932);
+  background-color: rgba(0, 0, 0, 0.774);
   border-radius: 10px 10px 10px 10px;
   box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
 }
 .enter {
   -webkit-animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
 @-webkit-keyframes enter {
   0% {
     -webkit-transform: translateY(0) translateX(0);
@@ -490,34 +443,30 @@ export default {
     transform: translateY(-480px) translateX(-400px);
   }
 }
-
 .snapSection {
   flex-basis: 50%;
   max-height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  border: 1px solid gray;
   scroll-snap-type: y mandatory;
   &.proximity {
     scroll-snap-type: y proximity;
   }
 }
-
 .child {
   scroll-snap-align: start;
   height: 100vh;
 }
-
 #grad1 {
   background-image: linear-gradient(white, #062d40);
 }
 #grad2 {
   background-image: linear-gradient(#062d40, #010c13);
 }
-
 #grad3 {
   background: linear-gradient(white, #062d40);
 }
-
 #boton {
   background-color: rgba(255, 255, 255, 0);
 }
@@ -525,7 +474,6 @@ export default {
   padding-top: 80px;
   color: #03141d;
 }
-
 #video {
   padding-top: 100px;
   padding-left: 100px;
@@ -534,18 +482,17 @@ export default {
 .content {
   color: white;
 }
-
 .snapSection::-webkit-scrollbar {
   display: none;
 }
-
 .description {
   column-count: 2;
   column-gap: 40px;
   text-align: justify;
   text-justify: inter-word;
-  color: black;
+  color: white;
   font-weight: 300;
+  text-transform: none;
 }
 #logos {
   padding-top: 45px;
@@ -567,29 +514,23 @@ export default {
     rgba(184, 253, 49, 1) 89%
   );
 }
-
 .parallax {
   /* The image used */
   background-image: url("https://imgur.com/nLylsqL.jpg");
-
   /* Set a specific height */
   height: 750px;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #pregunta1 {
   /* The image used */
   background-image: url("../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png");
   color: Black;
-
   /* Set a specific height */
   height: 100vh;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -602,7 +543,6 @@ export default {
   color: Black;
   /* Set a specific height */
   height: 100vh;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -615,14 +555,12 @@ export default {
   color: Black;
   /* Set a specific height */
   height: 100vh;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .jumbo {
   background-color: rgba(0, 0, 0, 0.37);
   padding-top: 120px;
@@ -635,7 +573,6 @@ export default {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
 .modal {
   display: block;
   position: relative;
@@ -648,11 +585,9 @@ export default {
   overflow: auto;
   background-color: black;
 }
-
 .modal::-webkit-scrollbar {
   display: none;
 }
-
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -661,14 +596,12 @@ export default {
   width: 90%;
   max-width: 1200px;
 }
-
 .mySlides {
   display: none;
   padding: 15%;
   padding-top: 0;
   padding-bottom: 0;
 }
-
 /* Next & previous buttons */
 .next {
   cursor: pointer;
@@ -686,7 +619,6 @@ export default {
   user-select: none;
   -webkit-user-select: none;
 }
-
 .prev {
   cursor: pointer;
   position: absolute;
@@ -703,13 +635,11 @@ export default {
   -webkit-user-select: none;
   left: 7%;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -719,7 +649,6 @@ export default {
   top: 75%;
   left: 7%;
 }
-
 /* Caption text */
 .caption-container {
   text-align: center;
@@ -728,34 +657,28 @@ export default {
   color: white;
   font-size: 20px;
 }
-
 .hover-shadow {
   transition: 0.3s;
 }
-
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 #flecha {
   width: 2%;
   height: 2%;
   margin-top: 2%;
 }
-
 #cerrarInfo {
   width: 2%;
   height: 2%;
   margin-top: 1%;
   display: none;
 }
-
 .FadeInBottom {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.25, 0, 0.15, 1);
   animation-name: fadeInBottom;
 }
-
 @keyframes fadeInBottom {
   0% {
     opacity: 0;
@@ -768,13 +691,11 @@ export default {
     opacity: 1;
   }
 }
-
 .FadeInUp {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.25, 0, 0.15, 1);
   animation-name: fadeInUp;
 }
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -787,7 +708,6 @@ export default {
     opacity: 1;
   }
 }
-
 .animate-wrap {
   position: relative;
   top: 50%;
@@ -801,7 +721,6 @@ export default {
   justify-content: center;
   margin-top: 4%;
 }
-
 .animate-item {
   background: #222;
   padding: 1em 2em;
@@ -809,17 +728,14 @@ export default {
   width: 800px;
   height: 300px;
 }
-
 .is-hidden {
   display: none;
 }
-
 .FadeOutUp {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.25, 0, 0.15, 1);
   animation-name: fadeOutUp;
 }
-
 @keyframes fadeOutUp {
   0% {
     opacity: 1;
@@ -832,13 +748,11 @@ export default {
     opacity: 0;
   }
 }
-
 .FadeOutBottom {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.25, 0, 0.15, 1);
   animation-name: fadeOutBottom;
 }
-
 @keyframes fadeOutBottom {
   0% {
     opacity: 1;
@@ -864,7 +778,6 @@ export default {
     width: 500px;
     height: 500px;
     margin-left: 60%;
-
     margin-top: 37%;
     background-color: rgba(255, 255, 255, 0.678);
     border-radius: 10px 10px 10px 10px;

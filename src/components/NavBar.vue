@@ -64,7 +64,7 @@ export default {
   background-color: #020d1400 !important;
   height: 15%;
   color: black !important;
-  font-weight: 500;
+  font-weight: 300;
   padding-right: 12%;
   padding-left: 5%;
 
