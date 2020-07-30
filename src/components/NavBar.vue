@@ -41,9 +41,19 @@
         <b-nav-item class="text-uppercase link" text="Noticias" right>
           <router-link to="/noticias" class="colorWhite">Noticias</router-link>
         </b-nav-item>
-        <b-nav-item class="text-uppercase link" text="Partners" right>
-          <router-link to="/partners" class="colorWhite">Partners</router-link>
-        </b-nav-item>
+        <b-nav-item-dropdown   class="text-uppercase link colorWhite" text="Partners" right >
+
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/">Partner 1</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/">Partner 2</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/">Partner 3</router-link>
+          </b-dropdown-item>
+
+        </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

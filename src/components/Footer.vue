@@ -19,15 +19,7 @@
           <img class="imagenes" id="salud" src="../assets/img/LogoSalud.png" />
         </b-col>
       </b-row>
-      <b-row align-h="center" id="texto">
-        <b-col cols="12" md="4" class="pb-4">
-          <a
-            href="http://www.usfq.edu.ec/programas_academicos/colegios/cocoa/Paginas/default.aspx"
-          >COCOA USFQ</a>
-          <p>© Todos los derechos reservados - 2020</p>
-          <a href="http://www.usfq.edu.ec/Paginas/Inicio.aspx">USFQ - ECUADOR</a>
-        </b-col>
-      </b-row>
+
     </div>
   </section>
 </template>
