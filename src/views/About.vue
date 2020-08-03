@@ -4,14 +4,13 @@
     <b-container fluid class="contenedorAbout">
       <b-row>
         <b-col lg="6" sm="12"  id="colText">
-          <h1 class="font-weight-bold mb-5">El Equipo Detras de Regeneracion de Ecosistemas.</h1>
-          <h3 class="mb-5">Quienes somos?</h3>
+          <h1 class="font-weight-light mb-3">Quienes somos?</h1>
           <b-row>
             <b-col cols="3">
               <b-avatar class="mx-3 my-4" size="6rem"></b-avatar>
             </b-col>
-            <b-col cols="3" class="py-3" >
-              <h4>Nombre</h4>
+            <b-col cols="3" class="py-3 font-weight-light" >
+              <h5>Nombre</h5>
               <p>Este seria un lugar para poner una pequena info</p>
             </b-col>
             <b-col cols="3">
@@ -35,6 +34,22 @@
               <h4>Nombre</h4>
               <p>Este seria un lugar para poner una pequena info</p>
             </b-col>
+            <b-col cols="3">
+              <b-avatar class="mx-3 my-4" size="6rem"></b-avatar>
+            </b-col>
+            <b-col cols="3" class="py-3">
+              <h4>Nombre</h4>
+              <p>Este seria un lugar para poner una pequena info</p>
+            </b-col>
+            <b-col cols="3">
+              <b-avatar class="mx-3 my-4" size="6rem"></b-avatar>
+            </b-col>
+            <b-col cols="3" class="py-3">
+              <h4>Nombre</h4>
+              <p>Este seria un lugar para poner una pequena info</p>
+            </b-col>
+            
+            
 
           </b-row>
         </b-col>

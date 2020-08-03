@@ -14,6 +14,7 @@
   text-align: center;
   color: white;
   height: 100%;
+  font-weight: 300;
 }
 
 .fade-home-enter-active,

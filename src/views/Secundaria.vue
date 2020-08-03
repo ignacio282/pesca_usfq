@@ -19,7 +19,7 @@
           <h2 class="text-center pt-5 pb-4"></h2>
           <div v-scrollanimation>
             <div class="fondoTarjeta">
-              <h1 class="pb-3">Antecedentes</h1>
+              <h4 class="pb-4">Antecedentes</h4>
               <div class="overflow-auto pr-3" style="height:300px">
                 <p class="description">
                   El proyecto de vinculación “Restauración de Ecosistemas” es uno de los proyectos emblemáticos de la Universidad San Francisco de Quito. Este proyecto es una iniciativa de tres colegios de la Universidad San Francisco de Quito en convenio con varias organizaciones de la sociedad civil. Se enfoca en aportar a la conservación del ecosistema marino en la provincia de Esmeraldas desde varios ejes de acción como son: la investigación, comunicación y educación ambiental.
@@ -417,7 +417,7 @@ export default {
   padding-right: 5%;
   padding-bottom: 10%;
   background-color: rgba(0, 0, 0, 0.774);
-  border-radius: 10px 10px 10px 10px;
+
   box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
   color: white;
   text-align: left;
