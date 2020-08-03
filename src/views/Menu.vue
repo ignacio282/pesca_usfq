@@ -2,7 +2,7 @@
   <div class="menu">
     <video-background
       id="main"
-      :src="require('@/assets/video/VideoPrueba.mp4')"
+      :src="require('@/assets/video/Principal03.mp4')"
       style="height: 100%;"
       :poster="require('@/assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png')"
       :loop="false"
@@ -30,7 +30,7 @@ export default {
       setTimeout(function() {
         document.getElementById("menu").style.visibility = "visible";
         document.getElementById("menu").style.opacity = 1;
-      }, 3500);
+      }, 18000);
     }
   }
 };
