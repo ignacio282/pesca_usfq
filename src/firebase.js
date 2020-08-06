@@ -17,9 +17,15 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 
 const educacionTexts = db.collection('educacionTexts');
+const plasticosTexts = db.collection('plasticosTexts');
+const reciclajeTexts = db.collection('reciclajeTexts');
+const pescaTexts = db.collection('pescaTexts');
 
 export {
   db,
   educacionTexts,
+  plasticosTexts,
+  reciclajeTexts,
+  pescaTexts,
   storage
 }
