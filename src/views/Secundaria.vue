@@ -25,7 +25,7 @@
                 <h2 class="text-center pt-5 pb-4"></h2>
                 <div v-scrollanimation>
                   <div class="fondoTarjeta">
-                    <h1 class="pb-3">{{educacionText.pregunta}}</h1>
+                    <h4 class="pb-3">{{educacionText.pregunta}}</h4>
                     <div class="overflow-auto pr-3" style="height:300px">
                       <p class="description">{{educacionText.respuesta}}</p>
                     </div>
