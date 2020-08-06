@@ -12,3 +12,14 @@ const firebaseConfig = {
   };
 
 firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+const storage = firebase.storage();
+
+const educacionTexts = db.collection('educacionTexts');
+
+export {
+  db,
+  educacionTexts,
+  storage
+}

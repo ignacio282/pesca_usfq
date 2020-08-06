@@ -1,7 +1,7 @@
 <template>
   <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
-    <b-navbar-brand class="pt-4" style="text-align: left; line-height: 18px;">
-      <router-link to="/menu"  class="text-uppercase colorWhite">Regeneracion <br> de <br> Ecosistemas</router-link>
+    <b-navbar-brand style="line-height: 18px; text-align: left;">
+      <router-link to="/menu" class="colorWhite">Regen<br>de<br>Eco</router-link>
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>

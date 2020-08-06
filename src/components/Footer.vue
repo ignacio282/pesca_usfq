@@ -10,13 +10,14 @@
       </b-row>
       <b-row id="logos" align-h="center">
         <b-col cols="12" md="12" class="imagen">
+          <img class="imagenes" src="../assets/img/logoPlastico3.png" />
           <img class="imagenes" src="../assets/img/DAAD_Logo.svg" />
           <img class="imagenes" src="../assets/img/ZMT_Logo_SMALL_cmyk_ENG.png" />
-          <img class="imagenes" src="../assets/img/LogoPlastiCo.png" />
-          <img class="imagenes" id="community" src="../assets/img/LogoCommunity.png" />
+          <img class="imagenes" id="community" src="../assets/img/logoCommunityESP.png" />
           <img class="imagenes" src="../assets/img/LogoCocoa.png" />
           <img class="imagenes" src="../assets/img/LogoBio.png" />
           <img class="imagenes" id="salud" src="../assets/img/LogoSalud.png" />
+          <img class="imagenes" id="community" src="../assets/img/logoUSFQ2.png" />
         </b-col>
       </b-row>
 
@@ -91,5 +92,9 @@ export default {
 .sociales{
   margin: 3%;
   font-size: 28px;
+}
+
+#community{
+  width: 15%;
 }
 </style>
