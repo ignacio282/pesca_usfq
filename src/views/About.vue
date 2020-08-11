@@ -4,36 +4,18 @@
     <b-container fluid class="contenedorAbout">
       <b-row id="rows">
         <b-col lg="6" sm="12" id="colText">
-          <h1 class="font-weight-bold mb-5">El Equipo Detras de Regeneracion de Ecosistemas.</h1>
-          <h3 class="mb-5">Quienes somos?</h3>
-          <b-row>
-            <b-col cols="3">
-              <b-avatar class="mx-3 my-4" size="6rem"></b-avatar>
-            </b-col>
-            <b-col cols="3" class="py-3">
-              <h4>Nombre</h4>
-              <p>Este seria un lugar para poner una pequena info</p>
-            </b-col>
-            <b-col cols="3">
-              <b-avatar class="mx-3 my-4" size="6rem"></b-avatar>
-            </b-col>
-            <b-col cols="3" class="py-3">
-              <h4>Nombre</h4>
-              <p>Este seria un lugar para poner una pequena info</p>
-            </b-col>
-            <b-col cols="3">
-              <b-avatar class="mx-3 my-4" size="6rem"></b-avatar>
-            </b-col>
-            <b-col cols="3" class="py-3">
-              <h4>Nombre</h4>
-              <p>Este seria un lugar para poner una pequena info</p>
-            </b-col>
-            <b-col cols="3">
-              <b-avatar class="mx-3 my-4" size="6rem"></b-avatar>
-            </b-col>
-            <b-col cols="3" class="py-3">
-              <h4>Nombre</h4>
-              <p>Este seria un lugar para poner una pequena info</p>
+          <h3 class="mb-5">¿Quiénes somos?</h3>
+          <b-row v-for="lideres in lideresPares" :key="lideres.id">
+            <b-col v-for="lider in lideres" :key="lider.id" cols="3" md="6">
+              <b-row>
+                <b-col cols="3" md="6" class="py-3">
+                  <b-avatar class="mx-4" size="6rem"></b-avatar>
+                </b-col>
+                <b-col cols="3" md="6" class="py-4">
+                  <h5>{{lider.nombre}}</h5>
+                  <p>{{lider.info}}</p>
+                </b-col>
+              </b-row>
             </b-col>
           </b-row>
         </b-col>
@@ -78,83 +60,96 @@
           </b-row>
         </b-col>
       </b-row>
-      <h6>Coordinación - Área Educación Ambiental</h6>
-      <p>
-        Pieter van‘t Hof
-        <br />Andrea Lema
-        <br />Giovanna Jácome Ruiz
-        <br />
-      </p>
-      <h6>Editor Principal</h6>
-      <p>Paúl Rosero</p>
-      <h6>Proyecto Redes Fantasmas</h6>
-      <p>
-        Judith Denkinger
-        <br />Javier Oña
-      </p>
-      <h6>Actores Creativos</h6>
-      <p>
-        Hector Garcia
-        <br />Samantha Jarrín
-        <br />Nicole Palacios
-        <br />Carly Rojas
-        <br />Ibón Jácome Ruiz
-        <br />Samay Lima Vega
-        <br />
-      </p>
-      <h6>Diseñadores Gráficos</h6>
-      <p>
-        Daniela Carrión
-        <br />Jennifer Freire C.
-        <br />Michelle Molina
-        <br />Sarah Viver
-        <br />
-      </p>
-      <h6>Diseñador Logo</h6>
-      <p>xxxxxxxxxxxxxx</p>
-      <h6>Edición y creación de contenido multimedia</h6>
-      <p>
-        Juan José Alomía
-        <br />Carlos Chérrez Montenegro
-        <br />Alissen Haro
-        <br />Alex Lalama Paredes
-        <br />Favio Rivera
-        <br />Matías Yépez Gaete
-        <br />
-      </p>
-      <h6>Escritores creativos</h6>
-      <p>
-        Rossana Carpio
-        <br />Valeria Grieco
-        <br />Camila Miranda
-        <br />Vanessa Naula
-        <br />Leo Santos
-        <br />
-      </p>
-      <h6>Investigadores / Fact checkers</h6>
-      <p>
-        Lía Altamirano Ponce
-        <br />Karla Barragan
-        <br />Mateo Carvajal
-        <br />Paola Espinosa-Torres
-        <br />Kerly R. Galeth-Moreira.
-        <br />David Martínez
-        <br />Juan Sebastian Martinez Gomez
-        <br />Andrés Moreira-Mendieta
-        <br />Marlon Josué Romo Gualinga
-        Isabela Saud Miño<br>
-        Ana Velástegui
-      </p>
+      <div id="nombres" v-if="creditos.length">
+        <div v-for="credito in creditos" :key="credito.id">
+          <h6 v-if="credito.id === 'educacion'">Coordinación - Área Educación Ambiental</h6>
+          <h6 v-if="credito.id === 'editor'">Editor Principal</h6>
+          <h6 v-if="credito.id === 'redes'">Proyecto Redes Fantasmas</h6>
+          <h6 v-if="credito.id === 'actores'">Actores Creativos</h6>
+          <h6 v-if="credito.id === 'grafico'">Diseñadores Gráficos</h6>
+          <h6 v-if="credito.id === 'logo'">Diseñador Logo</h6>
+          <h6 v-if="credito.id === 'multimedia'">Edición y Creación de Contenido Mltimedia</h6>
+          <h6 v-if="credito.id === 'escritores'">Escritores Creativos</h6>
+          <h6 v-if="credito.id === 'investigadores'">Investigadores / Fact Checkers</h6>
+          <div v-for="(nombre, campo) in credito" :key="nombre.id">
+            <p v-if="campo !== 'id'">{{nombre}}</p>
+          </div>
+        </div>
+      </div>
     </b-container>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import { creditos } from "../firebase";
+import { lideres } from "../firebase";
+import { chunk } from "lodash";
 export default {
   name: "About",
+  mounted: function() {
+    lideres.onSnapshot(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        let text = doc.data();
+        text.id = doc.id;
+        this.lideres.push(text);
+      });
+    });
+    creditos.doc("educacion").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("editor").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("redes").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("actores").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("grafico").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("logo").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("multimedia").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("escritores").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("investigadores").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+  },
   data() {
-    return {};
+    return {
+      creditos: [],
+      lideres: []
+    };
+  },
+  computed: {
+    lideresPares() {
+      return _.chunk(this.lideres, 2);
+    }
   }
 };
 </script>
@@ -219,6 +214,18 @@ export default {
 
 #rows {
   margin-bottom: 3%;
+}
+
+#nombres {
+  margin-bottom: 5%;
+}
+
+#nombres h6 {
+  margin-top: 2%;
+}
+
+#nombres p {
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 600px) {
