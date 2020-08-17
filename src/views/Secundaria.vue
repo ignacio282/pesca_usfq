@@ -6,14 +6,34 @@
         <div class="child">
           <div class="container" id="video">
             <br />
-            <img
-              v-if="educacion"
-              src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png"
-              width="90%"
-            />
-            <img v-if="redes" src="../assets/img/ConcepstCharacter.jpg" width="90%" />
-            <img v-if="plastico" src="../assets/img/ConcepstBarco.jpg" width="90%" />
-            <img v-if="reciclaje" src="../assets/img/ConcepstCharacter.jpg" width="90%" />
+            <b-embed
+            v-if="educacion"
+              type="iframe"
+              aspect="16by9"
+              src="../assets/video/1 Educacion_Ambiental.mp4"
+              allowfullscreen
+            ></b-embed>
+            <b-embed
+            v-if="redes"
+              type="iframe"
+              aspect="16by9"
+              src="../assets/video/2 Redes_Fantasma.mp4"
+              allowfullscreen
+            ></b-embed>
+            <b-embed
+            v-if="plastico"
+              type="iframe"
+              aspect="16by9"
+              src="../assets/video/4_Plasticos2.mp4"
+              allowfullscreen
+            ></b-embed>
+            <b-embed
+            v-if="reciclaje"
+              type="iframe"
+              aspect="16by9"
+              src="../assets/video/3 Plasticos.mp4"
+              allowfullscreen
+            ></b-embed>
             <img v-if="pesca" src="../assets/img/ConcepstBarco.jpg" width="90%" />
           </div>
         </div>
