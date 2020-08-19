@@ -24,7 +24,7 @@
         <kinesis-element type="depth" :strength="10">
           <p class="tituloLanding">REGENERACION</p>
         </kinesis-element>
-        <kinesis-element style="margin:-20px" type="depth" :strength="2">
+        <kinesis-element style="margin:-20px" type="depth" :strength="8">
           <p class="tituloLanding">DE</p>
         </kinesis-element>
         <kinesis-element type="depth_inv" :strength="10">
@@ -96,10 +96,14 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  height: 100%;
+  height: 100vh;
   color: rgb(0, 0, 0);
   overflow: hidden;
   background-color: rgb(7, 22, 54);
+  background-image: url("../assets/img/PantallaInicio_Draft.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .contenedor {
@@ -111,15 +115,19 @@ export default {
   font-size: 500%;
   padding: 0;
   margin: 0;
-  font-weight: 900;
+  font-weight: 100;
 }
 .respuestas {
-  color: #1381B5;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
 }
 .pregunta {
-  color: #1381B5;
+  color: white;
   font-size: 150%;
   margin-bottom: 3%;
+  text-transform: uppercase;
+  font-weight: 100;
 }
 
 #titulo {
