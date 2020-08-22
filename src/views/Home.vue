@@ -20,7 +20,8 @@
       </b-row>
     </div>
       -->
-      <kinesis-container class="contenedor">
+      <kinesis-container  class="contenedor">
+
         <kinesis-element type="depth" :strength="10">
           <p class="tituloLanding">REGENERACION</p>
         </kinesis-element>

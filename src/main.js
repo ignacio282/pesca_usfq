@@ -2,12 +2,17 @@ import '@babel/polyfill'
 import 'mutationobserver-shim'
 import Vue from "vue";
 import './plugins/bootstrap-vue'
-import './plugins/bootstrap-vue'
+
 import App from "./App.vue";
 import router from "./router";
 
+import AudioVisual from 'vue-audio-visual'
+Vue.use(AudioVisual)
+
 import scrollAnimation from './directives/scrollanimation'
 Vue.directive('scrollanimation',scrollAnimation);
+
+
 
 import 'popper.js';
 import './assets/css/app.scss';
@@ -19,9 +24,11 @@ Vue.use(BootstrapVueIcons);
 
 import VideoBackground from 'vue-responsive-video-background-player'
 
+
 Vue.component('video-background', VideoBackground);
 Vue.component('Footer',require('./components/Footer.vue').default);
 Vue.component('NavBar',require('./components/NavBar.vue').default); 
+
 
 import VueKinesis from 'vue-kinesis'
 
