@@ -68,13 +68,7 @@
           <b-button v-b-modal.modal3>VER</b-button>
           <b-modal id="modal3" hide-footer hide-header size="xl" centered>
             <b-row>
-              
-              <av-waveform
-                audio-src="https://staskobzar.github.io/vue-audio-visual/file_example_MP3_1MG.mp3"
-              ></av-waveform>
-              <av-waveform
-                audio-src="/assets/audio/Soothsayer.mp3"
-              ></av-waveform>
+
             </b-row>
           </b-modal>
         </b-card>
@@ -121,7 +115,18 @@
 
 <script>
 export default {
-  name: "Recursos"
+  name: "Recursos",
+  data() {
+    return {
+      mediaNotSupported: false,
+      showMedia: false
+    };
+  },
+  mounted() {
+    if (!navigator.mediaDevices) {
+      this.mediaNotSupported = true;
+    }
+  }
 };
 </script>
 
