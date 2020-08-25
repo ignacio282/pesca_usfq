@@ -1,3 +1,4 @@
+<script src="https://unpkg.com/wavesurfer.js"></script>
 <template>
   <div id="recursos">
     <NavBar />
@@ -68,7 +69,17 @@
           <b-button v-b-modal.modal3>VER</b-button>
           <b-modal id="modal3" hide-footer hide-header size="xl" centered>
             <b-row>
-
+              <audio controls>
+                <source src="@/assets//audio/Soothsayer.mp3" type="audio/ogg" />
+                <source src="@/assets//audio/Soothsayer.mp3" type="audio/mpeg" />Your browser does not support the audio element.
+              </audio>
+              <kinesis-container @click="playAudio"  audio="@/assets//audio/Soothsayer.mp3" :active='false'>
+                <kinesis-audio audioIndex="10">
+                  <kinesis-element type="translate" :strength="20">
+                    <img src="@/assets//basura/Bottle1basura.png" alt="basura1" />
+                  </kinesis-element>
+                </kinesis-audio>
+              </kinesis-container>
             </b-row>
           </b-modal>
         </b-card>
@@ -113,20 +124,10 @@
   </div>
 </template>
 
+
 <script>
 export default {
-  name: "Recursos",
-  data() {
-    return {
-      mediaNotSupported: false,
-      showMedia: false
-    };
-  },
-  mounted() {
-    if (!navigator.mediaDevices) {
-      this.mediaNotSupported = true;
-    }
-  }
+  name: "Recursos"
 };
 </script>
 

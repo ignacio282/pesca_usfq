@@ -6,8 +6,7 @@ import './plugins/bootstrap-vue'
 import App from "./App.vue";
 import router from "./router";
 
-import AudioVisual from 'vue-audio-visual'
-Vue.use(AudioVisual)
+
 
 import scrollAnimation from './directives/scrollanimation'
 Vue.directive('scrollanimation',scrollAnimation);
