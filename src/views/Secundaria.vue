@@ -425,6 +425,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.fondoTarjeta{
+  ::-webkit-scrollbar {
+  width: 2px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff00; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(153, 152, 152); 
+}
+}
 .before-enter {
   width: 900px;
   height: 440px;
@@ -518,6 +539,7 @@ export default {
   color: white;
   font-weight: 300;
   text-transform: none;
+  padding-right: 1%;
 }
 #logos {
   padding-top: 45px;
