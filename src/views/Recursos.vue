@@ -1,4 +1,3 @@
-<script src="https://unpkg.com/wavesurfer.js"></script>
 <template>
   <div id="recursos">
     <NavBar />
@@ -57,31 +56,12 @@
             </b-row>
           </b-modal>
         </b-card>
-        <b-card
-          title="Audio"
-          img-src="../assets/img/waveformjs.png"
-          img-alt="Card image"
-          img-top
-          img-height="60%"
-          class="mb-2"
-        >
+        <b-card class="mb-2">
+          <div id="waveform" class="py-5"></div>
+          <b-card-title>AUDIO</b-card-title>
           <b-card-text>Audio para descargar</b-card-text>
-          <b-button v-b-modal.modal3>VER</b-button>
-          <b-modal id="modal3" hide-footer hide-header size="xl" centered>
-            <b-row>
-              <audio controls>
-                <source src="@/assets//audio/Soothsayer.mp3" type="audio/ogg" />
-                <source src="@/assets//audio/Soothsayer.mp3" type="audio/mpeg" />Your browser does not support the audio element.
-              </audio>
-              <kinesis-container @click="playAudio"  audio="@/assets//audio/Soothsayer.mp3" :active='false'>
-                <kinesis-audio audioIndex="10">
-                  <kinesis-element type="translate" :strength="20">
-                    <img src="@/assets//basura/Bottle1basura.png" alt="basura1" />
-                  </kinesis-element>
-                </kinesis-audio>
-              </kinesis-container>
-            </b-row>
-          </b-modal>
+          <b-button @click="play" >PLAY</b-button>
+          <b-button>DESCARGAR</b-button>
         </b-card>
       </b-card-group>
       <b-card-group deck>
@@ -126,8 +106,27 @@
 
 
 <script>
+import WaveSurfer from "wavesurfer.js";
 export default {
-  name: "Recursos"
+  name: "Recursos",
+  mounted: function() {
+    this.$nextTick(()=>{
+      this.wavesurfer = WaveSurfer.create({
+          container: "#waveform",
+          waveColor: "#1381B5",
+          progressColor: "#03141d",
+          barHeight: 3
+        });
+        this.wavesurfer.load(
+          "https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3"
+        );
+    })
+  },
+  methods: {
+    play: function(){
+      this.wavesurfer.playPause();
+    }
+  }
 };
 </script>
 
@@ -140,5 +139,9 @@ export default {
 }
 #modal-xl {
   background-color: black;
+}
+
+.btn-secondary{
+  margin: 1%;
 }
 </style>
