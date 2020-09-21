@@ -1,7 +1,7 @@
 <template>
   <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
     <b-navbar-brand style="line-height: 18px; text-align: left;">
-      <router-link to="/menu" class="colorWhite">REGEN<br>DE<br>ECO</router-link>
+      <router-link to="/menu" id="brand" @mouseover.native="expandBrand(true);" @mouseleave.native="expandBrand(false);" class="colorWhite">REGEN<br>DE<br>ECO</router-link>
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
@@ -65,19 +65,27 @@ export default {
   props: {
     msg: String,
   },
+  methods: {
+    expandBrand: function(expand){
+      if(expand){
+        document.getElementById("brand").innerHTML = "REGENERACIÓN<br>DE<br>ECOSISTEMAS";
+      }else{
+        document.getElementById("brand").innerHTML = "REGEN<br>DE<br>ECO";
+      }
+    }
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .navbar {
-  background-color: #020d1400 !important;
   height: 15%;
   color: black !important;
   font-weight: 300;
   padding-right: 12%;
   padding-left: 5%;
-  
+  transition: visibility 0.5s linear, opacity 0.5s linear;
 }
 
 ::v-deep .nav-link{
@@ -92,7 +100,10 @@ export default {
 .link{
 padding-left: 3%;
 padding-right: 3%;
+}
 
+#brand:hover{
+  text-decoration: none;
 }
 
 </style>

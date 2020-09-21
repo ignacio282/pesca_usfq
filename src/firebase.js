@@ -17,6 +17,7 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 
 const educacionTexts = db.collection('educacionTexts');
+const redesTexts = db.collection('redesTexts');
 const plasticosTexts = db.collection('plasticosTexts');
 const reciclajeTexts = db.collection('reciclajeTexts');
 const pescaTexts = db.collection('pescaTexts');
@@ -26,6 +27,7 @@ const lideres = db.collection('lideres');
 export {
   db,
   educacionTexts,
+  redesTexts,
   plasticosTexts,
   reciclajeTexts,
   pescaTexts,

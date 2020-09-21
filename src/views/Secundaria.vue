@@ -7,28 +7,28 @@
           <div class="container" id="video">
             <br />
             <b-embed
-            v-if="educacion"
+              v-if="educacion"
               type="iframe"
               aspect="16by9"
               src="../assets/video/1 Educacion_Ambiental.mp4"
               allowfullscreen
             ></b-embed>
             <b-embed
-            v-if="redes"
+              v-if="redes"
               type="iframe"
               aspect="16by9"
               src="../assets/video/2 Redes_Fantasma.mp4"
               allowfullscreen
             ></b-embed>
             <b-embed
-            v-if="plastico"
+              v-if="plastico"
               type="iframe"
               aspect="16by9"
               src="../assets/video/4_Plasticos2.mp4"
               allowfullscreen
             ></b-embed>
             <b-embed
-            v-if="reciclaje"
+              v-if="reciclaje"
               type="iframe"
               aspect="16by9"
               src="../assets/video/3 Plasticos.mp4"
@@ -49,6 +49,23 @@
                   <h4 class="pb-3">{{educacionText.pregunta}}</h4>
                   <div class="overflow-auto pr-3" style="height:300px">
                     <p class="description">{{educacionText.respuesta}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="redes">
+        <div v-if="redesTexts.length">
+          <div v-for="redesText in redesTexts" :key="redesText.id">
+            <div class="container-fluid child" :id="redesText.id">
+              <h2 class="text-center pt-4 pb-4"></h2>
+              <div v-scrollanimation>
+                <div class="fondoTarjeta">
+                  <h4 class="pb-3">{{redesText.pregunta}}</h4>
+                  <div class="overflow-auto pr-3" style="height:300px">
+                    <p class="description">{{redesText.respuesta}}</p>
                   </div>
                 </div>
               </div>
@@ -131,32 +148,32 @@
           <div class="modalContent">
             <div class="mySlides activeSlide" style="display: block;">
               <div class="numbertext">1 / 6</div>
-              <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+              <img src="@/assets//img/IMG_0168.jpg" alt="Barco" style="width:100%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">2 / 6</div>
-              <img src="@/assets//img/ConcepstBG1.jpg" alt="BG" style="width:100%" />
+              <img src="@/assets//img/IMG_0179.jpg" alt="BG" style="width:100%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">3 / 6</div>
-              <img src="@/assets//img/ConcepstCharacter.jpg" alt="Character" style="width:100%" />
+              <img src="@/assets//img/IMG_0236.jpg" alt="Character" style="width:100%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">4 / 6</div>
-              <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+              <img src="@/assets//img/IMG_0258.jpg" alt="Diver" style="width:100%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">5 / 6</div>
-              <img src="@/assets//img/Concepts_Diver.jpg" alt="Diver" style="width:100%" />
+              <img src="@/assets//img/IMG_0262.jpg" alt="Diver" style="width:100%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">6 / 6</div>
-              <img src="@/assets//img/ConcepstBarco.jpg" alt="Barco" style="width:100%" />
+              <img src="@/assets//img/IMG_0408.jpg" alt="Barco" style="width:100%" />
             </div>
 
             <!-- Next/previous controls -->
@@ -183,6 +200,7 @@
 
 <script>
 import { educacionTexts } from "../firebase";
+import { redesTexts } from "../firebase";
 import { plasticosTexts } from "../firebase";
 import { reciclajeTexts } from "../firebase";
 import { pescaTexts } from "../firebase";
@@ -275,6 +293,13 @@ export default {
         this.educacionTexts.push(text);
       });
     });
+    redesTexts.onSnapshot(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        let text = doc.data();
+        text.id = doc.id;
+        this.redesTexts.push(text);
+      });
+    });
     plasticosTexts.onSnapshot(querySnapshot => {
       querySnapshot.forEach(doc => {
         let text = doc.data();
@@ -299,6 +324,56 @@ export default {
       });
     });
   },
+  updated: function() {
+    if (this.educacion) {
+      document.getElementById("pregunta1").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0377.jpg") + ")";
+      document.getElementById("pregunta2").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0365.jpg") + ")";
+      document.getElementById("pregunta3").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0264.jpg") + ")";
+    };
+    if (this.redes) {
+      document.getElementById("pregunta1").style.backgroundImage =
+        "url(" + require("../assets/img/redesFondos.png") + ")";
+      document.getElementById("pregunta2").style.backgroundImage =
+        "url(" + require("../assets/img/redesAnguila.png") + ")";
+      document.getElementById("pregunta3").style.backgroundImage =
+        "url(" + require("../assets/img/redesTecnica.png") + ")";
+    };
+    if (this.plastico) {
+      document.getElementById("pregunta1").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0377.jpg") + ")";
+      document.getElementById("pregunta2").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0365.jpg") + ")";
+      document.getElementById("pregunta3").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0264.jpg") + ")";
+      document.getElementById("pregunta4").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0236.jpg") + ")";
+    };
+    if (this.reciclaje) {
+      document.getElementById("pregunta1").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0377.jpg") + ")";
+      document.getElementById("pregunta2").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0365.jpg") + ")";
+      document.getElementById("pregunta3").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0264.jpg") + ")";
+      document.getElementById("pregunta4").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0236.jpg") + ")";
+      document.getElementById("pregunta5").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0408.jpg") + ")";
+      document.getElementById("pregunta6").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0258.jpg") + ")";
+    };
+    if (this.pesca) {
+      document.getElementById("pregunta1").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0377.jpg") + ")";
+      document.getElementById("pregunta2").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0365.jpg") + ")";
+      document.getElementById("pregunta3").style.backgroundImage =
+        "url(" + require("../assets/img/IMG_0264.jpg") + ")";
+    };
+  },
   beforeDestroy: function() {
     document
       .getElementsByClassName("snapSection")[0]
@@ -321,6 +396,7 @@ export default {
       reciclaje: false,
       pesca: false,
       educacionTexts: [],
+      redesTexts: [],
       plasticosTexts: [],
       reciclajeTexts: [],
       pescaTexts: []
@@ -406,18 +482,22 @@ export default {
     },
     isElementinViewport: function(el) {
       var rect = el.getBoundingClientRect();
-      if (rect.top <= 754 && rect.left > 0) {
+      if (rect.top <= 754) {
         return true;
       }
     },
     onScroll: function() {
+      document.getElementById("myNav").style.backgroundColor =
+        "rgba(255, 255, 255, 0.5)";
       let visible = this.isElementinViewport(
         document.getElementById("myModal")
       );
       if (visible) {
-        document.getElementById("myNav").style.display = "none";
+        document.getElementById("myNav").style.opacity = 0;
+        document.getElementById("myNav").style.visibility = "hidden";
       } else {
-        document.getElementById("myNav").style.display = "flex";
+        document.getElementById("myNav").style.opacity = 1;
+        document.getElementById("myNav").style.visibility = "visible";
       }
     }
   }
@@ -425,26 +505,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.fondoTarjeta{
+.fondoTarjeta {
   ::-webkit-scrollbar {
-  width: 2px;
-  
-}
+    width: 2px;
+  }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #ffffff00; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(255, 255, 255); 
-}
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(153, 152, 152); 
-}
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(153, 152, 152);
+  }
 }
 .before-enter {
   width: 900px;
@@ -574,7 +653,6 @@ export default {
 }
 #pregunta1 {
   /* The image used */
-  background-image: url("../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png");
   color: Black;
   /* Set a specific height */
   height: 100vh;
@@ -586,7 +664,6 @@ export default {
 }
 #pregunta2 {
   /* The image used */
-  background-image: url("../assets/img/ConcepstCharacter.jpg");
   color: Black;
   /* Set a specific height */
   height: 100vh;
@@ -598,7 +675,6 @@ export default {
 }
 #pregunta3 {
   /* The image used */
-  background-image: url("../assets/img/ConcepstBarco.jpg");
   color: Black;
   /* Set a specific height */
   height: 100vh;
@@ -611,7 +687,6 @@ export default {
 
 #pregunta4 {
   /* The image used */
-  background-image: url("../assets/img/ConcepstBG1.jpg");
   color: Black;
   /* Set a specific height */
   height: 100vh;
@@ -625,7 +700,6 @@ export default {
 
 #pregunta5 {
   /* The image used */
-  background-image: url("../assets/img/Concepts_Diver.jpg");
   color: Black;
   /* Set a specific height */
   height: 100vh;
@@ -639,7 +713,6 @@ export default {
 
 #pregunta6 {
   /* The image used */
-  background-image: url("../assets/img/ConcepstBarco.jpg");
   color: Black;
   /* Set a specific height */
   height: 100vh;
@@ -690,6 +763,10 @@ export default {
   padding: 15%;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.mySlides img {
+  max-height: 80%;
 }
 /* Next & previous buttons */
 .next {
