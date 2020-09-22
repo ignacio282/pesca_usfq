@@ -12,20 +12,23 @@
         <kinesis-container class="contenedor">
         <kinesis-element style="margin-left:-800px; margin-top:-100px"  type="translate" :strength="20">
           <img
+          style="opacity: 0.6"
             src="@/assets//basura/Bottle1basura.png"
             width="5%"
             alt="basura1"
           />
         </kinesis-element>
-        <kinesis-element style="margin-left:-400px"  type="depth" :strength="20">
+        <kinesis-element style="margin-left:-300px"  type="depth" :strength="20">
           <img
+          style="opacity: 0.6"
             src="@/assets//basura/QFcbasura.png"
-            width="4%"
+            width="5%"
             alt="basura1"
           />
         </kinesis-element>
         <kinesis-element style="margin-left:-1000px; margin-top:-70px"  type="depth_inv" :strength="20">
           <img
+          style="opacity: 0.6"
             src="@/assets//basura/Dorobasura.png"
             width="4%"
             alt="basura1"
@@ -33,6 +36,7 @@
         </kinesis-element>
         <kinesis-element style="margin-left:800px; margin-top:-200px "   type="depth" :strength="20">
           <img
+          style="opacity: 0.6"
             src="@/assets//basura/Fundabasura.png"
             width="15%"
             alt="basura1"
@@ -41,27 +45,32 @@
 
         <kinesis-element style="margin-left:300px"  type="depth_inv" :strength="20">
           <img
+          style="opacity: 0.6"
             src="@/assets//basura/Cap1basura.png"
             width="2%"
             alt="basura1"
           />
         </kinesis-element>
         <kinesis-element style="margin-top:-100px" type="depth" :strength="20">
+
           <img
+          style="opacity: 0.7"
             src="@/assets//basura/nacdonalddsbasura.png"
-            width="10%"
+            width="4%"
             alt="basura1"
           />
         </kinesis-element>
         <kinesis-element style="margin-left:-500px" type="depth" :strength="15">
           <img
+          style="opacity: 0.6"
             src="@/assets//basura/Cig3basura.png"
-            width="3%"
+            width="4%"
             alt="basura1"
           />
         </kinesis-element>
         <kinesis-element style="margin-left:200px" type="depth_inv" :strength="20">
           <img
+          style="opacity: 0.6"
             src="@/assets//basura/cOFFEEbasura.png"
             width="4%"
             alt="basura1"
@@ -69,6 +78,7 @@
         </kinesis-element>
         <kinesis-element style="margin-left:-700px"  type="depth_inv" :strength="20">
           <img
+          style="opacity: 0.6"
             src="@/assets//basura/Mask1basura.png"
             width="10%"
             alt="basura1"
@@ -104,6 +114,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+div.overlay {
+    opacity: .9;
+    background-color: black;
+    position: absolute;
+    left: 0; top: 0; height: 256px; width: 256px;
+}
 .menu {
   height: 100%;
 }

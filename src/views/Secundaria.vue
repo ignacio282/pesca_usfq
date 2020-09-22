@@ -126,7 +126,7 @@
       </div>
 
       <div class="parallax child">
-        <b-container style="padding-top:110px">
+        <b-container style="padding-top:200px">
           <b-jumbotron
             class="jumbo"
             header="Material Educativo"
@@ -148,32 +148,32 @@
           <div class="modalContent">
             <div class="mySlides activeSlide" style="display: block;">
               <div class="numbertext">1 / 6</div>
-              <img src="@/assets//img/IMG_0168.jpg" alt="Barco" style="width:100%" />
+              <img src="@/assets//img/IMG_0168.jpg" alt="Barco" style="width:80%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">2 / 6</div>
-              <img src="@/assets//img/IMG_0179.jpg" alt="BG" style="width:100%" />
+              <img src="@/assets//img/IMG_0179.jpg" alt="BG" style="width:80%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">3 / 6</div>
-              <img src="@/assets//img/IMG_0236.jpg" alt="Character" style="width:100%" />
+              <img src="@/assets//img/IMG_0236.jpg" alt="Character" style="width:80%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">4 / 6</div>
-              <img src="@/assets//img/IMG_0258.jpg" alt="Diver" style="width:100%" />
+              <img src="@/assets//img/IMG_0258.jpg" alt="Diver" style="width:80%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">5 / 6</div>
-              <img src="@/assets//img/IMG_0262.jpg" alt="Diver" style="width:100%" />
+              <img src="@/assets//img/IMG_0262.jpg" alt="Diver" style="width:80%" />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">6 / 6</div>
-              <img src="@/assets//img/IMG_0408.jpg" alt="Barco" style="width:100%" />
+              <img src="@/assets//img/IMG_0408.jpg" alt="Barco" style="width:80%" />
             </div>
 
             <!-- Next/previous controls -->
@@ -488,7 +488,7 @@ export default {
     },
     onScroll: function() {
       document.getElementById("myNav").style.backgroundColor =
-        "rgba(255, 255, 255, 0.5)";
+        "rgba(255, 255, 255, 0.25)";
       let visible = this.isElementinViewport(
         document.getElementById("myModal")
       );
@@ -534,7 +534,7 @@ export default {
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.774);
+  background-color: rgba(0, 0, 0, 0.5);
 
   box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
   color: white;
