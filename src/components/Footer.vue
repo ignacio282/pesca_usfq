@@ -17,7 +17,7 @@
           <img class="imagenes" src="../assets/img/LogoCocoa.png" />
           <img class="imagenes" src="../assets/img/LogoBio.png" />
           <img class="imagenes" id="salud" src="../assets/img/LogoSalud.png" />
-          <img class="imagenes" id="community" src="../assets/img/logoUSFQ2.png" />
+          <img class="imagenes" id="community" src="../assets/img/LogoUSFQPlano.png" />
         </b-col>
       </b-row>
 
