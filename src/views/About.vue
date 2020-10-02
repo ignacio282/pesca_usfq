@@ -4,12 +4,12 @@
     <b-container fluid class="contenedorAbout">
       <b-row id="rows">
         <b-col lg="6" sm="12" id="colText">
-          <h3 class="mb-5">¿Quiénes somos?</h3>
+          <h3 class="mb-4 ml-5" style="font-weight:300">El Equipo</h3>
           <b-row v-for="lideres in lideresPares" :key="lideres.id">
             <b-col v-for="lider in lideres" :key="lider.id" cols="3" md="6">
               <b-row>
-                <b-col cols="3" md="6" class="py-3">
-                  <b-avatar class="mx-4" size="6rem"></b-avatar>
+                <b-col cols="3" md="6" class="py-2">
+                  <b-avatar class="mx-5" size="5rem"></b-avatar>
                 </b-col>
                 <b-col cols="3" md="6" class="py-4">
                   <h5>{{lider.nombre}}</h5>
@@ -21,13 +21,14 @@
         </b-col>
 
         <b-col id="containerLogos">
-          <b-row align-h="center">
+          <h3 class="mb-4 tituloPatrocinadores">Patrocinadores y Organizadores</h3>
+          <b-row>
             <b-col cols="12" md="6">
-              <b-img class="mb-5 imagen" src="../assets/img/logoUSFQ.png" alt="Image 1"></b-img>
+              <b-img class="mb-4 imagen" src="../assets/img/logoUSFQ.png" alt="Image 1"></b-img>
             </b-col>
             <b-col cols="12" md="6">
               <b-img
-                class="mb-5 imagen"
+                class="mb-4 imagen"
                 id="community"
                 src="../assets/img/logoCommunityESPcolor.png"
                 alt="Image 1"
@@ -44,17 +45,17 @@
           </b-row>
           <b-row align-h="center">
             <b-col cols="12" md="4">
-              <b-img id="cocoa" src="../assets/img/logoCOCOAdark.png" alt="Image 1"></b-img>
-            </b-col>
-            <b-col cols="12" md="4">
               <b-img class="imagen3" src="../assets/img/logoCocibaDark.png" alt="Image 1"></b-img>
             </b-col>
             <b-col cols="12" md="4">
               <b-img class="imagen3" id="salud" src="../assets/img/logoSaludDark.png" alt="Image 1"></b-img>
             </b-col>
           </b-row>
-          <b-row align-h="center">
-            <b-col cols="12">
+          <b-row align-h="center" class="mt-3">
+            <b-col cols="12" md="4">
+              <b-img id="cocoa" src="../assets/img/logoCOCOAdark.png" alt="Image 1"></b-img>
+            </b-col>
+            <b-col cols="12" md="4">
               <b-img id="plastico" src="../assets/img/LogoPlastiCo.png" alt="Image 1"></b-img>
             </b-col>
           </b-row>
@@ -62,13 +63,20 @@
       </b-row>
       <div id="nombres" v-if="creditos.length">
         <div v-for="credito in creditos" :key="credito.id">
+          <h6 v-if="credito.id === 'logistico'">Coordinador Logístico</h6>
           <h6 v-if="credito.id === 'educacion'">Coordinación - Área Educación Ambiental</h6>
-          <h6 v-if="credito.id === 'editor'">Editor Principal</h6>
+          <h6
+            v-if="credito.id === 'editor'"
+          >Coordinación - Área Plásticos / Reciclaje / Biodegradación</h6>
+          <h6 v-if="credito.id === 'pesca'">Coordinación - Área Pesca</h6>
+          <h6 v-if="credito.id === 'website'">Coordinación - Área Comunicación / Arte / Website</h6>
           <h6 v-if="credito.id === 'redes'">Proyecto Redes Fantasmas</h6>
           <h6 v-if="credito.id === 'actores'">Actores Creativos</h6>
           <h6 v-if="credito.id === 'grafico'">Diseñadores Gráficos</h6>
           <h6 v-if="credito.id === 'logo'">Diseñador Logo</h6>
-          <h6 v-if="credito.id === 'multimedia'">Edición y Creación de Contenido Multimedia</h6>
+          <h6
+            v-if="credito.id === 'multimedia'"
+          >Edición y Creación de Contenido Multimedia (Educación Ambiental)</h6>
           <h6 v-if="credito.id === 'escritores'">Escritores Creativos</h6>
           <h6 v-if="credito.id === 'investigadores'">Investigadores / Fact Checkers</h6>
           <div v-for="(nombre, campo) in credito" :key="nombre.id">
@@ -77,6 +85,7 @@
         </div>
       </div>
     </b-container>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -94,12 +103,8 @@ export default {
         this.lideres.push(text);
       });
     });
-    creditos.doc("educacion").onSnapshot(doc => {
-      let text = doc.data();
-      text.id = doc.id;
-      this.creditos.push(text);
-    });
-    creditos.doc("editor").onSnapshot(doc => {
+
+    creditos.doc("logistico").onSnapshot(doc => {
       let text = doc.data();
       text.id = doc.id;
       this.creditos.push(text);
@@ -109,7 +114,23 @@ export default {
       text.id = doc.id;
       this.creditos.push(text);
     });
-    creditos.doc("actores").onSnapshot(doc => {
+
+    creditos.doc("educacion").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("website").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("editor").onSnapshot(doc => {
+      let text = doc.data();
+      text.id = doc.id;
+      this.creditos.push(text);
+    });
+    creditos.doc("pesca").onSnapshot(doc => {
       let text = doc.data();
       text.id = doc.id;
       this.creditos.push(text);
@@ -119,11 +140,13 @@ export default {
       text.id = doc.id;
       this.creditos.push(text);
     });
-    creditos.doc("logo").onSnapshot(doc => {
+
+    creditos.doc("actores").onSnapshot(doc => {
       let text = doc.data();
       text.id = doc.id;
       this.creditos.push(text);
     });
+
     creditos.doc("multimedia").onSnapshot(doc => {
       let text = doc.data();
       text.id = doc.id;
@@ -160,6 +183,10 @@ export default {
   margin-left: -3%;
   margin-right: 20%;
 }
+.tituloPatrocinadores {
+  font-weight: 300;
+  text-align: left;
+}
 .navbar {
   background-color: #ffffff !important;
 }
@@ -169,14 +196,15 @@ export default {
   max-width: 100%;
 }
 .contenedorAbout {
-  padding-top: 10%;
+  padding-top: 9%;
   padding-left: 10%;
-  padding-right: 10%;
+  padding-right: 12%;
   font-size: 14px;
 }
 #containerLogos {
-  margin-top: 0.5%;
   padding-bottom: 1%;
+  margin-left: -2%;
+  padding-left: 0;
 }
 
 .imagen {
@@ -185,7 +213,7 @@ export default {
 
 .imagen3 {
   width: 110%;
-  padding-top: 10%;
+  padding-top: 3%;
 }
 
 #community {
@@ -207,7 +235,7 @@ export default {
 }
 
 #plastico {
-  width: 35%;
+  width:100%;
   padding-top: 5%;
   padding-left: 3%;
 }
@@ -218,6 +246,8 @@ export default {
 
 #nombres {
   margin-bottom: 5%;
+  text-align: left;
+  margin-left: 9.5%;
 }
 
 #nombres h6 {
@@ -247,7 +277,7 @@ export default {
     margin-bottom: 20%;
   }
   #containerLogos {
-    margin-left: 10%;
+    padding-left: 10%;
   }
 }
 </style>

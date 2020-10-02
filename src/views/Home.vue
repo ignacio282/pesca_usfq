@@ -101,7 +101,7 @@ export default {
   color: rgb(0, 0, 0);
   overflow: hidden;
   background-color: rgb(7, 22, 54);
-  background-image: url("../assets/img/PantallaInicio_Draft.jpg");
+  background-image: url("../assets/img/Inicio_short.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;

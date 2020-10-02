@@ -1,8 +1,13 @@
 <template>
-  <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
-    <b-navbar-brand style="line-height: 18px; text-align: left;">
-      <router-link to="/menu" id="brand" @mouseover.native="expandBrand(true);" @mouseleave.native="expandBrand(false);" class="colorWhite">REGEN<br>DE<br>ECO</router-link>
+  <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg" >
+
+    <b-navbar-brand style="line-height: 18px; text-align: left;" >
+      
+      <router-link to="/menu" id="brand"  class="colorWhite"> <div id="regen"><span>REGEN</span><span>ERACIÓN</span><br>DE<br><span>ECO</span><span>SISTEMAS</span></div></router-link>
     </b-navbar-brand>
+
+
+    
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
@@ -66,26 +71,52 @@ export default {
     msg: String,
   },
   methods: {
-    expandBrand: function(expand){
-      if(expand){
-        document.getElementById("brand").innerHTML = "REGENERACIÓN<br>DE<br>ECOSISTEMAS";
-      }else{
-        document.getElementById("brand").innerHTML = "REGEN<br>DE<br>ECO";
-      }
-    }
+
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+#regen{
+  margin:0;
+  padding: 0;
+}
+#regen span
+{
+display: inline-flex;
+
+
+}
+#regen span:nth-child(even)
+{
+overflow: hidden;
+transition: ease-in-out 0.5s;
+
+letter-spacing: -1em;
+}
+#regen:hover span:nth-child(even)
+{
+letter-spacing: 0;
+
+}
+#regen:hover span:nth-child(6)
+{
+transition-delay: 0.25s;
+
+}
+
+
 .navbar {
-  height: 10%;
+  height: 12%;
   color: black !important;
   font-weight: 300;
   padding-right: 12%;
   padding-left: 5%;
   transition: visibility 0.5s linear, opacity 0.5s linear;
+}
+#brand{
+  font-weight: 300;
 }
 
 ::v-deep .nav-link{
