@@ -13,7 +13,7 @@
       <b-navbar-nav class="ml-auto">
         <b-nav-item-dropdown   class="text-uppercase link colorWhite" text="Menú" right >
           <b-dropdown-item>
-            <router-link to="/menu" class="colorGray">MENÚ</router-link>
+            <router-link to="/menu/sucio" class="colorGray">MENÚ</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
             <router-link class="colorGray" to="/secundaria/educacion">EDUCACIÓN AMBIENTAL</router-link>
