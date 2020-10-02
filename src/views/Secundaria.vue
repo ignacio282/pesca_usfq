@@ -534,7 +534,7 @@ export default {
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.774);
+  background-color: rgba(0, 0, 0, 0.5);
 
   box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
   color: white;

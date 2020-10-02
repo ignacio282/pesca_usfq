@@ -68,7 +68,7 @@
           <h6 v-if="credito.id === 'actores'">Actores Creativos</h6>
           <h6 v-if="credito.id === 'grafico'">Diseñadores Gráficos</h6>
           <h6 v-if="credito.id === 'logo'">Diseñador Logo</h6>
-          <h6 v-if="credito.id === 'multimedia'">Edición y Creación de Contenido Mltimedia</h6>
+          <h6 v-if="credito.id === 'multimedia'">Edición y Creación de Contenido Multimedia</h6>
           <h6 v-if="credito.id === 'escritores'">Escritores Creativos</h6>
           <h6 v-if="credito.id === 'investigadores'">Investigadores / Fact Checkers</h6>
           <div v-for="(nombre, campo) in credito" :key="nombre.id">

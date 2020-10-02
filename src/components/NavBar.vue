@@ -80,7 +80,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .navbar {
-  height: 15%;
+  height: 10%;
   color: black !important;
   font-weight: 300;
   padding-right: 12%;
