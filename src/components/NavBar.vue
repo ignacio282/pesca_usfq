@@ -1,53 +1,82 @@
 <template>
-  <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg" >
+  <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
+    <b-row>
+      <b-col>
+        <b-img src="@/assets//img/PulpoB.png" width="50%" class="pulpo"></b-img>
+      </b-col>
+      <b-col>
+      <b-navbar-brand style="line-height: 18px; text-align: left;">
+          <router-link to="/menu" id="brand" class="colorWhite">
+            <div id="regen">
+              <span>REGEN</span><span>ERACIÓN</span><br />DE<br /><span
+                >ECO</span
+              ><span>SISTEMAS</span>
+            </div></router-link
+          >
+        
+      </b-navbar-brand>
+      </b-col>
+    </b-row>
 
-    <b-navbar-brand style="line-height: 18px; text-align: left;" >
-      
-      <router-link to="/menu" id="brand"  class="colorWhite"> <div id="regen"><span>REGEN</span><span>ERACIÓN</span><br>DE<br><span>ECO</span><span>SISTEMAS</span></div></router-link>
-    </b-navbar-brand>
-
-
-    
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item-dropdown   class="text-uppercase link colorWhite" text="Menú" right >
+        <b-nav-item-dropdown
+          class="text-uppercase link colorWhite"
+          text="Menú"
+          right
+        >
           <b-dropdown-item>
             <router-link to="/menu/sucio" class="colorGray">MENÚ</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria/educacion">EDUCACIÓN AMBIENTAL</router-link>
+            <router-link class="colorGray" to="/secundaria/educacion"
+              >EDUCACIÓN AMBIENTAL</router-link
+            >
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria/redes">REDES FANTASMA</router-link>
+            <router-link class="colorGray" to="/secundaria/redes"
+              >REDES FANTASMA</router-link
+            >
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria/plastico">PLÁSTICOS</router-link>
+            <router-link class="colorGray" to="/secundaria/plastico"
+              >PLÁSTICOS</router-link
+            >
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria/reciclaje">RECICLAJE</router-link>
+            <router-link class="colorGray" to="/secundaria/reciclaje"
+              >RECICLAJE</router-link
+            >
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria/pesca">PESCA</router-link>
+            <router-link class="colorGray" to="/secundaria/pesca"
+              >PESCA</router-link
+            >
           </b-dropdown-item>
           <b-dropdown-item>
             <router-link class="colorGray" to="/media">MEDIA</router-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <router-link class="colorGray" to="/secundaria">VIDEOJUEGO</router-link>
+            <router-link class="colorGray" to="/secundaria"
+              >VIDEOJUEGO</router-link
+            >
           </b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item class="text-uppercase link" text="About" right>
           <router-link to="/about" class="colorWhite">About</router-link>
         </b-nav-item>
         <b-nav-item class="text-uppercase link" text="Recursos" right>
-          <router-link  to="/recursos" class="colorWhite">Recursos</router-link>
+          <router-link to="/recursos" class="colorWhite">Recursos</router-link>
         </b-nav-item>
         <b-nav-item class="text-uppercase link" text="Noticias" right>
           <router-link to="/noticias" class="colorWhite">Noticias</router-link>
         </b-nav-item>
-        <b-nav-item-dropdown   class="text-uppercase link colorWhite" text="Partners" right >
-
+        <b-nav-item-dropdown
+          class="text-uppercase link colorWhite"
+          text="Partners"
+          right
+        >
           <b-dropdown-item>
             <router-link class="colorGray" to="/">Partner 1</router-link>
           </b-dropdown-item>
@@ -57,7 +86,6 @@
           <b-dropdown-item>
             <router-link class="colorGray" to="/">Partner 3</router-link>
           </b-dropdown-item>
-
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>
@@ -68,73 +96,65 @@
 export default {
   name: "NavBar",
   props: {
-    msg: String,
+    msg: String
   },
-  methods: {
-
-  }
+  methods: {}
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#regen{
-  margin:0;
+.pulpo {
+  margin-right: -70px;
+  padding-top: 5px;
+}
+#regen {
+  margin: 0;
   padding: 0;
 }
-#regen span
-{
-display: inline-flex;
-
-
+#regen span {
+  display: inline-flex;
 }
-#regen span:nth-child(even)
-{
-overflow: hidden;
-transition: ease-in-out 0.5s;
+#regen span:nth-child(even) {
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
 
-letter-spacing: -1em;
+  letter-spacing: -1em;
 }
-#regen:hover span:nth-child(even)
-{
-letter-spacing: 0;
-
+#regen:hover span:nth-child(even) {
+  letter-spacing: 0;
 }
-#regen:hover span:nth-child(6)
-{
-transition-delay: 0.25s;
-
+#regen:hover span:nth-child(6) {
+  transition-delay: 0.25s;
 }
-
 
 .navbar {
   height: 12%;
   color: black !important;
   font-weight: 300;
   padding-right: 12%;
-  padding-left: 5%;
+  padding-left: 2%;
   transition: visibility 0.5s linear, opacity 0.5s linear;
 }
-#brand{
+#brand {
   font-weight: 300;
 }
 
-::v-deep .nav-link{
-  color: rgba($color: black, $alpha: 1.0)!important;
+::v-deep .nav-link {
+  color: rgba($color: black, $alpha: 1) !important;
 }
 ::v-deep .colorWhite {
-  color: black ;
+  color: black;
 }
 ::v-deep .colorGray {
-  color: rgb(83, 81, 81) ;
+  color: rgb(83, 81, 81);
 }
-.link{
-padding-left: 3%;
-padding-right: 3%;
+.link {
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
-#brand:hover{
+#brand:hover {
   text-decoration: none;
 }
-
 </style>

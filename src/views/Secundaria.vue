@@ -1,6 +1,7 @@
 <template>
   <div class="pr-0 content bodySecu">
     <NavBar></NavBar>
+
     <div class="snapSection pr-0">
       <div class="pt-5">
         <div class="child">
@@ -34,21 +35,52 @@
               src="../assets/video/3 Plasticos.mp4"
               allowfullscreen
             ></b-embed>
-            <img v-if="pesca" src="../assets/img/ConcepstBarco.jpg" width="90%" />
+            <img
+              v-if="pesca"
+              src="../assets/img/ConcepstBarco.jpg"
+              width="90%"
+            />
+            <div>
+              <b-button v-b-toggle.sidebar-1 class="openSidebar"
+                ><b-icon-list /></b-button
+              >
+              <b-sidebar id="sidebar-1" title="CONTENIDO" shadow  style="overflow-y:hidden"  >
+                <b-nav
+                  class="flex-column sideMenu"
+                  v-b-scrollspy:nav-scroller
+                  style="margin-top:30%"
+                  
+                >
+                  <b-nav-item href="#video" @click="scrollIntoView"
+                    >VIDEO</b-nav-item
+                  >
+                  <b-nav-item href="#PREGUNTAS" @click="scrollIntoView"
+                    >PREGUNTAS</b-nav-item
+                  >
+                  <b-nav-item href="#RECURSOS" @click="scrollIntoView"
+                    >RECURSOS</b-nav-item
+                  >
+                  <b-nav-item href="#GALERIA" @click="scrollIntoView"
+                    >GALERIA</b-nav-item
+                  >
+                </b-nav>
+                <b-img src="@/assets//img/Barra.png" width="300%" class="fondoSide" ></b-img>
+              </b-sidebar>
+            </div>
           </div>
         </div>
       </div>
 
-      <div v-if="educacion">
+      <div v-if="educacion" id="PREGUNTAS">
         <div v-if="educacionTexts.length">
           <div v-for="educacionText in educacionTexts" :key="educacionText.id">
             <div class="container-fluid child" :id="educacionText.id">
               <h2 class="text-center pt-4 pb-4"></h2>
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
-                  <h4 class="pb-3">{{educacionText.pregunta}}</h4>
+                  <h4 class="pb-3">{{ educacionText.pregunta }}</h4>
                   <div class="overflow-auto pr-3" style="height:300px">
-                    <p class="description">{{educacionText.respuesta}}</p>
+                    <p class="description">{{ educacionText.respuesta }}</p>
                   </div>
                 </div>
               </div>
@@ -63,9 +95,9 @@
               <h2 class="text-center pt-4 pb-4"></h2>
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
-                  <h4 class="pb-3">{{redesText.pregunta}}</h4>
+                  <h4 class="pb-3">{{ redesText.pregunta }}</h4>
                   <div class="overflow-auto pr-3" style="height:300px">
-                    <p class="description">{{redesText.respuesta}}</p>
+                    <p class="description">{{ redesText.respuesta }}</p>
                   </div>
                 </div>
               </div>
@@ -80,9 +112,9 @@
               <h2 class="text-center pt-4 pb-4"></h2>
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
-                  <h4 class="pb-3">{{plasticosText.pregunta}}</h4>
+                  <h4 class="pb-3">{{ plasticosText.pregunta }}</h4>
                   <div class="overflow-auto pr-3" style="height:300px">
-                    <p class="description">{{plasticosText.respuesta}}</p>
+                    <p class="description">{{ plasticosText.respuesta }}</p>
                   </div>
                 </div>
               </div>
@@ -97,9 +129,9 @@
               <h2 class="text-center pt-4 pb-4"></h2>
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
-                  <h4 class="pb-3 subtitulo">{{reciclajeText.pregunta}}</h4>
+                  <h4 class="pb-3 subtitulo">{{ reciclajeText.pregunta }}</h4>
                   <div class="overflow-auto pr-3" style="height:300px">
-                    <p class="description">{{reciclajeText.respuesta}}</p>
+                    <p class="description">{{ reciclajeText.respuesta }}</p>
                   </div>
                 </div>
               </div>
@@ -114,9 +146,9 @@
               <h2 class="text-center pt-4 pb-4"></h2>
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
-                  <h4 class="pb-3 subtitulo">{{pescaText.pregunta}}</h4>
+                  <h4 class="pb-3 subtitulo">{{ pescaText.pregunta }}</h4>
                   <div class="overflow-auto pr-3" style="height:300px">
-                    <p class="description">{{pescaText.respuesta}}</p>
+                    <p class="description">{{ pescaText.respuesta }}</p>
                   </div>
                 </div>
               </div>
@@ -125,7 +157,7 @@
         </div>
       </div>
 
-      <div class="parallax child">
+      <div class="parallax child" id="RECURSOS">
         <b-container style="padding-top:200px">
           <b-jumbotron
             class="jumbo"
@@ -144,43 +176,67 @@
       </div>
 
       <div class="pt-3" id="grad2">
-        <div id="myModal" class="modal child">
-          <div class="modalContent">
+        <div id="myModal" class="modal child" >
+          <div class="modalContent" id="GALERIA">
             <div class="mySlides activeSlide" style="display: block;">
               <div class="numbertext">1 / 6</div>
-              <img src="@/assets//img/IMG_0168.jpg" alt="Barco" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0168.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">2 / 6</div>
-              <img src="@/assets//img/IMG_0179.jpg" alt="BG" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0179.jpg"
+                alt="BG"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">3 / 6</div>
-              <img src="@/assets//img/IMG_0236.jpg" alt="Character" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0236.jpg"
+                alt="Character"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">4 / 6</div>
-              <img src="@/assets//img/IMG_0258.jpg" alt="Diver" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0258.jpg"
+                alt="Diver"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">5 / 6</div>
-              <img src="@/assets//img/IMG_0262.jpg" alt="Diver" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0262.jpg"
+                alt="Diver"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">6 / 6</div>
-              <img src="@/assets//img/IMG_0408.jpg" alt="Barco" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0408.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
             </div>
 
             <!-- Next/previous controls -->
-            <a class="prev" @click="plusSlides(-1);">&#10094;</a>
-            <a class="next" @click="plusSlides(1);">&#10095;</a>
+            <a class="prev" @click="plusSlides(-1)"><b-img src="@/assets//img/Pez1.png" width="100%" alt="Responsive image"></b-img></a>
+            <a class="next" @click="plusSlides(1)"><b-img src="@/assets//img/Tortuga.png" width="100%" alt="Responsive image"></b-img></a>
 
-            <b-icon-arrow-bar-up id="flecha" @click="showInfo" />
+            <b-icon-info-circle-fill id="flecha" @click="showInfo" />
             <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
 
             <div class="animate-wrap is-hidden">
@@ -332,7 +388,7 @@ export default {
         "url(" + require("../assets/img/IMG_0365.jpg") + ")";
       document.getElementById("pregunta3").style.backgroundImage =
         "url(" + require("../assets/img/IMG_0264.jpg") + ")";
-    };
+    }
     if (this.redes) {
       document.getElementById("pregunta1").style.backgroundImage =
         "url(" + require("../assets/img/redesFondos.png") + ")";
@@ -340,7 +396,7 @@ export default {
         "url(" + require("../assets/img/redesAnguila.png") + ")";
       document.getElementById("pregunta3").style.backgroundImage =
         "url(" + require("../assets/img/redesTecnica.png") + ")";
-    };
+    }
     if (this.plastico) {
       document.getElementById("pregunta1").style.backgroundImage =
         "url(" + require("../assets/img/IMG_0377.jpg") + ")";
@@ -350,7 +406,7 @@ export default {
         "url(" + require("../assets/img/IMG_0264.jpg") + ")";
       document.getElementById("pregunta4").style.backgroundImage =
         "url(" + require("../assets/img/IMG_0236.jpg") + ")";
-    };
+    }
     if (this.reciclaje) {
       document.getElementById("pregunta1").style.backgroundImage =
         "url(" + require("../assets/img/IMG_0377.jpg") + ")";
@@ -364,7 +420,7 @@ export default {
         "url(" + require("../assets/img/IMG_0408.jpg") + ")";
       document.getElementById("pregunta6").style.backgroundImage =
         "url(" + require("../assets/img/IMG_0258.jpg") + ")";
-    };
+    }
     if (this.pesca) {
       document.getElementById("pregunta1").style.backgroundImage =
         "url(" + require("../assets/img/IMG_0377.jpg") + ")";
@@ -372,7 +428,7 @@ export default {
         "url(" + require("../assets/img/IMG_0365.jpg") + ")";
       document.getElementById("pregunta3").style.backgroundImage =
         "url(" + require("../assets/img/IMG_0264.jpg") + ")";
-    };
+    }
   },
   beforeDestroy: function() {
     document
@@ -505,6 +561,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.sideMenu{
+  font-size: 120%;
+}
+::v-deep .b-sidebar{
+  width: 15%;
+}
+ ::v-deep .b-sidebar-body{
+  overflow: hidden;
+}
+::v-deep .b-sidebar-header{
+  padding: 30px;
+}
+.openSidebar {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 100;
+}
 .fondoTarjeta {
   ::-webkit-scrollbar {
     width: 2px;
