@@ -176,60 +176,27 @@
       </div>
 
       <div class="pt-3" id="grad2">
-        <div id="myModal" class="modal child" >
-          <div class="modalContent" id="GALERIA">
-            <div class="mySlides activeSlide" style="display: block;">
-              <div class="numbertext">1 / 6</div>
-              <img
-                src="@/assets//img/IMG_0168.jpg"
-                alt="Barco"
-                style="width:80%"
-              />
+        <div id="myModal" class="modal child">
+          <div class="modalContent">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="@/assets//img/IMG_0236.jpg" alt="Character" style="width:80%" />
             </div>
 
             <div class="mySlides">
-              <div class="numbertext">2 / 6</div>
-              <img
-                src="@/assets//img/IMG_0179.jpg"
-                alt="BG"
-                style="width:80%"
-              />
+              <div class="numbertext">2 / 4</div>
+              <img src="@/assets//img/IMG_0258.jpg" alt="Diver" style="width:80%" />
             </div>
 
             <div class="mySlides">
-              <div class="numbertext">3 / 6</div>
-              <img
-                src="@/assets//img/IMG_0236.jpg"
-                alt="Character"
-                style="width:80%"
-              />
+              <div class="numbertext">3 / 4</div>
+              <img src="@/assets//img/IMG_0262.jpg" alt="Diver" style="width:80%" />
             </div>
 
             <div class="mySlides">
-              <div class="numbertext">4 / 6</div>
-              <img
-                src="@/assets//img/IMG_0258.jpg"
-                alt="Diver"
-                style="width:80%"
-              />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">5 / 6</div>
-              <img
-                src="@/assets//img/IMG_0262.jpg"
-                alt="Diver"
-                style="width:80%"
-              />
-            </div>
-
-            <div class="mySlides">
-              <div class="numbertext">6 / 6</div>
-              <img
-                src="@/assets//img/IMG_0408.jpg"
-                alt="Barco"
-                style="width:80%"
-              />
+              <div class="numbertext">4 / 4</div>
+              <img src="@/assets//img/IMG_0408.jpg" alt="Barco" style="width:80%" />
             </div>
 
             <!-- Next/previous controls -->
@@ -887,7 +854,7 @@ export default {
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
-  top: 75%;
+  top: 72%;
   left: 7%;
 }
 /* Caption text */
