@@ -60,7 +60,7 @@
                   <b-nav-item href="#RECURSOS" @click="scrollIntoView"
                     >RECURSOS</b-nav-item
                   >
-                  <b-nav-item href="#GALERIA" @click="scrollIntoView"
+                  <b-nav-item href="#grad2" @click="scrollIntoView"
                     >GALERIA</b-nav-item
                   >
                 </b-nav>
@@ -177,9 +177,9 @@
 
       <div class="pt-3" id="grad2">
         <div id="myModal" class="modal child">
-          <div class="modalContent">
+          <div class="modalContent" id="GALERIA">
 
-            <div class="mySlides">
+            <div class="mySlides" style="display:block">
               <div class="numbertext">1 / 4</div>
               <img src="@/assets//img/IMG_0236.jpg" alt="Character" style="width:80%" />
             </div>
@@ -200,10 +200,10 @@
             </div>
 
             <!-- Next/previous controls -->
-            <a class="prev" @click="plusSlides(-1)"><b-img src="@/assets//img/Pez1.png" width="100%" alt="Responsive image"></b-img></a>
-            <a class="next" @click="plusSlides(1)"><b-img src="@/assets//img/Tortuga.png" width="100%" alt="Responsive image"></b-img></a>
+            <a class="prev" @click="plusSlides(-1)"><b-img src="@/assets//img/Pez1Hueco.png" width="100%" alt="Responsive image"></b-img></a>
+            <a class="next" @click="plusSlides(1)"><b-img src="@/assets//img/TortugaHueco.png" width="100%" alt="Responsive image"></b-img></a>
 
-            <b-icon-info-circle-fill id="flecha" @click="showInfo" />
+            <b-icon-info-circle-fill  id="flecha" @click="showInfo" />
             <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
 
             <div class="animate-wrap is-hidden">
@@ -850,7 +850,7 @@ export default {
 }
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: #5DB9D1;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -875,6 +875,7 @@ export default {
   width: 2%;
   height: 2%;
   margin-top: 2%;
+  color: #5DB9D1;
 }
 #cerrarInfo {
   width: 2%;
