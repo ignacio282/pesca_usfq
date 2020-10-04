@@ -23,10 +23,10 @@
       <kinesis-container  class="contenedor">
 
         <kinesis-element type="depth" :strength="10">
-          <p class="tituloLanding">REGENERACION</p>
+          <p class="tituloLanding">REGENERACIÓN</p>
         </kinesis-element>
-        <kinesis-element style="margin:-20px" type="depth" :strength="8">
-          <p class="tituloLanding">DE</p>
+        <kinesis-element style="margin:-40px" type="depth" :strength="8">
+          <p class="tituloLandingS">DE</p>
         </kinesis-element>
         <kinesis-element type="depth_inv" :strength="10">
           <p class="tituloLanding">ECOSISTEMAS</p>
@@ -37,14 +37,13 @@
     <kinesis-container>
     <kinesis-element type="depth" :strength="20">
     
-      <b-row class="justify-content-center pregunta" >Pregunta</b-row>
+      <b-row class="justify-content-center pregunta" >¿CÓMO SERÁ EL OCÉANO EN EL FUTURO?</b-row>
       <b-row class="justify-content-center" >
         <b-col col lg="2" class="respuestas">
-          Respuesta 1
-          <router-link to="/menu">
+          LIMPIO
+          <router-link to="/menu/limpio">
           <b-form-checkbox
             id="checkbox-1"
-            v-model="status"
             name="checkbox-1"
             value="accepted"
             unchecked-value="not_accepted"
@@ -56,28 +55,30 @@
           
         </b-col>
         <b-col col lg="2" class="respuestas">
-          Respuesta 2 
+          IGUAL
+          <router-link to="/menu/sucio">
           <b-form-checkbox
             id="checkbox-2"
-            v-model="status"
             name="checkbox-2"
             value="accepted"
             unchecked-value="not_accepted"
             style="margin:5px"
             
           ></b-form-checkbox>
+          </router-link>
         </b-col>
         <b-col col lg="2" class="respuestas">
-          Respuesta 3
+          MUY SUCIO
+          <router-link to="/menu/sucio">
           <b-form-checkbox
             id="checkbox-3"
-            v-model="status"
             name="checkbox-3"
             value="accepted"
             unchecked-value="not_accepted"
             style="margin:5px"
             
           ></b-form-checkbox>
+          </router-link>
         </b-col>
       </b-row>
       </kinesis-element>
@@ -91,7 +92,12 @@
 export default {
   name: "Home",
   components: {},
-  methods: {}
+  data: function(){
+    return{
+    }
+  },
+  methods: {
+  }
 };
 </script>
 
@@ -108,12 +114,21 @@ export default {
 }
 
 .contenedor {
-  height: 70%;
+  height: 60%;
   padding-top: 6%;
 }
 .tituloLanding {
   color: white;
-  font-size: 500%;
+  font-size: 600%;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+
+.tituloLandingS{
+  color: white;
+  font-size: 200%;
   padding: 0;
   margin: 0;
   font-weight: 100;
@@ -121,14 +136,15 @@ export default {
 .respuestas {
   color: white;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 200;
+  font-size: 150%;
 }
 .pregunta {
   color: white;
-  font-size: 150%;
+  font-size: 175%;
   margin-bottom: 3%;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 #titulo {

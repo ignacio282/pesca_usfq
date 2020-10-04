@@ -21,7 +21,7 @@ const routes = [
     component: Media
   },
   {
-    path: "/menu",
+    path: "/menu/:sucio",
     name: "Menu",
     component: Menu
   },

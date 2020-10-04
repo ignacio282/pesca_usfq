@@ -9,7 +9,7 @@
     >
       <b-container fluid id="menu">
         <NavBar></NavBar>
-        <kinesis-container class="contenedor">
+        <kinesis-container v-if="sucio" class="contenedor">
         <kinesis-element style="margin-left:-800px; margin-top:-100px"  type="translate" :strength="20">
           <img
           style="opacity: 0.6"
@@ -98,6 +98,19 @@ export default {
   name: "Menu",
   components: {
     Foot
+  },
+  data: function(){
+    return{
+      sucio: Boolean
+    }
+  },
+  created: function(){
+    if(this.$route.params.sucio === "limpio"){
+      this.sucio = false;
+    };
+    if(this.$route.params.sucio === "sucio"){
+      this.sucio = true;
+    };
   },
   mounted: function() {
     this.menuAppear();
