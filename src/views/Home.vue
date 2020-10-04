@@ -136,7 +136,7 @@ export default {
 .respuestas {
   color: white;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 150%;
 }
 .pregunta {
@@ -144,7 +144,7 @@ export default {
   font-size: 175%;
   margin-bottom: 3%;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 #titulo {

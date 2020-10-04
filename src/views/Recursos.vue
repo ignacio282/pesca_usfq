@@ -1,7 +1,7 @@
 <template>
   <div id="recursos">
     <NavBar />
-    <b-container fluid class="px-5" id="tarjetas">
+    <b-container fluid class="px-5 mt-5" id="tarjetas">
       <b-card-group deck>
         <b-card
           title="PDF"
@@ -9,7 +9,7 @@
           img-alt="Card image"
           img-top
           img-height="60%"
-          class="mb-2"
+          class="mb-5"
         >
           <b-card-text>PDF para descargar</b-card-text>
           <b-button v-b-modal.modal-xl>VER</b-button>
@@ -38,7 +38,7 @@
           img-alt="Card image"
           img-top
           img-height="60%"
-          class="mb-2"
+          class="mb-5 "
         >
           <b-card-text>Video para descargar</b-card-text>
           <b-button v-b-modal.modal2>VER</b-button>
@@ -56,7 +56,7 @@
             </b-row>
           </b-modal>
         </b-card>
-        <b-card class="mb-2">
+        <b-card class="mb-5 ">
           <div id="waveform" class="py-5"></div>
           <b-card-title>AUDIO</b-card-title>
           <b-card-text>Audio para descargar</b-card-text>
@@ -131,6 +131,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
 #tarjetas {
   padding-top: 7%;
   color: black;
