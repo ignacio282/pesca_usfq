@@ -6,7 +6,9 @@
       style="height: 100%;"
       :poster="require('@/assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png')"
       :loop="false"
+      ref="videobackground"
     >
+    <b-button id="skip" squared @click="stopVideo"> SKIP </b-button>
       <b-container fluid id="menu">
         <NavBar></NavBar>
         <kinesis-container v-if="sucio" class="contenedor">
@@ -113,14 +115,20 @@ export default {
     };
   },
   mounted: function() {
-    this.menuAppear();
+    this.menuAppear(18000);
   },
   methods: {
-    menuAppear: function() {
+    menuAppear: function(time) {
       setTimeout(function() {
         document.getElementById("menu").style.visibility = "visible";
         document.getElementById("menu").style.opacity = 1;
-      }, 18000);
+        document.getElementById("skip").style.display = "none";
+      }, time);
+    },
+    stopVideo: function(){
+      console.log(document.getElementById("main").children[1].children[0].currentTime);
+      document.getElementById("main").children[1].children[0].currentTime = 17;
+      this.menuAppear(1000);
     }
   }
 };
@@ -135,6 +143,23 @@ div.overlay {
 }
 .menu {
   height: 100%;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+#skip{
+  background-color: white;
+  color: #496f96;
+  opacity: 30%;
+  float: right;
+  margin-top: 2%;
+  margin-right: 2%;
+}
+
+#skip:hover{
+  opacity: 75%;
 }
 
 #menu {

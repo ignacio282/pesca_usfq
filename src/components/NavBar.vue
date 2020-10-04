@@ -3,7 +3,7 @@
 
     <b-navbar-brand style="line-height: 18px; text-align: left;" >
       
-      <router-link to="/menu" id="brand"  class="colorWhite"> <div id="regen"><span>REGEN</span><span>ERACIÓN</span><br>DE<br><span>ECO</span><span>SISTEMAS</span></div></router-link>
+      <router-link to="/menu/sucio" id="brand"  class="colorWhite"> <div id="regen"><span>REGEN</span><span>ERACIÓN</span><br>DE<br><span>ECO</span><span>SISTEMAS</span></div></router-link>
     </b-navbar-brand>
 
 
