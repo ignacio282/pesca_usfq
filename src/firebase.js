@@ -23,6 +23,7 @@ const reciclajeTexts = db.collection('reciclajeTexts');
 const pescaTexts = db.collection('pescaTexts');
 const creditos = db.collection('creditos');
 const lideres = db.collection('lideres');
+const blog = db.collection('blog');
 
 export {
   db,
@@ -33,5 +34,6 @@ export {
   pescaTexts,
   creditos,
   lideres,
+  blog,
   storage
 }

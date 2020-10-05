@@ -3,24 +3,40 @@
     <div class="container">
       <b-row id="social" align-h="center">
         <b-col cols="12" md="4">
-          <font-awesome-icon class="sociales" :icon="[ 'fab', 'facebook' ]"/>
-          <font-awesome-icon class="sociales" :icon="[ 'fab', 'instagram' ]"/>
-          <font-awesome-icon class="sociales" :icon="[ 'fab', 'twitter' ]"/>
+          <a href="">
+            <font-awesome-icon class="sociales" :icon="['fab', 'facebook']" />
+          </a>
+          <a href="">
+          <font-awesome-icon class="sociales" :icon="['fab', 'instagram']" />
+          </a>
+          <a href="">
+          <font-awesome-icon class="sociales" :icon="['fab', 'twitter']" />
+          </a>
         </b-col>
       </b-row>
       <b-row id="logos" align-h="center">
         <b-col cols="12" md="12" class="imagen">
           <img class="imagenes" src="../assets/img/logoPlastico3.png" />
-          <img class="imagenes" src="../assets/img/DAAD_Logo.svg" />
-          <img class="imagenes" src="../assets/img/ZMT_Logo_SMALL_cmyk_ENG.png" />
-          <img class="imagenes" id="community" src="../assets/img/logoCommunityESP.png" />
+          <img class="imagenes" src="../assets/img/DAAD_Logo.png" />
+          <img
+            class="imagenes"
+            src="../assets/img/ZMT_Logo_SMALL_cmyk_ENG.png"
+          />
+          <img
+            class="imagenes"
+            id="community"
+            src="../assets/img/logoCommunityESP.png"
+          />
           <img class="imagenes" src="../assets/img/LogoCocoa.png" />
           <img class="imagenes" src="../assets/img/LogoBio.png" />
           <img class="imagenes" id="salud" src="../assets/img/LogoSalud.png" />
-          <img class="imagenes" id="community" src="../assets/img/LogoUSFQPlano.png" />
+          <img
+            class="imagenes"
+            id="community"
+            src="../assets/img/LogoUSFQPlano.png"
+          />
         </b-col>
       </b-row>
-
     </div>
   </section>
 </template>
@@ -52,7 +68,7 @@ export default {
   margin-bottom: 0;
 }
 
-#social{
+#social {
   padding-top: 3%;
 }
 
@@ -85,16 +101,16 @@ export default {
   padding-bottom: 0.5%;
 }
 
-#salud{
+#salud {
   width: 8.5%;
 }
 
-.sociales{
+.sociales {
   margin: 3%;
   font-size: 28px;
 }
 
-#community{
+#community {
   width: 15%;
 }
 </style>
