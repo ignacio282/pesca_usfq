@@ -5,7 +5,6 @@
       <h2 style="padding-top:60px">
         Noticias Regeneración de Ecosistemas
       </h2>
-      <div class="subtitle pt-1 pb-2">Paúl Rosero</div>
       <hr />
       <div v-for="(blog, index) in blogs" :key="blog.id">
         <b-row class="pt-5">

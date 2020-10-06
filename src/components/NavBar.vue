@@ -21,6 +21,7 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-item-dropdown
+          v-if="!eng"
           class="text-uppercase link colorWhite"
           text="Menú"
           right
@@ -62,14 +63,59 @@
             >
           </b-dropdown-item>
         </b-nav-item-dropdown>
+        <b-nav-item-dropdown
+          v-if="eng"
+          class="text-uppercase link colorWhite"
+          text="Menu"
+          right
+        >
+          <b-dropdown-item>
+            <router-link to="/menu/sucio" class="colorGray">MENU</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/secundaria/educacion"
+              >ENVIRONMENTAL EDUCATION</router-link
+            >
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/secundaria/redes"
+              >GHOST NETS</router-link
+            >
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/secundaria/plastico"
+              >PLASTICS</router-link
+            >
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/secundaria/reciclaje"
+              >RECYCLING</router-link
+            >
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/secundaria/pesca"
+              >FISHING</router-link
+            >
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/media">MEDIA</router-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <router-link class="colorGray" to="/secundaria"
+              >VIDEOGAME</router-link
+            >
+          </b-dropdown-item>
+        </b-nav-item-dropdown>
         <b-nav-item class="text-uppercase link" text="About" right>
           <router-link to="/about" class="colorWhite">About</router-link>
         </b-nav-item>
         <b-nav-item class="text-uppercase link" text="Recursos" right>
-          <router-link to="/recursos" class="colorWhite">Recursos</router-link>
+          <router-link v-if="!eng" to="/recursos" class="colorWhite">Recursos</router-link>
+          <router-link v-if="eng" to="/recursos" class="colorWhite">Resources</router-link>
         </b-nav-item>
         <b-nav-item class="text-uppercase link" text="Noticias" right>
-          <router-link to="/noticias" class="colorWhite">Noticias</router-link>
+          <router-link v-if="!eng" to="/noticias" class="colorWhite">Noticias</router-link>
+          <router-link v-if="eng" to="/noticias" class="colorWhite">News</router-link>
         </b-nav-item>
         <b-nav-item-dropdown
           class="text-uppercase link"
@@ -105,9 +151,9 @@
             Hospital de Fauna Silvestre TUERI USFQ
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item class="text-uppercase language activo" right>ES</b-nav-item>
+        <b-nav-item class="text-uppercase language activo" right @click="changeLang(1, emitLang);">ES</b-nav-item>
         <b-nav-text id="separador" right>|</b-nav-text>
-        <b-nav-item class="text-uppercase" right>EN</b-nav-item>
+        <b-nav-item class="text-uppercase" right @click="changeLang(2, emitLang);">EN</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -116,10 +162,29 @@
 <script>
 export default {
   name: "NavBar",
+  data: function(){
+    return{
+      eng: false
+    }
+  },
   props: {
     msg: String
   },
-  methods: {}
+  methods: {
+    changeLang: function(lang, callback){
+      if(lang === 1){
+        this.eng = false;
+      }
+      if(lang === 2){
+        this.eng = true;
+      }
+      callback();
+    },
+    emitLang: function(){
+      this.$root.$emit('lang', this.eng);
+      console.log("emit" + this.eng);
+    }
+  }
 };
 </script>
 

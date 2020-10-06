@@ -45,6 +45,7 @@
                 ><b-icon-list
               /></b-button>
               <b-sidebar
+                v-if="!eng"
                 id="sidebar-1"
                 title="CONTENIDO"
                 shadow
@@ -55,18 +56,33 @@
                   v-b-scrollspy:nav-scroller
                   style="margin-top:30%"
                 >
-                  <b-nav-item href="#video" 
-                    >VIDEO</b-nav-item
-                  >
-                  <b-nav-item href="#PREGUNTAS" 
-                    >PREGUNTAS</b-nav-item
-                  >
-                  <b-nav-item href="#RECURSOS"
-                    >RECURSOS</b-nav-item
-                  >
-                  <b-nav-item href="#grad2"
-                    >GALERIA</b-nav-item
-                  >
+                  <b-nav-item href="#video">VIDEO</b-nav-item>
+                  <b-nav-item href="#PREGUNTAS">PREGUNTAS</b-nav-item>
+                  <b-nav-item href="#RECURSOS">RECURSOS</b-nav-item>
+                  <b-nav-item href="#grad2">GALERIA</b-nav-item>
+                </b-nav>
+                <b-img
+                  src="@/assets//img/Barra.png"
+                  width="300%"
+                  class="fondoSide"
+                ></b-img>
+              </b-sidebar>
+              <b-sidebar
+                v-if="eng"
+                id="sidebar-1"
+                title="CONTENT"
+                shadow
+                style="overflow-y:hidden"
+              >
+                <b-nav
+                  class="flex-column sideMenu"
+                  v-b-scrollspy:nav-scroller
+                  style="margin-top:30%"
+                >
+                  <b-nav-item href="#video">VIDEO</b-nav-item>
+                  <b-nav-item href="#PREGUNTAS">QUESTIONS</b-nav-item>
+                  <b-nav-item href="#RECURSOS">RESOURCES</b-nav-item>
+                  <b-nav-item href="#grad2">GALLERY</b-nav-item>
                 </b-nav>
                 <b-img
                   src="@/assets//img/Barra.png"
@@ -76,10 +92,32 @@
               </b-sidebar>
             </div>
           </div>
+          <h5 v-if="educacion && !eng" class="titulo text-uppercase">
+            Educación Ambiental
+          </h5>
+          <h5 v-if="educacion && eng" class="titulo text-uppercase">
+            Environmental Education
+          </h5>
+          <h5 v-if="redes && !eng" class="titulo text-uppercase">
+            Redes Fantasma
+          </h5>
+          <h5 v-if="redes && eng" class="titulo text-uppercase">Ghost Nets</h5>
+          <h5 v-if="plastico && !eng" class="titulo text-uppercase">
+            Plásticos
+          </h5>
+          <h5 v-if="plastico && eng" class="titulo text-uppercase">Plastics</h5>
+          <h5 v-if="reciclaje && !eng" class="titulo text-uppercase">
+            Reciclaje
+          </h5>
+          <h5 v-if="reciclaje && eng" class="titulo text-uppercase">
+            Recycling
+          </h5>
+          <h5 v-if="pesca && !eng" class="titulo text-uppercase">Pesca</h5>
+          <h5 v-if="pesca && eng" class="titulo text-uppercase">Fishing</h5>
         </div>
       </div>
 
-      <div v-if="educacion" id="PREGUNTAS">
+      <div v-if="educacion && !eng" id="PREGUNTAS">
         <div v-if="educacionTexts.length">
           <div v-for="educacionText in educacionTexts" :key="educacionText.id">
             <div class="container-fluid child" :id="educacionText.id">
@@ -96,7 +134,24 @@
           </div>
         </div>
       </div>
-      <div v-if="redes" id="PREGUNTAS">
+      <div v-if="educacion && eng" id="PREGUNTAS">
+        <div v-if="educationTexts.length">
+          <div v-for="educationText in educationTexts" :key="educationText.id">
+            <div class="container-fluid child" :id="educationText.id">
+              <h2 class="text-center pt-4 pb-4"></h2>
+              <div v-scrollanimation>
+                <div class="fondoTarjeta">
+                  <h4 class="pb-3">{{ educationText.question }}</h4>
+                  <div class="overflow-auto pr-3" style="height:300px">
+                    <p class="description">{{ educationText.answer }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="redes">
         <div v-if="redesTexts.length">
           <div v-for="redesText in redesTexts" :key="redesText.id">
             <div class="container-fluid child" :id="redesText.id">
@@ -168,12 +223,27 @@
       <div class="parallax child" id="RECURSOS">
         <b-container style="padding-top:180px">
           <b-jumbotron
+            v-if="!eng"
             class="jumbo"
             header="Material Educativo"
             lead="Videos educativos, Infografías, Hojas de trabajo (PDF)"
             style="text-transform: uppercase"
           >
-            <p>Haz Click Aquí Para Descargar</p>
+            <p>Haz Click Aquí Para Ver</p>
+            <router-link to="/recursos" class="colorWhite">
+              <b-button variant="primary">
+                <b-icon-download></b-icon-download>
+              </b-button>
+            </router-link>
+          </b-jumbotron>
+          <b-jumbotron
+            v-if="eng"
+            class="jumbo"
+            header="Educational Material"
+            lead="Educational videos, infographics, work sheets (PDF)"
+            style="text-transform: uppercase"
+          >
+            <p>Click Here to View</p>
             <router-link to="/recursos" class="colorWhite">
               <b-button variant="primary">
                 <b-icon-download></b-icon-download>
@@ -262,6 +332,7 @@ import { redesTexts } from "../firebase";
 import { plasticosTexts } from "../firebase";
 import { reciclajeTexts } from "../firebase";
 import { pescaTexts } from "../firebase";
+import { educationTexts } from "../firebase";
 export default {
   name: "Secundaria",
   watch: {
@@ -381,6 +452,18 @@ export default {
         this.pescaTexts.push(text);
       });
     });
+    educationTexts.onSnapshot(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        let text = doc.data();
+        text.id = doc.id;
+        text.question = text.question.replace("br", "\n");
+        this.educationTexts.push(text);
+      });
+    });
+    this.$root.$on("lang", eng => {
+      this.eng = eng;
+      console.log(this.eng);
+    });
   },
   updated: function() {
     if (this.educacion) {
@@ -457,7 +540,9 @@ export default {
       redesTexts: [],
       plasticosTexts: [],
       reciclajeTexts: [],
-      pescaTexts: []
+      pescaTexts: [],
+      educationTexts: [],
+      eng: false
     };
   },
   methods: {
@@ -578,7 +663,7 @@ export default {
 .openSidebar {
   position: fixed;
   bottom: 5%;
-  right: 5%;
+  right: 4%;
   z-index: 100;
 }
 .fondoTarjeta {
@@ -652,6 +737,13 @@ export default {
     scroll-snap-type: y proximity;
   }
 }
+.titulo {
+  color: black;
+  font-weight: 300;
+  margin-top: 1%;
+  margin-right: 19.25%;
+  text-align: right;
+}
 .child {
   scroll-snap-align: start;
   height: 100vh;
@@ -676,7 +768,7 @@ export default {
   color: #03141d;
 }
 #video {
-  padding-top: 100px;
+  padding-top: 70px;
   padding-left: 100px;
   padding-right: 100px;
 }

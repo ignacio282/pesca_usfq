@@ -16,16 +16,23 @@
           <b-modal id="modal-xl" hide-footer hide-header size="xl" centered>
             <b-row class="mx-4 my-5">
               <b-col cols="8">
-                <b-img src="https://via.placeholder.com/800x600" fluid alt="Responsive image"></b-img>
+                <b-img
+                  src="../assets/img/PlasticoPDFCompletoL.png"
+                  fluid
+                  alt="Responsive image"
+                ></b-img>
               </b-col>
               <b-col cols="4" class="my-auto text-center">
-                Ea nulla magna do veniam nostrud aliquip. Magna deserunt proident cupidatat in amet.
-                Aliqua occaecat irure dolore laboris id eu veniam aliquip anim officia.
-                Do sunt id dolor cupidatat. Voluptate occaecat incididunt duis laboris excepteur incididunt culpa.
-                Voluptate aliquip velit quis ut exercitation occaecat do id ut sint duis aliqua minim. Sunt aliquip
-                Lorem dolor et consectetur.Enim incididunt minim do commodo consequat minim do commodo nisi deserunt proident veniam.
-                Dolore consequat nisi commodo excepteur ipsum laborum. Sit magna pariatur pariatur ullamco non ut dolore culpa exercitation
-                minim ipsum aute est.
+                Ea nulla magna do veniam nostrud aliquip. Magna deserunt
+                proident cupidatat in amet. Aliqua occaecat irure dolore laboris
+                id eu veniam aliquip anim officia. Do sunt id dolor cupidatat.
+                Voluptate occaecat incididunt duis laboris excepteur incididunt
+                culpa. Voluptate aliquip velit quis ut exercitation occaecat do
+                id ut sint duis aliqua minim. Sunt aliquip Lorem dolor et
+                consectetur.Enim incididunt minim do commodo consequat minim do
+                commodo nisi deserunt proident veniam. Dolore consequat nisi
+                commodo excepteur ipsum laborum. Sit magna pariatur pariatur
+                ullamco non ut dolore culpa exercitation minim ipsum aute est.
                 <br />
                 <b-button class="mt-5" variant="dark">DESCARGAR</b-button>
               </b-col>
@@ -41,14 +48,15 @@
           class="mb-5 "
         >
           <b-card-text>Video para descargar</b-card-text>
-          <b-button v-b-modal.modal2>VER</b-button>
+          <b-button v-b-modal.modal2 @click="setVideo(1);">VER</b-button>
           <b-modal id="modal2" hide-footer hide-header size="xl" centered>
             <b-row class="mx-4 my-2">
               <b-col class="text-center">
                 <b-embed
+                  id="video1"
                   type="iframe"
                   aspect="16by9"
-                  src="../assets/video/1 Educacion_Ambiental.mp4"
+                  src=""
                   allowfullscreen
                 ></b-embed>
                 <b-button class="mt-3" variant="dark">DESCARGAR</b-button>
@@ -57,10 +65,10 @@
           </b-modal>
         </b-card>
         <b-card class="mb-5 ">
-          <div id="waveform" class="py-5"></div>
+          <div id="waveform" class="wave"></div>
           <b-card-title>AUDIO</b-card-title>
           <b-card-text>Audio para descargar</b-card-text>
-          <b-button @click="play" >PLAY</b-button>
+          <b-button @click="play(1)">PLAY</b-button>
           <b-button>DESCARGAR</b-button>
         </b-card>
       </b-card-group>
@@ -74,7 +82,32 @@
           class="mb-2"
         >
           <b-card-text>PDF para descargar</b-card-text>
-          <b-button>Descargar</b-button>
+          <b-button v-b-modal.modal-3>VER</b-button>
+          <b-modal id="modal-3" hide-footer hide-header size="xl" centered>
+            <b-row class="mx-4 my-5">
+              <b-col cols="8">
+                <b-img
+                  src="../assets/img/infoRedes.png"
+                  fluid
+                  alt="Responsive image"
+                ></b-img>
+              </b-col>
+              <b-col cols="4" class="my-auto text-center">
+                Ea nulla magna do veniam nostrud aliquip. Magna deserunt
+                proident cupidatat in amet. Aliqua occaecat irure dolore laboris
+                id eu veniam aliquip anim officia. Do sunt id dolor cupidatat.
+                Voluptate occaecat incididunt duis laboris excepteur incididunt
+                culpa. Voluptate aliquip velit quis ut exercitation occaecat do
+                id ut sint duis aliqua minim. Sunt aliquip Lorem dolor et
+                consectetur.Enim incididunt minim do commodo consequat minim do
+                commodo nisi deserunt proident veniam. Dolore consequat nisi
+                commodo excepteur ipsum laborum. Sit magna pariatur pariatur
+                ullamco non ut dolore culpa exercitation minim ipsum aute est.
+                <br />
+                <b-button class="mt-5" variant="dark">DESCARGAR</b-button>
+              </b-col>
+            </b-row>
+          </b-modal>
         </b-card>
         <b-card
           title="Video"
@@ -85,18 +118,28 @@
           class="mb-2"
         >
           <b-card-text>Video para descargar</b-card-text>
-          <b-button>Descargar</b-button>
+          <b-button v-b-modal.modal-4 @click="setVideo(2);">VER</b-button>
+          <b-modal id="modal-4" hide-footer hide-header size="xl" centered>
+            <b-row class="mx-4 my-2">
+              <b-col class="text-center">
+                <b-embed
+                  id="video2"
+                  type="iframe"
+                  aspect="16by9"
+                  src=""
+                  allowfullscreen
+                ></b-embed>
+                <b-button class="mt-3" variant="dark">DESCARGAR</b-button>
+              </b-col>
+            </b-row>
+          </b-modal>
         </b-card>
-        <b-card
-          title="Audio"
-          img-src="../assets/img/waveformjs.png"
-          img-alt="Card image"
-          img-top
-          img-height="60%"
-          class="mb-2"
-        >
+        <b-card class="mb-2">
+          <div id="waveform2" class="wave"></div>
+          <b-card-title>AUDIO</b-card-title>
           <b-card-text>Audio para descargar</b-card-text>
-          <b-button>Descargar</b-button>
+          <b-button @click="play(2)">PLAY</b-button>
+          <b-button>DESCARGAR</b-button>
         </b-card>
       </b-card-group>
     </b-container>
@@ -107,32 +150,73 @@
 
 <script>
 import WaveSurfer from "wavesurfer.js";
+import { storage } from "../firebase";
 export default {
   name: "Recursos",
+  data: function() {
+    return {
+      storageRef: storage.ref()
+    };
+  },
   mounted: function() {
-    this.$nextTick(()=>{
+    this.$nextTick(() => {
       this.wavesurfer = WaveSurfer.create({
-          container: "#waveform",
-          waveColor: "#1381B5",
-          progressColor: "#03141d",
-          barHeight: 3
-        });
-        this.wavesurfer.load(
-          "https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3"
-        );
-    })
+        container: "#waveform",
+        waveColor: "#1381B5",
+        progressColor: "#03141d",
+        barHeight: 4
+      });
+      this.wavesurfer2 = WaveSurfer.create({
+        container: "#waveform2",
+        waveColor: "#1381B5",
+        progressColor: "#03141d",
+        barHeight: 4
+      });
+      this.wavesurfer.load(
+        "https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3"
+      );
+      this.wavesurfer2.load(
+        "https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3"
+      );
+    });
   },
   methods: {
-    play: function(){
-      this.wavesurfer.playPause();
+    play: function(wave) {
+      if (wave === 1) {
+        this.wavesurfer.playPause();
+      }
+      if (wave === 2) {
+        this.wavesurfer2.playPause();
+      }
+    },
+    setVideo: function(num) {
+      if (num === 1) {
+        this.storageRef
+          .child("videos/VIDEO_REDES_1_FINAL_NOBORRAR.mp4")
+          .getDownloadURL()
+          .then(function(url) {
+            let video1 = document.getElementById("video1");
+            console.log(video1);
+            video1.src = url;
+          });
+      }
+      if(num === 2){
+        this.storageRef
+        .child("videos/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
+        .getDownloadURL()
+        .then(function(url) {
+          let video2 = document.getElementById("video2");
+          video2.src = url;
+        });
+      }
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.card{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 #tarjetas {
   padding-top: 7%;
@@ -144,7 +228,11 @@ export default {
   background-color: black;
 }
 
-.btn-secondary{
+.wave {
+  padding-top: 18%;
+  padding-bottom: 18%;
+}
+.btn-secondary {
   margin: 1%;
 }
 </style>
