@@ -200,8 +200,8 @@
             </div>
 
             <!-- Next/previous controls -->
-            <a class="prev" @click="plusSlides(-1)"><b-img src="@/assets//img/Pez1Hueco.png" width="100%" alt="Responsive image"></b-img></a>
-            <a class="next" @click="plusSlides(1)"><b-img src="@/assets//img/TortugaHueco.png" width="100%" alt="Responsive image"></b-img></a>
+            <a class="prev" @click="plusSlides(-1)"><b-img src="@/assets//img/Pez1Hueco.png" width="75%" alt="Responsive image"></b-img></a>
+            <a class="next" @click="plusSlides(1)"><b-img src="@/assets//img/TortugaHueco.png" width="75%" alt="Responsive image"></b-img></a>
 
             <b-icon-info-circle-fill  id="flecha" @click="showInfo" />
             <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />

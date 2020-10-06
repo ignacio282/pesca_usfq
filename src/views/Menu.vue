@@ -152,15 +152,11 @@ div.overlay {
 #skip{
   background-color: white;
   color: #496f96;
-  opacity: 30%;
   float: right;
   margin-top: 2%;
   margin-right: 2%;
 }
 
-#skip:hover{
-  opacity: 75%;
-}
 
 #menu {
   height: 100%;
