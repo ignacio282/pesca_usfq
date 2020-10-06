@@ -3,7 +3,7 @@
     <div class="container">
       <b-row id="social" align-h="center">
         <b-col cols="12" md="4">
-          <a href="">
+          <a href="https://www.facebook.com/oceanrestorationecuador/">
             <font-awesome-icon class="sociales" :icon="['fab', 'facebook']" />
           </a>
           <a href="">

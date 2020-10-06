@@ -136,7 +136,7 @@ export default {
   height: 12%;
   color: black !important;
   font-weight: 300;
-  padding-right: 12%;
+  padding-right: 14%;
   padding-left: 2%;
   transition: visibility 0.5s linear, opacity 0.5s linear;
 }
