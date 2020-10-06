@@ -4,7 +4,7 @@
 
     <div class="snapSection pr-0">
       <div class="pt-5">
-        <div class="child">
+        <div class="child childVideo">
           <div class="container" id="video">
             <br />
             <b-embed
@@ -42,29 +42,37 @@
             />
             <div>
               <b-button v-b-toggle.sidebar-1 class="openSidebar"
-                ><b-icon-list /></b-button
+                ><b-icon-list
+              /></b-button>
+              <b-sidebar
+                id="sidebar-1"
+                title="CONTENIDO"
+                shadow
+                style="overflow-y:hidden"
               >
-              <b-sidebar id="sidebar-1" title="CONTENIDO" shadow  style="overflow-y:hidden"  >
                 <b-nav
                   class="flex-column sideMenu"
                   v-b-scrollspy:nav-scroller
                   style="margin-top:30%"
-                  
                 >
-                  <b-nav-item href="#video" @click="scrollIntoView"
+                  <b-nav-item href="#video" 
                     >VIDEO</b-nav-item
                   >
-                  <b-nav-item href="#PREGUNTAS" @click="scrollIntoView"
+                  <b-nav-item href="#PREGUNTAS" 
                     >PREGUNTAS</b-nav-item
                   >
-                  <b-nav-item href="#RECURSOS" @click="scrollIntoView"
+                  <b-nav-item href="#RECURSOS"
                     >RECURSOS</b-nav-item
                   >
-                  <b-nav-item href="#grad2" @click="scrollIntoView"
+                  <b-nav-item href="#grad2"
                     >GALERIA</b-nav-item
                   >
                 </b-nav>
-                <b-img src="@/assets//img/Barra.png" width="300%" class="fondoSide" ></b-img>
+                <b-img
+                  src="@/assets//img/Barra.png"
+                  width="300%"
+                  class="fondoSide"
+                ></b-img>
               </b-sidebar>
             </div>
           </div>
@@ -88,7 +96,7 @@
           </div>
         </div>
       </div>
-      <div v-if="redes">
+      <div v-if="redes" id="PREGUNTAS">
         <div v-if="redesTexts.length">
           <div v-for="redesText in redesTexts" :key="redesText.id">
             <div class="container-fluid child" :id="redesText.id">
@@ -105,7 +113,7 @@
           </div>
         </div>
       </div>
-      <div v-if="plastico">
+      <div v-if="plastico" id="PREGUNTAS">
         <div v-if="plasticosTexts.length">
           <div v-for="plasticosText in plasticosTexts" :key="plasticosText.id">
             <div class="container-fluid child" :id="plasticosText.id">
@@ -122,7 +130,7 @@
           </div>
         </div>
       </div>
-      <div v-if="reciclaje">
+      <div v-if="reciclaje" id="PREGUNTAS">
         <div v-if="reciclajeTexts.length">
           <div v-for="reciclajeText in reciclajeTexts" :key="reciclajeText.id">
             <div class="container-fluid child" :id="reciclajeText.id">
@@ -139,7 +147,7 @@
           </div>
         </div>
       </div>
-      <div v-if="pesca">
+      <div v-if="pesca" id="PREGUNTAS">
         <div v-if="pescaTexts.length">
           <div v-for="pescaText in pescaTexts" :key="pescaText.id">
             <div class="container-fluid child" :id="pescaText.id">
@@ -158,7 +166,7 @@
       </div>
 
       <div class="parallax child" id="RECURSOS">
-        <b-container style="padding-top:200px">
+        <b-container style="padding-top:180px">
           <b-jumbotron
             class="jumbo"
             header="Material Educativo"
@@ -178,32 +186,59 @@
       <div class="pt-3" id="grad2">
         <div id="myModal" class="modal child">
           <div class="modalContent" id="GALERIA">
-
             <div class="mySlides" style="display:block">
               <div class="numbertext">1 / 4</div>
-              <img src="@/assets//img/IMG_0236.jpg" alt="Character" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0236.jpg"
+                alt="Character"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">2 / 4</div>
-              <img src="@/assets//img/IMG_0258.jpg" alt="Diver" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0258.jpg"
+                alt="Diver"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">3 / 4</div>
-              <img src="@/assets//img/IMG_0262.jpg" alt="Diver" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0262.jpg"
+                alt="Diver"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
-              <img src="@/assets//img/IMG_0408.jpg" alt="Barco" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0408.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
             </div>
 
             <!-- Next/previous controls -->
-            <a class="prev" @click="plusSlides(-1)"><b-img src="@/assets//img/Pez1Hueco.png" width="75%" alt="Responsive image"></b-img></a>
-            <a class="next" @click="plusSlides(1)"><b-img src="@/assets//img/TortugaHueco.png" width="75%" alt="Responsive image"></b-img></a>
+            <a class="prev" @click="plusSlides(-1)"
+              ><b-img
+                src="@/assets//img/Pez1Hueco.png"
+                width="75%"
+                alt="Responsive image"
+              ></b-img
+            ></a>
+            <a class="next" @click="plusSlides(1)"
+              ><b-img
+                src="@/assets//img/TortugaHueco.png"
+                width="75%"
+                alt="Responsive image"
+              ></b-img
+            ></a>
 
-            <b-icon-info-circle-fill  id="flecha" @click="showInfo" />
+            <b-icon-info-circle-fill id="flecha" @click="showInfo" />
             <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
 
             <div class="animate-wrap is-hidden">
@@ -216,7 +251,7 @@
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer class="child"></Footer>
     </div>
   </div>
 </template>
@@ -528,17 +563,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.sideMenu{
+.sideMenu {
   font-size: 120%;
 }
-::v-deep .b-sidebar{
+::v-deep .b-sidebar {
   width: 15%;
 }
- ::v-deep .b-sidebar-body{
+::v-deep .b-sidebar-body {
   overflow: hidden;
 }
-::v-deep .b-sidebar-header{
+::v-deep .b-sidebar-header {
   padding: 30px;
 }
 .openSidebar {
@@ -621,6 +655,9 @@ export default {
 .child {
   scroll-snap-align: start;
   height: 100vh;
+}
+#footer.child{
+  height: 10%;
 }
 #grad1 {
   background-image: linear-gradient(white, #062d40);
@@ -850,7 +887,7 @@ export default {
 }
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #5DB9D1;
+  color: #5db9d1;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -875,7 +912,7 @@ export default {
   width: 2%;
   height: 2%;
   margin-top: 2%;
-  color: #5DB9D1;
+  color: #5db9d1;
 }
 #cerrarInfo {
   width: 2%;
@@ -974,23 +1011,59 @@ export default {
     opacity: 0;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen  and (max-width: 850px) {
   #video {
     padding-left: 0px;
     padding-right: 0px;
   }
   .child {
     scroll-snap-align: start;
-    height: 600px;
+    
   }
   .before-enter {
-    width: 500px;
-    height: 500px;
-    margin-left: 60%;
-    margin-top: 37%;
-    background-color: rgba(255, 255, 255, 0.678);
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
+    display: none;
+  }
+  ::v-deep .b-sidebar {
+    width: 55%;
+  }
+  .fondoSide{
+    margin-top:20%;
+  }
+  .jumbo{
+    padding-top: 0%;
+  }
+  
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .child {
+    scroll-snap-align: start;
+
+  }
+  ::v-deep .navbar {
+    padding-right: 20%;
+  }
+  ::v-deep .b-sidebar {
+    width: 22%;
+  }
+  .parallax{
+    height: 800px;
+  }
+  .jumbo{
+    margin-top: 5%;
+  }
+
+  @keyframes enter {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-400px) translateX(-400px);
+    transform: translateY(-400px) translateX(-400px);
+  }
+}
+#GALERIA{
+    padding-top:10%;
   }
 }
 </style>
