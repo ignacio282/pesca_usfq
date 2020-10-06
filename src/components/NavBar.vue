@@ -88,6 +88,9 @@
             <router-link class="colorGray" to="/">Partner 3</router-link>
           </b-dropdown-item>
         </b-nav-item-dropdown>
+        <b-nav-item class="text-uppercase language activo" right>ES</b-nav-item>
+        <b-nav-text id="separador" right>|</b-nav-text>
+        <b-nav-item class="text-uppercase" right>EN</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -153,6 +156,17 @@ export default {
 .link {
   padding-left: 3%;
   padding-right: 3%;
+}
+
+.activo{}
+
+.language{
+  padding-left: 3%;
+}
+
+#separador{
+  color: black;
+  padding-top: .45rem;
 }
 
 #brand:hover {

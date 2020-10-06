@@ -3,106 +3,76 @@
     <NavBar />
     <b-container class="p-5">
       <h2 style="padding-top:60px">
-        Lorem ipsum dolor sit amet Praesent facilisis nibh
-        <br />
-        diam, et tempor augue semper id
+        Noticias Regeneración de Ecosistemas
       </h2>
-      <div class="subtitle pt-1 pb-2">Autor</div>
-      <img class="pt-3 pb-5" src="https://via.placeholder.com/400" alt="..." />
+      <div class="subtitle pt-1 pb-2">Paúl Rosero</div>
       <hr />
-      <h3 class="pt-4 pb-5">
-        Lorem ipsum dolor si
-        <br />
-        amet Praesent facilisis nibh
-      </h3>
-      <p class="pl-5 pr-5">
-        <b-container class="pb-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-          facilisis nibh diam, et tempor augue semper id. Vestibulum ante risus,
-          fringilla a rutrum ac, vehicula nec erat. Morbi rutrum elementum
-          aliquam. Suspendisse non aliquet lacus. <br />
-          <br />Quisque in metus diam. Donec eleifend nisi nec tortor fermentum,
-          eget efficitur libero ornare. In sed justo quis ante finibus dictum.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          ultricies vulputate pharetra. <br />
-          <br />
-          Donec varius lobortis augue a malesuada. Nulla dictum, ante rutrum
-          hendrerit aliquet, lectus justo condimentum eros, vel fringilla lorem
-          turpis in augue. Nunc scelerisque libero id velit luctus tempor.
-          Nullam efficitur tortor a malesuada auctor.
-        </b-container>
-      </p>
-      <hr />
-      <b-row class="pt-5">
-        <b-col>
-          <h3>1. Titulo 1</h3>
-          <p class="pl-5 pr-5 pt-3">
-            <b-container class="pb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              facilisis nibh diam, et tempor augue semper id. Vestibulum ante
-              risus, fringilla a rutrum ac, vehicula nec erat. Morbi rutrum
-              elementum aliquam. Suspendisse non aliquet lacus. <br />
-              <br />Quisque in metus diam. Donec eleifend nisi nec tortor
-              fermentum, eget efficitur libero ornare. In sed justo quis ante
-              finibus dictum. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Vivamus ultricies vulputate pharetra. <br />
-              <br />
-              Donec varius lobortis augue a malesuada. Nulla dictum, ante rutrum
-              hendrerit aliquet, lectus justo condimentum eros, vel fringilla
-              lorem turpis in augue. Nunc scelerisque libero id velit luctus
-              tempor. Nullam efficitur tortor a malesuada auctor.
-            </b-container>
-          </p>
-        </b-col>
-        <b-col>
-          <img
-            class="pt-3 pb-5"
-            src="https://via.placeholder.com/400"
-            alt="..."
-          />
-        </b-col>
-      </b-row>
-
-      <b-row class="pt-5">
-        <b-col>
-          <img
-            class="pt-3 pb-5"
-            src="https://via.placeholder.com/400"
-            alt="..."
-          />
-        </b-col>
-        <b-col>
-          <h3>1. Titulo 1</h3>
-          <p class="pl-5 pr-5 pt-3">
-            <b-container class="pb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              facilisis nibh diam, et tempor augue semper id. Vestibulum ante
-              risus, fringilla a rutrum ac, vehicula nec erat. Morbi rutrum
-              elementum aliquam. Suspendisse non aliquet lacus. <br />
-              <br />Quisque in metus diam. Donec eleifend nisi nec tortor
-              fermentum, eget efficitur libero ornare. In sed justo quis ante
-              finibus dictum. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Vivamus ultricies vulputate pharetra. <br />
-              <br />
-              Donec varius lobortis augue a malesuada. Nulla dictum, ante rutrum
-              hendrerit aliquet, lectus justo condimentum eros, vel fringilla
-              lorem turpis in augue. Nunc scelerisque libero id velit luctus
-              tempor. Nullam efficitur tortor a malesuada auctor.
-            </b-container>
-          </p>
-        </b-col>
-      </b-row>
+      <div v-for="(blog, index) in blogs" :key="blog.id">
+        <b-row class="pt-5">
+          <b-col v-if="index % 2 !== 0">
+            <img
+              class="image"
+              :src="imagenes[index]"
+              alt="..."
+            />
+          </b-col>
+          <b-col>
+            <h3 class="pt-4 pb-3 pl-3 titulo">
+              {{ blog.titulo }}
+            </h3>
+            <p class="pr-4 pt-3">
+              <b-container class="pb-5">
+                {{ blog.texto }}
+              </b-container>
+            </p>
+          </b-col>
+          <b-col v-if="index % 2 === 0 || index === 0">
+            <img
+              class="image"
+              :src="imagenes[index]"
+              alt="..."
+            />
+          </b-col>
+        </b-row>
+        <hr />
+      </div>
     </b-container>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import { storage } from "../firebase";
+import { blog } from "../firebase";
 export default {
   name: "News",
+  data: function() {
+    return {
+      storageRef: storage.ref(),
+      blogs: [],
+      imagenes: []
+    };
+  },
+  mounted: function() {
+    let blogRef = this.storageRef.child("blog");
+    blog.orderBy("fecha", "desc").onSnapshot(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        let text = doc.data();
+        text.id = doc.id;
+        this.blogs.push(text);
+      });
+    });
+    blogRef.listAll().then(res => {
+      res.items.forEach(itemRef =>{
+        itemRef.getDownloadURL().then(url =>{
+          this.imagenes.push(url);
+        })
+      })
+    });
+  },
   components: {},
-  methods: {},
+  methods: {}
 };
 </script>
 
@@ -116,8 +86,18 @@ export default {
 .navbar {
   background-color: white !important;
   height: 10%;
-  color: black ;
+  color: black;
 }
+
+.titulo{
+  text-align: left;
+}
+
+.image{
+  padding-top: 5%;
+  max-height: 60%;
+}
+
 ::v-deep .nav-link {
   color: rgba($color: black, $alpha: 1) !important;
 }
@@ -131,7 +111,7 @@ p {
   color: rgb(80, 80, 80);
   font-family: "Roboto Light";
 }
-::v-deep .colorWhite{
-    color: black !important;
+::v-deep .colorWhite {
+  color: black !important;
 }
 </style>
