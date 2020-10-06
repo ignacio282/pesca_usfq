@@ -42,36 +42,82 @@
             />
             <div>
               <b-button v-b-toggle.sidebar-1 class="openSidebar"
-                ><b-icon-list /></b-button
+                ><b-icon-list
+              /></b-button>
+              <b-sidebar
+                v-if="!eng"
+                id="sidebar-1"
+                title="CONTENIDO"
+                shadow
+                style="overflow-y:hidden"
               >
-              <b-sidebar id="sidebar-1" title="CONTENIDO" shadow  style="overflow-y:hidden"  >
                 <b-nav
                   class="flex-column sideMenu"
                   v-b-scrollspy:nav-scroller
                   style="margin-top:30%"
-                  
                 >
-                  <b-nav-item href="#video" @click="scrollIntoView"
-                    >VIDEO</b-nav-item
-                  >
-                  <b-nav-item href="#PREGUNTAS" @click="scrollIntoView"
-                    >PREGUNTAS</b-nav-item
-                  >
-                  <b-nav-item href="#RECURSOS" @click="scrollIntoView"
-                    >RECURSOS</b-nav-item
-                  >
-                  <b-nav-item href="#grad2" @click="scrollIntoView"
-                    >GALERIA</b-nav-item
-                  >
+                  <b-nav-item href="#video">VIDEO</b-nav-item>
+                  <b-nav-item href="#PREGUNTAS">PREGUNTAS</b-nav-item>
+                  <b-nav-item href="#RECURSOS">RECURSOS</b-nav-item>
+                  <b-nav-item href="#grad2">GALERIA</b-nav-item>
                 </b-nav>
-                <b-img src="@/assets//img/Barra.png" width="300%" class="fondoSide" ></b-img>
+                <b-img
+                  src="@/assets//img/Barra.png"
+                  width="300%"
+                  class="fondoSide"
+                ></b-img>
+              </b-sidebar>
+              <b-sidebar
+                v-if="eng"
+                id="sidebar-1"
+                title="CONTENT"
+                shadow
+                style="overflow-y:hidden"
+              >
+                <b-nav
+                  class="flex-column sideMenu"
+                  v-b-scrollspy:nav-scroller
+                  style="margin-top:30%"
+                >
+                  <b-nav-item href="#video">VIDEO</b-nav-item>
+                  <b-nav-item href="#PREGUNTAS">QUESTIONS</b-nav-item>
+                  <b-nav-item href="#RECURSOS">RESOURCES</b-nav-item>
+                  <b-nav-item href="#grad2">GALLERY</b-nav-item>
+                </b-nav>
+                <b-img
+                  src="@/assets//img/Barra.png"
+                  width="300%"
+                  class="fondoSide"
+                ></b-img>
               </b-sidebar>
             </div>
           </div>
+          <h5 v-if="educacion && !eng" class="titulo text-uppercase">
+            Educación Ambiental
+          </h5>
+          <h5 v-if="educacion && eng" class="titulo text-uppercase">
+            Environmental Education
+          </h5>
+          <h5 v-if="redes && !eng" class="titulo text-uppercase">
+            Redes Fantasma
+          </h5>
+          <h5 v-if="redes && eng" class="titulo text-uppercase">Ghost Nets</h5>
+          <h5 v-if="plastico && !eng" class="titulo text-uppercase">
+            Plásticos
+          </h5>
+          <h5 v-if="plastico && eng" class="titulo text-uppercase">Plastics</h5>
+          <h5 v-if="reciclaje && !eng" class="titulo text-uppercase">
+            Reciclaje
+          </h5>
+          <h5 v-if="reciclaje && eng" class="titulo text-uppercase">
+            Recycling
+          </h5>
+          <h5 v-if="pesca && !eng" class="titulo text-uppercase">Pesca</h5>
+          <h5 v-if="pesca && eng" class="titulo text-uppercase">Fishing</h5>
         </div>
       </div>
 
-      <div v-if="educacion" id="PREGUNTAS">
+      <div v-if="educacion && !eng" id="PREGUNTAS">
         <div v-if="educacionTexts.length">
           <div v-for="educacionText in educacionTexts" :key="educacionText.id">
             <div class="container-fluid child" :id="educacionText.id">
@@ -81,6 +127,23 @@
                   <h4 class="pb-3">{{ educacionText.pregunta }}</h4>
                   <div class="overflow-auto pr-3" style="height:300px">
                     <p class="description">{{ educacionText.respuesta }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="educacion && eng" id="PREGUNTAS">
+        <div v-if="educationTexts.length">
+          <div v-for="educationText in educationTexts" :key="educationText.id">
+            <div class="container-fluid child" :id="educationText.id">
+              <h2 class="text-center pt-4 pb-4"></h2>
+              <div v-scrollanimation>
+                <div class="fondoTarjeta">
+                  <h4 class="pb-3">{{ educationText.question }}</h4>
+                  <div class="overflow-auto pr-3" style="height:300px">
+                    <p class="description">{{ educationText.answer }}</p>
                   </div>
                 </div>
               </div>
@@ -160,12 +223,27 @@
       <div class="parallax child" id="RECURSOS">
         <b-container style="padding-top:200px">
           <b-jumbotron
+            v-if="!eng"
             class="jumbo"
             header="Material Educativo"
             lead="Videos educativos, Infografías, Hojas de trabajo (PDF)"
             style="text-transform: uppercase"
           >
-            <p>Haz Click Aquí Para Descargar</p>
+            <p>Haz Click Aquí Para Ver</p>
+            <router-link to="/recursos" class="colorWhite">
+              <b-button variant="primary">
+                <b-icon-download></b-icon-download>
+              </b-button>
+            </router-link>
+          </b-jumbotron>
+          <b-jumbotron
+            v-if="eng"
+            class="jumbo"
+            header="Educational Material"
+            lead="Educational videos, infographics, work sheets (PDF)"
+            style="text-transform: uppercase"
+          >
+            <p>Click Here to View</p>
             <router-link to="/recursos" class="colorWhite">
               <b-button variant="primary">
                 <b-icon-download></b-icon-download>
@@ -178,32 +256,59 @@
       <div class="pt-3" id="grad2">
         <div id="myModal" class="modal child">
           <div class="modalContent" id="GALERIA">
-
             <div class="mySlides" style="display:block">
               <div class="numbertext">1 / 4</div>
-              <img src="@/assets//img/IMG_0236.jpg" alt="Character" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0236.jpg"
+                alt="Character"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">2 / 4</div>
-              <img src="@/assets//img/IMG_0258.jpg" alt="Diver" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0258.jpg"
+                alt="Diver"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">3 / 4</div>
-              <img src="@/assets//img/IMG_0262.jpg" alt="Diver" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0262.jpg"
+                alt="Diver"
+                style="width:80%"
+              />
             </div>
 
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
-              <img src="@/assets//img/IMG_0408.jpg" alt="Barco" style="width:80%" />
+              <img
+                src="@/assets//img/IMG_0408.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
             </div>
 
             <!-- Next/previous controls -->
-            <a class="prev" @click="plusSlides(-1)"><b-img src="@/assets//img/Pez1Hueco.png" width="100%" alt="Responsive image"></b-img></a>
-            <a class="next" @click="plusSlides(1)"><b-img src="@/assets//img/TortugaHueco.png" width="100%" alt="Responsive image"></b-img></a>
+            <a class="prev" @click="plusSlides(-1)"
+              ><b-img
+                src="@/assets//img/Pez1Hueco.png"
+                width="75%"
+                alt="Responsive image"
+              ></b-img
+            ></a>
+            <a class="next" @click="plusSlides(1)"
+              ><b-img
+                src="@/assets//img/TortugaHueco.png"
+                width="75%"
+                alt="Responsive image"
+              ></b-img
+            ></a>
 
-            <b-icon-info-circle-fill  id="flecha" @click="showInfo" />
+            <b-icon-info-circle-fill id="flecha" @click="showInfo" />
             <b-icon-arrow-bar-down id="cerrarInfo" @click="closeInfo" />
 
             <div class="animate-wrap is-hidden">
@@ -227,6 +332,7 @@ import { redesTexts } from "../firebase";
 import { plasticosTexts } from "../firebase";
 import { reciclajeTexts } from "../firebase";
 import { pescaTexts } from "../firebase";
+import { educationTexts } from "../firebase";
 export default {
   name: "Secundaria",
   watch: {
@@ -346,6 +452,18 @@ export default {
         this.pescaTexts.push(text);
       });
     });
+    educationTexts.onSnapshot(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        let text = doc.data();
+        text.id = doc.id;
+        text.question = text.question.replace("br", "\n");
+        this.educationTexts.push(text);
+      });
+    });
+    this.$root.$on("lang", eng => {
+      this.eng = eng;
+      console.log(this.eng);
+    });
   },
   updated: function() {
     if (this.educacion) {
@@ -422,7 +540,9 @@ export default {
       redesTexts: [],
       plasticosTexts: [],
       reciclajeTexts: [],
-      pescaTexts: []
+      pescaTexts: [],
+      educationTexts: [],
+      eng: false
     };
   },
   methods: {
@@ -528,23 +648,22 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.sideMenu{
+.sideMenu {
   font-size: 120%;
 }
-::v-deep .b-sidebar{
+::v-deep .b-sidebar {
   width: 15%;
 }
- ::v-deep .b-sidebar-body{
+::v-deep .b-sidebar-body {
   overflow: hidden;
 }
-::v-deep .b-sidebar-header{
+::v-deep .b-sidebar-header {
   padding: 30px;
 }
 .openSidebar {
   position: fixed;
   bottom: 5%;
-  right: 5%;
+  right: 4%;
   z-index: 100;
 }
 .fondoTarjeta {
@@ -618,6 +737,13 @@ export default {
     scroll-snap-type: y proximity;
   }
 }
+.titulo {
+  color: black;
+  font-weight: 300;
+  margin-top: 1%;
+  margin-right: 19.25%;
+  text-align: right;
+}
 .child {
   scroll-snap-align: start;
   height: 100vh;
@@ -639,7 +765,7 @@ export default {
   color: #03141d;
 }
 #video {
-  padding-top: 100px;
+  padding-top: 70px;
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -850,7 +976,7 @@ export default {
 }
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #5DB9D1;
+  color: #5db9d1;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -875,7 +1001,7 @@ export default {
   width: 2%;
   height: 2%;
   margin-top: 2%;
-  color: #5DB9D1;
+  color: #5db9d1;
 }
 #cerrarInfo {
   width: 2%;
