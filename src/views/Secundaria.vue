@@ -4,7 +4,7 @@
 
     <div class="snapSection pr-0">
       <div class="pt-5">
-        <div class="child">
+        <div class="child childVideo">
           <div class="container" id="video">
             <br />
             <b-embed
@@ -56,10 +56,18 @@
                   v-b-scrollspy:nav-scroller
                   style="margin-top:30%"
                 >
-                  <b-nav-item href="#video">VIDEO</b-nav-item>
-                  <b-nav-item href="#PREGUNTAS">PREGUNTAS</b-nav-item>
-                  <b-nav-item href="#RECURSOS">RECURSOS</b-nav-item>
-                  <b-nav-item href="#grad2">GALERIA</b-nav-item>
+                  <b-nav-item href="#video" 
+                    >VIDEO</b-nav-item
+                  >
+                  <b-nav-item href="#PREGUNTAS" 
+                    >PREGUNTAS</b-nav-item
+                  >
+                  <b-nav-item href="#RECURSOS"
+                    >RECURSOS</b-nav-item
+                  >
+                  <b-nav-item href="#grad2"
+                    >GALERIA</b-nav-item
+                  >
                 </b-nav>
                 <b-img
                   src="@/assets//img/Barra.png"
@@ -168,7 +176,7 @@
           </div>
         </div>
       </div>
-      <div v-if="plastico">
+      <div v-if="plastico" id="PREGUNTAS">
         <div v-if="plasticosTexts.length">
           <div v-for="plasticosText in plasticosTexts" :key="plasticosText.id">
             <div class="container-fluid child" :id="plasticosText.id">
@@ -185,7 +193,7 @@
           </div>
         </div>
       </div>
-      <div v-if="reciclaje">
+      <div v-if="reciclaje" id="PREGUNTAS">
         <div v-if="reciclajeTexts.length">
           <div v-for="reciclajeText in reciclajeTexts" :key="reciclajeText.id">
             <div class="container-fluid child" :id="reciclajeText.id">
@@ -202,7 +210,7 @@
           </div>
         </div>
       </div>
-      <div v-if="pesca">
+      <div v-if="pesca" id="PREGUNTAS">
         <div v-if="pescaTexts.length">
           <div v-for="pescaText in pescaTexts" :key="pescaText.id">
             <div class="container-fluid child" :id="pescaText.id">
@@ -221,7 +229,7 @@
       </div>
 
       <div class="parallax child" id="RECURSOS">
-        <b-container style="padding-top:200px">
+        <b-container style="padding-top:180px">
           <b-jumbotron
             v-if="!eng"
             class="jumbo"
@@ -321,7 +329,7 @@
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer class="child"></Footer>
     </div>
   </div>
 </template>
@@ -748,6 +756,9 @@ export default {
   scroll-snap-align: start;
   height: 100vh;
 }
+#footer.child{
+  height: 10%;
+}
 #grad1 {
   background-image: linear-gradient(white, #062d40);
 }
@@ -1100,23 +1111,59 @@ export default {
     opacity: 0;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen  and (max-width: 850px) {
   #video {
     padding-left: 0px;
     padding-right: 0px;
   }
   .child {
     scroll-snap-align: start;
-    height: 600px;
+    
   }
   .before-enter {
-    width: 500px;
-    height: 500px;
-    margin-left: 60%;
-    margin-top: 37%;
-    background-color: rgba(255, 255, 255, 0.678);
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
+    display: none;
+  }
+  ::v-deep .b-sidebar {
+    width: 55%;
+  }
+  .fondoSide{
+    margin-top:20%;
+  }
+  .jumbo{
+    padding-top: 0%;
+  }
+  
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .child {
+    scroll-snap-align: start;
+
+  }
+  ::v-deep .navbar {
+    padding-right: 20%;
+  }
+  ::v-deep .b-sidebar {
+    width: 22%;
+  }
+  .parallax{
+    height: 800px;
+  }
+  .jumbo{
+    margin-top: 5%;
+  }
+
+  @keyframes enter {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-400px) translateX(-400px);
+    transform: translateY(-400px) translateX(-400px);
+  }
+}
+#GALERIA{
+    padding-top:10%;
   }
 }
 </style>
