@@ -12,7 +12,7 @@
       :loop="false"
       ref="videobackground"
     >
-      <b-button id="skip" pill @click="stopVideo"> SKIP </b-button>
+    <b-button id="skip" pill @click="stopVideo"> SKIP </b-button>
       <b-container fluid id="menu">
         <NavBar></NavBar>
       </b-container>
@@ -79,7 +79,7 @@ export default {
         document.getElementById("menu").style.visibility = "visible";
         document.getElementById("menu").style.opacity = 1;
         document.getElementById("skip").style.display = "none";
-        this.toggleLoop(7800);
+        this.toggleLoop(7820);
       }, time);
     },
     stopVideo: function() {

@@ -56,18 +56,10 @@
                   v-b-scrollspy:nav-scroller
                   style="margin-top:30%"
                 >
-                  <b-nav-item href="#video" 
-                    >VIDEO</b-nav-item
-                  >
-                  <b-nav-item href="#PREGUNTAS" 
-                    >PREGUNTAS</b-nav-item
-                  >
-                  <b-nav-item href="#RECURSOS"
-                    >RECURSOS</b-nav-item
-                  >
-                  <b-nav-item href="#grad2"
-                    >GALERIA</b-nav-item
-                  >
+                  <b-nav-item href="#video">VIDEO</b-nav-item>
+                  <b-nav-item href="#PREGUNTAS">PREGUNTAS</b-nav-item>
+                  <b-nav-item href="#RECURSOS">RECURSOS</b-nav-item>
+                  <b-nav-item href="#grad2">GALERIA</b-nav-item>
                 </b-nav>
                 <b-img
                   src="@/assets//img/Barra.png"
