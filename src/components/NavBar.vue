@@ -123,31 +123,31 @@
           right
           
         >
-          <b-dropdown-item class="colorGray dropMenu" href="https://dlab.usfq.edu.ec/">
+          <b-dropdown-item class="colorGray dropMenu" target="_blank" href="https://dlab.usfq.edu.ec/">
            D-Lab USFQ
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.plasticoproject.com/" >
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.plasticoproject.com/" >
             PlastiCO Project
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.facebook.com/USFQCOCOA">
+          <b-dropdown-item class="colorGray" target="_blank"  href="https://www.facebook.com/USFQCOCOA">
             COCOA USFQ
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.daad.de/en/">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.daad.de/en/">
             DAAD
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.facebook.com/proyectocetaceaecuador">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.facebook.com/proyectocetaceaecuador">
             CETACEA Ecuador
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.delaredalplato.com/">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.delaredalplato.com/">
             De la Red al Plato
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.facebook.com/USFQCOCIBA">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.facebook.com/USFQCOCIBA">
             COCIBA USFQ
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.leibniz-zmt.de/en/">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.leibniz-zmt.de/en/">
             ZMT Centre for Tropical Marine Ecology
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.facebook.com/TueriUSFQ">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.facebook.com/TueriUSFQ">
             Hospital de Fauna Silvestre TUERI USFQ
           </b-dropdown-item>
         </b-nav-item-dropdown>

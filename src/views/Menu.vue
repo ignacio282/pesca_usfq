@@ -12,7 +12,7 @@
       :loop="false"
       ref="videobackground"
     >
-      <b-button id="skip" squared @click="stopVideo"> SKIP </b-button>
+      <b-button id="skip" pill @click="stopVideo"> SKIP </b-button>
       <b-container fluid id="menu">
         <NavBar></NavBar>
       </b-container>
