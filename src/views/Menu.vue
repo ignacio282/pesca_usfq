@@ -1,93 +1,36 @@
 <template>
   <div class="menu">
     <video-background
+      v-show="!loop"
+      :key="videoKey"
       id="main"
-      :src="require('@/assets/video/Principal09_limpia.mp4')"
+      :src="sourceVideo"
       style="height: 100%;"
-      :poster="require('@/assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png')"
+      :poster="
+        require('@/assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png')
+      "
       :loop="false"
       ref="videobackground"
     >
-    <b-button id="skip" pill @click="stopVideo"> SKIP </b-button>
+      <b-button id="skip" squared @click="stopVideo"> SKIP </b-button>
       <b-container fluid id="menu">
         <NavBar></NavBar>
-        <kinesis-container v-if="sucio" class="contenedor">
-        <kinesis-element style="margin-left:-800px; margin-top:-100px"  type="translate" :strength="20">
-          <img
-          style="opacity: 0.6"
-            src="@/assets//basura/Bottle1basura.png"
-            width="5%"
-            alt="basura1"
-          />
-        </kinesis-element>
-        <kinesis-element style="margin-left:-300px"  type="depth" :strength="20">
-          <img
-          style="opacity: 0.6"
-            src="@/assets//basura/QFcbasura.png"
-            width="5%"
-            alt="basura1"
-          />
-        </kinesis-element>
-        <kinesis-element style="margin-left:-1000px; margin-top:-70px"  type="depth_inv" :strength="20">
-          <img
-          style="opacity: 0.6"
-            src="@/assets//basura/Dorobasura.png"
-            width="4%"
-            alt="basura1"
-          />
-        </kinesis-element>
-        <kinesis-element style="margin-left:800px; margin-top:-200px "   type="depth" :strength="20">
-          <img
-          style="opacity: 0.6"
-            src="@/assets//basura/Fundabasura.png"
-            width="15%"
-            alt="basura1"
-          />
-        </kinesis-element>
-
-        <kinesis-element style="margin-left:300px"  type="depth_inv" :strength="20">
-          <img
-          style="opacity: 0.6"
-            src="@/assets//basura/Cap1basura.png"
-            width="2%"
-            alt="basura1"
-          />
-        </kinesis-element>
-        <kinesis-element style="margin-top:-100px" type="depth" :strength="20">
-
-          <img
-          style="opacity: 0.7"
-            src="@/assets//basura/nacdonalddsbasura.png"
-            width="4%"
-            alt="basura1"
-          />
-        </kinesis-element>
-        <kinesis-element style="margin-left:-500px" type="depth" :strength="15">
-          <img
-          style="opacity: 0.6"
-            src="@/assets//basura/Cig3basura.png"
-            width="4%"
-            alt="basura1"
-          />
-        </kinesis-element>
-        <kinesis-element style="margin-left:200px" type="depth_inv" :strength="20">
-          <img
-          style="opacity: 0.6"
-            src="@/assets//basura/cOFFEEbasura.png"
-            width="4%"
-            alt="basura1"
-          />
-        </kinesis-element>
-        <kinesis-element style="margin-left:-700px"  type="depth_inv" :strength="20">
-          <img
-          style="opacity: 0.6"
-            src="@/assets//basura/Mask1basura.png"
-            width="10%"
-            alt="basura1"
-          />
-        </kinesis-element>
-       
-      </kinesis-container>
+      </b-container>
+    </video-background>
+    <video-background
+      v-show="loop"
+      :key="loopKey"
+      id="mainL"
+      :src="sourceLoop"
+      style="height: 100%;"
+      :poster="
+        require('@/assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png')
+      "
+      :loop="true"
+      ref="videobackground"
+    >
+      <b-container fluid id="menuL">
+        <NavBar></NavBar>
       </b-container>
     </video-background>
     <Foot></Foot>
@@ -96,39 +39,60 @@
 
 <script>
 import Foot from "@/components/Footer.vue";
+import videoLimpio from "@/assets/video/Principal09_limpia.mp4";
+import videoSucio from "@/assets/video/Principal09_sucia.mp4";
+import loopLimpio from "@/assets/video/LoopLimpio.mp4";
+import loopSucio from "@/assets/video/Loop_Sucio.mp4";
 export default {
   name: "Menu",
   components: {
     Foot
   },
-  data: function(){
-    return{
-      sucio: Boolean
-    }
+  data: function() {
+    return {
+      sucio: Boolean,
+      loop: false,
+      sourceVideo: String,
+      sourceLoop: String,
+      videoKey: 0,
+      loopKey: 1
+    };
   },
-  created: function(){
-    if(this.$route.params.sucio === "limpio"){
+  created: function() {
+    if (this.$route.params.sucio === "limpio") {
       this.sucio = false;
-    };
-    if(this.$route.params.sucio === "sucio"){
+      this.sourceVideo = videoLimpio;
+      this.sourceLoop = loopLimpio;
+    }
+    if (this.$route.params.sucio === "sucio") {
       this.sucio = true;
-    };
+      this.sourceVideo = videoSucio;
+      this.sourceLoop = loopSucio;
+    }
   },
   mounted: function() {
     this.menuAppear(18000);
   },
   methods: {
     menuAppear: function(time) {
-      setTimeout(function() {
+      setTimeout(() => {
         document.getElementById("menu").style.visibility = "visible";
         document.getElementById("menu").style.opacity = 1;
         document.getElementById("skip").style.display = "none";
+        this.toggleLoop(7800);
       }, time);
     },
-    stopVideo: function(){
-      console.log(document.getElementById("main").children[1].children[0].currentTime);
+    stopVideo: function() {
       document.getElementById("main").children[1].children[0].currentTime = 17;
       this.menuAppear(1000);
+    },
+    toggleLoop: function(time){
+      setTimeout(()=>{
+        document.getElementById("menuL").style.visibility = "visible";
+        document.getElementById("menuL").style.opacity = 1;
+        document.getElementById("mainL").children[1].children[0].currentTime = 0;
+        this.loop = true;
+      }, time);
     }
   }
 };
@@ -136,20 +100,23 @@ export default {
 
 <style lang="scss" scoped>
 div.overlay {
-    opacity: .9;
-    background-color: black;
-    position: absolute;
-    left: 0; top: 0; height: 256px; width: 256px;
+  opacity: 0.9;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 256px;
+  width: 256px;
 }
 .menu {
   height: 100%;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
-#skip{
+#skip {
   background-color: white;
   color: #496f96;
   float: right;
@@ -161,7 +128,6 @@ div.overlay {
 #skip:hover{
   opacity: 0.8;
 }
-
 
 #menu {
   height: 100%;
