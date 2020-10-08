@@ -8,7 +8,7 @@
       :loop="false"
       ref="videobackground"
     >
-    <b-button id="skip" squared @click="stopVideo"> SKIP </b-button>
+    <b-button id="skip" pill @click="stopVideo"> SKIP </b-button>
       <b-container fluid id="menu">
         <NavBar></NavBar>
         <kinesis-container v-if="sucio" class="contenedor">
@@ -155,6 +155,11 @@ div.overlay {
   float: right;
   margin-top: 2%;
   margin-right: 2%;
+  opacity: 0.4;
+  border: none;
+}
+#skip:hover{
+  opacity: 0.8;
 }
 
 
