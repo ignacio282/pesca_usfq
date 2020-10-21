@@ -34,7 +34,7 @@
                 commodo excepteur ipsum laborum. Sit magna pariatur pariatur
                 ullamco non ut dolore culpa exercitation minim ipsum aute est.
                 <br />
-                <b-button class="mt-5" variant="dark">DESCARGAR</b-button>
+                <b-button class="mt-5" variant="dark" @click="downloadContent(1);">DESCARGAR</b-button>
               </b-col>
             </b-row>
           </b-modal>
@@ -48,7 +48,7 @@
           class="mb-5 "
         >
           <b-card-text>Video para descargar</b-card-text>
-          <b-button v-b-modal.modal2 @click="setVideo(1);">VER</b-button>
+          <b-button v-b-modal.modal2 @click="setVideo(1)">VER</b-button>
           <b-modal id="modal2" hide-footer hide-header size="xl" centered>
             <b-row class="mx-4 my-2">
               <b-col class="text-center">
@@ -59,7 +59,7 @@
                   src=""
                   allowfullscreen
                 ></b-embed>
-                <b-button class="mt-3" variant="dark">DESCARGAR</b-button>
+                <b-button class="mt-3" variant="dark" @click="downloadContent(2);">DESCARGAR</b-button>
               </b-col>
             </b-row>
           </b-modal>
@@ -69,7 +69,7 @@
           <b-card-title>AUDIO</b-card-title>
           <b-card-text>Audio para descargar</b-card-text>
           <b-button @click="play(1)">PLAY</b-button>
-          <b-button>DESCARGAR</b-button>
+          <b-button @click="downloadContent(3);">DESCARGAR</b-button>
         </b-card>
       </b-card-group>
       <b-card-group deck>
@@ -104,7 +104,7 @@
                 commodo excepteur ipsum laborum. Sit magna pariatur pariatur
                 ullamco non ut dolore culpa exercitation minim ipsum aute est.
                 <br />
-                <b-button class="mt-5" variant="dark">DESCARGAR</b-button>
+                <b-button class="mt-5" variant="dark" @click="downloadContent(4);">DESCARGAR</b-button>
               </b-col>
             </b-row>
           </b-modal>
@@ -118,7 +118,7 @@
           class="mb-2"
         >
           <b-card-text>Video para descargar</b-card-text>
-          <b-button v-b-modal.modal-4 @click="setVideo(2);">VER</b-button>
+          <b-button v-b-modal.modal-4 @click="setVideo(2)">VER</b-button>
           <b-modal id="modal-4" hide-footer hide-header size="xl" centered>
             <b-row class="mx-4 my-2">
               <b-col class="text-center">
@@ -129,7 +129,9 @@
                   src=""
                   allowfullscreen
                 ></b-embed>
-                <b-button class="mt-3" variant="dark">DESCARGAR</b-button>
+                <b-button class="mt-3" variant="dark" @click="downloadContent(5);"
+                  >DESCARGAR</b-button
+                >
               </b-col>
             </b-row>
           </b-modal>
@@ -139,7 +141,7 @@
           <b-card-title>AUDIO</b-card-title>
           <b-card-text>Audio para descargar</b-card-text>
           <b-button @click="play(2)">PLAY</b-button>
-          <b-button>DESCARGAR</b-button>
+          <b-button @click="downloadContent(6);">DESCARGAR</b-button>
         </b-card>
       </b-card-group>
     </b-container>
@@ -192,7 +194,7 @@ export default {
     setVideo: function(num) {
       if (num === 1) {
         this.storageRef
-          .child("videos/VIDEO_REDES_1_FINAL_NOBORRAR.mp4")
+          .child("recursos/videos/VIDEO_REDES_1_FINAL_NOBORRAR.mp4")
           .getDownloadURL()
           .then(function(url) {
             let video1 = document.getElementById("video1");
@@ -200,14 +202,122 @@ export default {
             video1.src = url;
           });
       }
-      if(num === 2){
+      if (num === 2) {
         this.storageRef
-        .child("videos/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
-        .getDownloadURL()
-        .then(function(url) {
-          let video2 = document.getElementById("video2");
-          video2.src = url;
-        });
+          .child("recursos/videos/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
+          .getDownloadURL()
+          .then(function(url) {
+            let video2 = document.getElementById("video2");
+            video2.src = url;
+          });
+      }
+    },
+    downloadContent: function(id) {
+      switch (id) {
+        case 1:
+          this.storageRef
+            .child("recursos/pdf/PlasticoCompleto.pdf")
+            .getDownloadURL()
+            .then(function(url) {
+              let xhr = new XMLHttpRequest();
+              xhr.responseType = "blob";
+              xhr.onload = function(event) {
+                let blob = xhr.response;
+                let a = document.createElement("a");
+                a.href = window.URL.createObjectURL(blob);
+                a.download = "videoRedes2";
+                a.click();
+              };
+              xhr.open("GET", url);
+              xhr.send();
+            });
+        case 2:
+          this.storageRef
+            .child("recursos/videos/VIDEO_REDES_1_FINAL_NOBORRAR.mp4")
+            .getDownloadURL()
+            .then(function(url) {
+              let xhr = new XMLHttpRequest();
+              xhr.responseType = "blob";
+              xhr.onload = function(event) {
+                let blob = xhr.response;
+                let a = document.createElement("a");
+                a.href = window.URL.createObjectURL(blob);
+                a.download = "videoRedes2";
+                a.click();
+              };
+              xhr.open("GET", url);
+              xhr.send();
+            });
+        case 3:
+          /*this.storageRef
+            .child("recursos/img/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
+            .getDownloadURL()
+            .then(function(url) {
+              let xhr = new XMLHttpRequest();
+              xhr.responseType = "blob";
+              xhr.onload = function(event) {
+                let blob = xhr.response;
+                let a = document.createElement("a");
+                a.href = window.URL.createObjectURL(blob);
+                a.download = "videoRedes2";
+                a.click();
+              };
+              xhr.open("GET", url);
+              xhr.send();
+            });*/
+            console.log("descarga audio 1");
+        case 4:
+          this.storageRef
+            .child("recursos/img/infoRedes.pdf")
+            .getDownloadURL()
+            .then(function(url) {
+              let xhr = new XMLHttpRequest();
+              xhr.responseType = "blob";
+              xhr.onload = function(event) {
+                let blob = xhr.response;
+                let a = document.createElement("a");
+                a.href = window.URL.createObjectURL(blob);
+                a.download = "videoRedes2";
+                a.click();
+              };
+              xhr.open("GET", url);
+              xhr.send();
+            });
+        case 5:
+          this.storageRef
+            .child("recursos/videos/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
+            .getDownloadURL()
+            .then(function(url) {
+              let xhr = new XMLHttpRequest();
+              xhr.responseType = "blob";
+              xhr.onload = function(event) {
+                let blob = xhr.response;
+                let a = document.createElement("a");
+                a.href = window.URL.createObjectURL(blob);
+                a.download = "videoRedes2";
+                a.click();
+              };
+              xhr.open("GET", url);
+              xhr.send();
+            });
+        case 6:
+          /*this.storageRef
+            .child("recursos/img/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
+            .getDownloadURL()
+            .then(function(url) {
+              let xhr = new XMLHttpRequest();
+              xhr.responseType = "blob";
+              xhr.onload = function(event) {
+                let blob = xhr.response;
+                let a = document.createElement("a");
+                a.href = window.URL.createObjectURL(blob);
+                a.download = "videoRedes2";
+                a.click();
+              };
+              xhr.open("GET", url);
+              xhr.send();
+            });*/
+            console.log("descarga audio 1");
       }
     }
   }
