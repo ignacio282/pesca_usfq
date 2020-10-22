@@ -259,6 +259,33 @@
             <div class="mySlides" style="display:block">
               <div class="numbertext">1 / 4</div>
               <img
+                src="@/assets//img/IMG_0377.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img
+                src="@/assets//img/IMG_0365.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img
+                src="@/assets//img/IMG_0264.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img
                 src="@/assets//img/IMG_0236.jpg"
                 alt="Character"
                 style="width:80%"
@@ -275,10 +302,10 @@
             </div>
 
             <div class="mySlides">
-              <div class="numbertext">3 / 4</div>
+              <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/IMG_0262.jpg"
-                alt="Diver"
+                src="@/assets//img/IMG_0408.jpg"
+                alt="Barco"
                 style="width:80%"
               />
             </div>
@@ -286,9 +313,189 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/IMG_0408.jpg"
+                src="@/assets//img/IMG_0169.jpg"
                 alt="Barco"
                 style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_0171.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_0174.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_0184.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_0194.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_0412.jpg"
+                alt="Barco"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/redesFondos.png"
+                alt="Character"
+                style="width:95%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/redes2.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/redesTecnica.png"
+                alt="Character"
+                style="width:95%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/redesAnguila.png"
+                alt="Character"
+                style="width:95%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0258.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0301.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0310.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0315.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/dardo muestra piel.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/Mother, calf and escort.png"
+                alt="Character"
+                style="width:95%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/muestras soplos.jpg"
+                alt="Character"
+                style="width:95%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/Photo-ID.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/RackMultipart20180729-7436-1g4yyeh.png"
+                alt="Character"
+                style="width:55%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/research_boat.png"
+                alt="Character"
+                style="width:100%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/Sountrap deployment.jpg"
+                alt="Character"
+                style="width:95%"
               />
             </div>
 
@@ -478,7 +685,7 @@ export default {
       document.getElementById("pregunta1").style.backgroundImage =
         "url(" + require("../assets/img/redesFondos.png") + ")";
       document.getElementById("pregunta2").style.backgroundImage =
-        "url(" + require("../assets/img/redesAnguila.png") + ")";
+        "url(" + require("../assets/img/redes2.jpg") + ")";
       document.getElementById("pregunta3").style.backgroundImage =
         "url(" + require("../assets/img/redesTecnica.png") + ")";
     }
@@ -748,7 +955,7 @@ export default {
   scroll-snap-align: start;
   height: 100vh;
 }
-#footer.child{
+#footer.child {
   height: 10%;
 }
 #grad1 {
@@ -1103,14 +1310,13 @@ export default {
     opacity: 0;
   }
 }
-@media only screen  and (max-width: 850px) {
+@media only screen and (max-width: 850px) {
   #video {
     padding-left: 0px;
     padding-right: 0px;
   }
   .child {
     scroll-snap-align: start;
-    
   }
   .before-enter {
     display: none;
@@ -1118,18 +1324,16 @@ export default {
   ::v-deep .b-sidebar {
     width: 55%;
   }
-  .fondoSide{
-    margin-top:20%;
+  .fondoSide {
+    margin-top: 20%;
   }
-  .jumbo{
+  .jumbo {
     padding-top: 0%;
   }
-  
 }
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
   .child {
     scroll-snap-align: start;
-
   }
   ::v-deep .navbar {
     padding-right: 20%;
@@ -1137,25 +1341,25 @@ export default {
   ::v-deep .b-sidebar {
     width: 22%;
   }
-  .parallax{
+  .parallax {
     height: 800px;
   }
-  .jumbo{
+  .jumbo {
     margin-top: 5%;
   }
 
   @keyframes enter {
-  0% {
-    -webkit-transform: translateY(0) translateX(0);
-    transform: translateY(0) translateX(0);
+    0% {
+      -webkit-transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      -webkit-transform: translateY(-400px) translateX(-400px);
+      transform: translateY(-400px) translateX(-400px);
+    }
   }
-  100% {
-    -webkit-transform: translateY(-400px) translateX(-400px);
-    transform: translateY(-400px) translateX(-400px);
-  }
-}
-#GALERIA{
-    padding-top:10%;
+  #GALERIA {
+    padding-top: 10%;
   }
 }
 </style>

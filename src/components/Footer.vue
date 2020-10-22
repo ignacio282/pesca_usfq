@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
 #footer {
-  background: #03141d;
+  background: black;
   color: #ffffff;
 }
 
