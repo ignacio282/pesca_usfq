@@ -13,6 +13,7 @@
               aspect="16by9"
               src="../assets/video/1 Educacion_Ambiental.mp4"
               allowfullscreen
+
             ></b-embed>
             <b-embed
               v-if="redes"
@@ -125,7 +126,7 @@
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ educacionText.pregunta }}</h4>
-                  <div class="overflow-auto pr-3" style="height:300px">
+                  <div class="overflow-auto pr-3 scrollArea" >
                     <p class="description">{{ educacionText.respuesta }}</p>
                   </div>
                 </div>
@@ -142,7 +143,7 @@
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ educationText.question }}</h4>
-                  <div class="overflow-auto pr-3" style="height:300px">
+                  <div class="overflow-auto pr-3 scrollArea">
                     <p class="description">{{ educationText.answer }}</p>
                   </div>
                 </div>
@@ -159,7 +160,7 @@
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ redesText.pregunta }}</h4>
-                  <div class="overflow-auto pr-3" style="height:300px">
+                  <div class="overflow-auto pr-3 scrollArea">
                     <p class="description">{{ redesText.respuesta }}</p>
                   </div>
                 </div>
@@ -176,7 +177,7 @@
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ plasticosText.pregunta }}</h4>
-                  <div class="overflow-auto pr-3" style="height:300px">
+                  <div class="overflow-auto pr-3 scrollArea">
                     <p class="description">{{ plasticosText.respuesta }}</p>
                   </div>
                 </div>
@@ -193,7 +194,7 @@
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
                   <h4 class="pb-3 subtitulo">{{ reciclajeText.pregunta }}</h4>
-                  <div class="overflow-auto pr-3" style="height:300px">
+                  <div class="overflow-auto pr-3 scrollArea">
                     <p class="description">{{ reciclajeText.respuesta }}</p>
                   </div>
                 </div>
@@ -210,7 +211,7 @@
               <div v-scrollanimation>
                 <div class="fondoTarjeta">
                   <h4 class="pb-3 subtitulo">{{ pescaText.pregunta }}</h4>
-                  <div class="overflow-auto pr-3" style="height:300px">
+                  <div class="overflow-auto pr-3 scrollArea">
                     <p class="description">{{ pescaText.respuesta }}</p>
                   </div>
                 </div>
@@ -648,6 +649,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.scrollArea{
+  height:300px
+}
 .sideMenu {
   font-size: 120%;
 }
@@ -815,7 +819,7 @@ export default {
   /* The image used */
   background-image: url("https://imgur.com/nLylsqL.jpg");
   /* Set a specific height */
-  height: 750px;
+  height: 100vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -1126,22 +1130,32 @@ export default {
   }
   
 }
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (min-width: 1260px) and (max-width: 1280px) {
   .child {
     scroll-snap-align: start;
-
+  } 
+  #video{
+    margin-bottom: 10%;
+  }
+  .titulo{
+display: none;
   }
   ::v-deep .navbar {
     padding-right: 20%;
+ 
   }
   ::v-deep .b-sidebar {
     width: 22%;
   }
   .parallax{
-    height: 800px;
+    height: 100vh;
   }
   .jumbo{
-    margin-top: 5%;
+    margin-top: -5%;
+  }
+  .numbertext{
+    top: 60%;
+
   }
 
   @keyframes enter {
@@ -1151,11 +1165,215 @@ export default {
   }
   100% {
     -webkit-transform: translateY(-400px) translateX(-400px);
-    transform: translateY(-400px) translateX(-400px);
+    transform: translateY(-400px) translateX(-500px);
   }
 }
-#GALERIA{
-    padding-top:10%;
+
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1260px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1260px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1260px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1260px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1260px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1260px) { 
+
+    .child {
+    scroll-snap-align: start;
+  } 
+  #video{
+    margin-bottom: 10%;
   }
+  .titulo{
+display: none;
+  }
+  ::v-deep .navbar {
+    padding-right: 20%;
+ 
+  }
+  ::v-deep .b-sidebar {
+    width: 22%;
+  }
+  .parallax{
+    height: 100vh;
+  }
+  .jumbo{
+    margin-top: -5%;
+  }
+  .numbertext{
+    top: 60%;
+
+  }
+
+  @keyframes enter {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-400px) translateX(-400px);
+    transform: translateY(-400px) translateX(-500px);
+  }
+}
+
+}
+
+@media screen and (min-width: 2300px) and (max-width: 3000px) {
+  #video{
+    padding-top: 10%;
+    
+  }
+  .scrollArea{
+    height: 1000px;
+  }
+  .child {
+    scroll-snap-align: start;
+  }
+  .titulo{
+    margin-right: 30%;
+    font-size: 200%;
+  }
+  .sideMenu{
+    font-size: 200%;
+  }
+  .fondoSide{
+    width: 100%;
+  }
+  ::v-deep .b-sidebar {
+    width: 20%;
+  }
+  .parallax{
+    height: 100vh;
+  }
+  .jumbo{
+    margin-top: 20%;
+  }
+  .description {
+  column-count: 2;
+  column-gap: 40px;
+  text-align: justify;
+  text-justify: inter-word;
+  color: white;
+  font-weight: 300;
+  text-transform: none;
+  padding-right: 1%;
+  font-size: 110%;
+}
+.before-enter {
+  width: 1200px;
+  height: 600px;
+  margin-left: 60%;
+  margin-top: 40%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+}
+.enter {
+  -webkit-animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+  @keyframes enter {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-00px) translateX(-400px);
+    transform: translateY(-600px) translateX(-400px);
+  }
+}
+#myModal{
+  height: 100vh;
+}
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 2300px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 2300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 2300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 2300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 2300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 2300px) { 
+
+     #video{
+    padding-top: 10%;
+    
+  }
+  .scrollArea{
+    height: 1000px;
+  }
+  .child {
+    scroll-snap-align: start;
+  }
+  .titulo{
+    margin-right: 30%;
+    font-size: 200%;
+  }
+  .sideMenu{
+    font-size: 200%;
+  }
+  .fondoSide{
+    width: 100%;
+  }
+  ::v-deep .b-sidebar {
+    width: 20%;
+  }
+  .parallax{
+    height: 100vh;
+  }
+  .jumbo{
+    margin-top: 20%;
+  }
+  .description {
+  column-count: 2;
+  column-gap: 40px;
+  text-align: justify;
+  text-justify: inter-word;
+  color: white;
+  font-weight: 300;
+  text-transform: none;
+  padding-right: 1%;
+  font-size: 110%;
+}
+.before-enter {
+  width: 1200px;
+  height: 600px;
+  margin-left: 60%;
+  margin-top: 40%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+}
+.enter {
+  -webkit-animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+  @keyframes enter {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-00px) translateX(-400px);
+    transform: translateY(-600px) translateX(-400px);
+  }
+}
+#myModal{
+  height: 100vh;
+}
+
 }
 </style>
