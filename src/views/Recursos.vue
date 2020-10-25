@@ -2,13 +2,14 @@
   <div id="recursos">
     <NavBar />
     <b-container fluid class="px-5 mt-5" id="tarjetas">
-      <b-card-group deck>
-        <b-card
+      <b-row>
+        <b-col>
+          <b-card
           title="PDF"
           img-src="../assets/img/plasticoPDF.png"
           img-alt="Card image"
           img-top
-          img-height="60%"
+          img-height="252px"
           class="mb-5"
         >
           <b-card-text>PDF para descargar</b-card-text>
@@ -40,46 +41,12 @@
           </b-modal>
         </b-card>
         <b-card
-          title="Video"
-          img-src="../assets/img/videoRedSS.png"
-          img-alt="Card image"
-          img-top
-          img-height="60%"
-          class="mb-5 "
-        >
-          <b-card-text>Video para descargar</b-card-text>
-          <b-button v-b-modal.modal2 @click="setVideo(1)">VER</b-button>
-          <b-modal id="modal2" hide-footer hide-header size="xl" centered>
-            <b-row class="mx-4 my-2">
-              <b-col class="text-center">
-                <b-embed
-                  id="video1"
-                  type="iframe"
-                  aspect="16by9"
-                  src=""
-                  allowfullscreen
-                ></b-embed>
-                <b-button class="mt-3" variant="dark" @click="downloadContent(2);">DESCARGAR</b-button>
-              </b-col>
-            </b-row>
-          </b-modal>
-        </b-card>
-        <b-card class="mb-5 ">
-          <div id="waveform" class="wave"></div>
-          <b-card-title>AUDIO</b-card-title>
-          <b-card-text>Audio para descargar</b-card-text>
-          <b-button @click="play(1)">PLAY</b-button>
-          <b-button @click="downloadContent(3);">DESCARGAR</b-button>
-        </b-card>
-      </b-card-group>
-      <b-card-group deck>
-        <b-card
           title="PDF"
           img-src="../assets/img/infoRedes.png"
           img-alt="Card image"
           img-top
-          img-height="60%"
-          class="mb-2"
+          img-height="252px"
+          class="mb-1"
         >
           <b-card-text>PDF para descargar</b-card-text>
           <b-button v-b-modal.modal-3>VER</b-button>
@@ -109,41 +76,76 @@
             </b-row>
           </b-modal>
         </b-card>
-        <b-card
+        </b-col>
+        <b-col>
+          <b-card
           title="Video"
-          img-src="../assets/img/videoRed2SS.png"
+          img-src="../assets/img/videoRedSS.png"
           img-alt="Card image"
           img-top
-          img-height="60%"
-          class="mb-2"
+          img-height="252px"
+          class="mb-5 "
         >
           <b-card-text>Video para descargar</b-card-text>
-          <b-button v-b-modal.modal-4 @click="setVideo(2)">VER</b-button>
-          <b-modal id="modal-4" hide-footer hide-header size="xl" centered>
+          <b-button v-b-modal.modal2 @click="setVideo(1)">VER</b-button>
+          <b-modal id="modal2" hide-footer hide-header size="xl" centered>
             <b-row class="mx-4 my-2">
               <b-col class="text-center">
                 <b-embed
-                  id="video2"
+                  id="video1"
                   type="iframe"
                   aspect="16by9"
                   src=""
                   allowfullscreen
                 ></b-embed>
-                <b-button class="mt-3" variant="dark" @click="downloadContent(5);"
-                  >DESCARGAR</b-button
-                >
+                <b-button class="mt-3" variant="dark" @click="downloadContent(2);">DESCARGAR</b-button>
               </b-col>
             </b-row>
           </b-modal>
         </b-card>
-        <b-card class="mb-2">
+        <b-card
+          title="Video"
+          img-src="../assets/img/videoRed2SS.png"
+          img-alt="Card image"
+          img-top
+          img-height="252px"
+          class="mb-5"
+        >
+          <b-card-text>Video para descargar</b-card-text>
+          <b-button v-b-modal.modal2 @click="setVideo(1)">VER</b-button>
+          <b-modal id="modal2" hide-footer hide-header size="xl" centered>
+            <b-row class="mx-4 my-2">
+              <b-col class="text-center">
+                <b-embed
+                  id="video1"
+                  type="iframe"
+                  aspect="16by9"
+                  src=""
+                  allowfullscreen
+                ></b-embed>
+                <b-button class="mt-3" variant="dark" @click="downloadContent(5);">DESCARGAR</b-button>
+              </b-col>
+            </b-row>
+          </b-modal>
+        </b-card>
+        </b-col>
+        <b-col>
+          <b-card class="mb-5 ">
+          <div id="waveform" class="wave"></div>
+          <b-card-title>AUDIO</b-card-title>
+          <b-card-text>Audio para descargar</b-card-text>
+          <b-button @click="play(1)">PLAY</b-button>
+          <b-button @click="downloadContent(3);">DESCARGAR</b-button>
+        </b-card>
+        <b-card class="mb-5 ">
           <div id="waveform2" class="wave"></div>
           <b-card-title>AUDIO</b-card-title>
           <b-card-text>Audio para descargar</b-card-text>
-          <b-button @click="play(2)">PLAY</b-button>
+          <b-button @click="play(1)">PLAY</b-button>
           <b-button @click="downloadContent(6);">DESCARGAR</b-button>
         </b-card>
-      </b-card-group>
+        </b-col>
+      </b-row>
     </b-container>
     <Footer />
   </div>
@@ -166,13 +168,13 @@ export default {
         container: "#waveform",
         waveColor: "#1381B5",
         progressColor: "#03141d",
-        barHeight: 4
+        barHeight: 3
       });
       this.wavesurfer2 = WaveSurfer.create({
         container: "#waveform2",
         waveColor: "#1381B5",
         progressColor: "#03141d",
-        barHeight: 4
+        barHeight: 3
       });
       this.wavesurfer.load(
         "https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3"
@@ -231,6 +233,7 @@ export default {
               xhr.open("GET", url);
               xhr.send();
             });
+            break;
         case 2:
           this.storageRef
             .child("recursos/videos/VIDEO_REDES_1_FINAL_NOBORRAR.mp4")
@@ -248,6 +251,7 @@ export default {
               xhr.open("GET", url);
               xhr.send();
             });
+            break;
         case 3:
           /*this.storageRef
             .child("recursos/img/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
@@ -266,6 +270,7 @@ export default {
               xhr.send();
             });*/
             console.log("descarga audio 1");
+            break;
         case 4:
           this.storageRef
             .child("recursos/img/infoRedes.pdf")
@@ -283,6 +288,7 @@ export default {
               xhr.open("GET", url);
               xhr.send();
             });
+            break;
         case 5:
           this.storageRef
             .child("recursos/videos/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
@@ -300,6 +306,7 @@ export default {
               xhr.open("GET", url);
               xhr.send();
             });
+            break;
         case 6:
           /*this.storageRef
             .child("recursos/img/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
@@ -318,6 +325,7 @@ export default {
               xhr.send();
             });*/
             console.log("descarga audio 1");
+            break;
       }
     }
   }
@@ -339,8 +347,9 @@ export default {
 }
 
 .wave {
-  padding-top: 18%;
-  padding-bottom: 18%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  width: 100%;
 }
 .btn-secondary {
   margin: 1%;
