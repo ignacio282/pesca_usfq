@@ -38,7 +38,7 @@
             ></b-embed>
             <img
               v-if="pesca"
-              src="../assets/img/ConcepstBarco.jpg"
+              src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png"
               width="90%"
             />
             <div>
@@ -369,7 +369,7 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/redesFondos.png"
+                src="@/assets//img/redesFondos.jpg"
                 alt="Character"
                 style="width:95%"
               />
@@ -387,7 +387,7 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/redesTecnica.png"
+                src="@/assets//img/redesTecnica.jpg"
                 alt="Character"
                 style="width:95%"
               />
@@ -396,7 +396,7 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/redesAnguila.png"
+                src="@/assets//img/redesAnguila.jpg"
                 alt="Character"
                 style="width:95%"
               />
@@ -450,7 +450,7 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/Mother, calf and escort.png"
+                src="@/assets//img/Mother,-calf-and-escort.jpg"
                 alt="Character"
                 style="width:95%"
               />
@@ -459,7 +459,7 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/muestras soplos.jpg"
+                src="@/assets//img/muestras-soplos.jpg"
                 alt="Character"
                 style="width:95%"
               />
@@ -477,7 +477,7 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/RackMultipart20180729-7436-1g4yyeh.png"
+                src="@/assets//img/RackMultipart20180729-7436-1g4yyeh.jpg"
                 alt="Character"
                 style="width:55%"
               />
@@ -486,7 +486,7 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/research_boat.png"
+                src="@/assets//img/research_boat.jpg"
                 alt="Character"
                 style="width:100%"
               />
@@ -498,6 +498,240 @@
                 src="@/assets//img/Sountrap deployment.jpg"
                 alt="Character"
                 style="width:95%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6981.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6999.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7000.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7004.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7011.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7024.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7030.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7037.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7061.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7064.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7066.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7075.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6940.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6942.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6943.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6945.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6951.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6955.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6958.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_6991.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7050.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7056.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7057.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7060.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7082.jpg"
+                alt="Character"
+                style="width:80%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSC_7083.jpg"
+                alt="Character"
+                style="width:80%"
               />
             </div>
 
@@ -688,11 +922,11 @@ export default {
     }
     if (this.redes) {
       document.getElementById("pregunta1").style.backgroundImage =
-        "url(" + require("../assets/img/redesFondos.png") + ")";
+        "url(" + require("../assets/img/redesFondos.jpg") + ")";
       document.getElementById("pregunta2").style.backgroundImage =
         "url(" + require("../assets/img/redes2.jpg") + ")";
       document.getElementById("pregunta3").style.backgroundImage =
-        "url(" + require("../assets/img/redesTecnica.png") + ")";
+        "url(" + require("../assets/img/redesTecnica.jpg") + ")";
     }
     if (this.plastico) {
       document.getElementById("pregunta1").style.backgroundImage =
@@ -706,17 +940,17 @@ export default {
     }
     if (this.reciclaje) {
       document.getElementById("pregunta1").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0377.jpg") + ")";
+        "url(" + require("../assets/img/DSC_6940.jpg") + ")";
       document.getElementById("pregunta2").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0365.jpg") + ")";
+        "url(" + require("../assets/img/DSC_6942.jpg") + ")";
       document.getElementById("pregunta3").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0264.jpg") + ")";
+        "url(" + require("../assets/img/DSC_6943.jpg") + ")";
       document.getElementById("pregunta4").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0236.jpg") + ")";
+        "url(" + require("../assets/img/DSC_6945.jpg") + ")";
       document.getElementById("pregunta5").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0408.jpg") + ")";
+        "url(" + require("../assets/img/DSC_6951.jpg") + ")";
       document.getElementById("pregunta6").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0258.jpg") + ")";
+        "url(" + require("../assets/img/DSC_6958.jpg") + ")";
     }
     if (this.pesca) {
       document.getElementById("pregunta1").style.backgroundImage =

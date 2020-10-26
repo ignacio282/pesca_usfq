@@ -1,5 +1,5 @@
 <template>
-  <b-navbar id="myNav" fixed="top" type="light" toggleable="lg" >
+  <b-navbar id="myNav" fixed="top" toggleable="lg" >
     <b-row>
       <b-col>
         <b-navbar-brand style="line-height: 18px; text-align: left;">
@@ -18,7 +18,8 @@
       <b-navbar-nav class="ml-auto">
         <b-nav-item-dropdown
           v-if="!eng"
-          class="text-uppercase link colorWhite"
+          class="text-uppercase link"
+          toggle-class="colorWhite"
           text="Menú"
           right
         >
@@ -117,7 +118,7 @@
           class="text-uppercase link"
           text="Partners"
           right
-          
+          toggle-class="colorWhite"
         >
           <b-dropdown-item class="colorGray dropMenu" target="_blank" href="https://dlab.usfq.edu.ec/">
            D-Lab USFQ
@@ -147,9 +148,9 @@
             Hospital de Fauna Silvestre TUERI USFQ
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item class="text-uppercase language activo" right @click="changeLang(1, emitLang);">ES</b-nav-item>
+        <b-nav-item class="text-uppercase language colorWhite" link-classes="colorWhite" right @click="changeLang(1, emitLang);">ES</b-nav-item>
         <b-nav-text id="separador" right>|</b-nav-text>
-        <b-nav-item class="text-uppercase" right @click="changeLang(2, emitLang);">EN</b-nav-item>
+        <b-nav-item class="text-uppercase colorWhite" link-classes="colorWhite" right @click="changeLang(2, emitLang);">EN</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -218,27 +219,21 @@ export default {
 }
 
 .navbar {
-  
-  color: black !important;
+  color: black;
   padding-right: 14%;
   padding-left: 2%;
   transition: visibility 0.5s linear, opacity 0.5s linear;
-  
-  
 }
 #brand {
   font-weight: 300;
 }
 ::v-deep .dropdown-menu.show{
   border: none;
+}
 
-}
-::v-deep .nav-link {
-  color: rgba($color: black, $alpha: 1) !important;
-  font-weight: 500;
-}
 ::v-deep .colorWhite {
-  color: black;
+  color: rgba($color: #000000, $alpha: 1.0)!important;
+  font-weight: 500;
 }
 ::v-deep .colorGray {
   color: rgb(83, 81, 81);

@@ -166,9 +166,13 @@ div.overlay {
   font-weight: 300;
 }
 ::v-deep .colorWhite {
-  color: white;
+  color: white!important;
 }
-::v-deep .nav-link {
-  color: rgba($color: white, $alpha: 1) !important;
+::v-deep .navbar-light .navbar-nav .nav-link{
+  color: rgba(255, 255, 255, 1)!important;
+}
+
+::v-deep .navbar-light .navbar-nav .nav-link a{
+  color: rgba(255, 255, 255, 1)!important;
 }
 </style>

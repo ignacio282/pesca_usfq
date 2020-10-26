@@ -91,7 +91,7 @@ export default {
   color: rgb(0, 0, 0);
   overflow: hidden;
   background-color: rgb(7, 22, 54);
-  background-image: url("../assets/img/Inicio_short.png");
+  background-image: url("../assets/img/Inicio_short.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
