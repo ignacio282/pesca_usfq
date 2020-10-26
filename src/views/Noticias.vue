@@ -8,14 +8,14 @@
       <hr />
       <div v-for="(blog, index) in blogs" :key="blog.id">
         <b-row class="pt-5">
-          <b-col v-if="index % 2 !== 0">
+          <b-col v-if="index % 2 !== 0" cols="12" lg="6">
             <img
               class="image"
               :src="imagenes[index]"
               alt="..."
             />
           </b-col>
-          <b-col>
+          <b-col cols="12" lg="6">
             <h3 class="pt-4 pb-3 pl-3 titulo">
               {{ blog.titulo }}
             </h3>
@@ -25,7 +25,7 @@
               </b-container>
             </p>
           </b-col>
-          <b-col v-if="index % 2 === 0 || index === 0">
+          <b-col v-if="index % 2 === 0 || index === 0" cols="12" lg="6">
             <img
               class="image"
               :src="imagenes[index]"
@@ -84,7 +84,7 @@ export default {
 }
 .navbar {
   background-color: white !important;
-  height: 10%;
+
   color: black;
 }
 
@@ -112,5 +112,11 @@ p {
 }
 ::v-deep .colorWhite {
   color: black !important;
+}
+@media only screen and (max-width: 500px) {
+ .image{
+  padding-top: 5%;
+  max-height: 25%;
+}
 }
 </style>

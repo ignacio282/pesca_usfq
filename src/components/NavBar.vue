@@ -1,5 +1,5 @@
 <template>
-  <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
+  <b-navbar id="myNav" fixed="top" type="light" toggleable="lg" >
     <b-row>
       <b-col>
         <b-img src="@/assets//img/PulpoB.png" width="50%" class="pulpo"></b-img>
@@ -17,7 +17,7 @@
       </b-col>
     </b-row>
 
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar-toggle  target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-item-dropdown
@@ -215,12 +215,14 @@ export default {
 }
 
 .navbar {
-  height: 12%;
+  
   color: black !important;
   font-weight: 300;
   padding-right: 14%;
   padding-left: 2%;
   transition: visibility 0.5s linear, opacity 0.5s linear;
+  
+  
 }
 #brand {
   font-weight: 300;

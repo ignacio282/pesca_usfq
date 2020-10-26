@@ -64,7 +64,8 @@
                 </b-nav>
                 <b-img
                   src="@/assets//img/Barra.png"
-                  width="300%"
+
+                  
                   class="fondoSide"
                 ></b-img>
               </b-sidebar>
@@ -87,7 +88,7 @@
                 </b-nav>
                 <b-img
                   src="@/assets//img/Barra.png"
-                  width="300%"
+
                   class="fondoSide"
                 ></b-img>
               </b-sidebar>
@@ -123,7 +124,7 @@
           <div v-for="educacionText in educacionTexts" :key="educacionText.id">
             <div class="container-fluid child" :id="educacionText.id">
               <h2 class="text-center pt-4 pb-4"></h2>
-              <div v-scrollanimation>
+              <div class="before-enter">
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ educacionText.pregunta }}</h4>
                   <div class="overflow-auto pr-3 scrollArea" >
@@ -140,7 +141,7 @@
           <div v-for="educationText in educationTexts" :key="educationText.id">
             <div class="container-fluid child" :id="educationText.id">
               <h2 class="text-center pt-4 pb-4"></h2>
-              <div v-scrollanimation>
+              <div class="before-enter">
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ educationText.question }}</h4>
                   <div class="overflow-auto pr-3 scrollArea">
@@ -157,7 +158,7 @@
           <div v-for="redesText in redesTexts" :key="redesText.id">
             <div class="container-fluid child" :id="redesText.id">
               <h2 class="text-center pt-4 pb-4"></h2>
-              <div v-scrollanimation>
+              <div class="before-enter">
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ redesText.pregunta }}</h4>
                   <div class="overflow-auto pr-3 scrollArea">
@@ -174,7 +175,7 @@
           <div v-for="plasticosText in plasticosTexts" :key="plasticosText.id">
             <div class="container-fluid child" :id="plasticosText.id">
               <h2 class="text-center pt-4 pb-4"></h2>
-              <div v-scrollanimation>
+              <div class="before-enter">
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ plasticosText.pregunta }}</h4>
                   <div class="overflow-auto pr-3 scrollArea">
@@ -191,7 +192,7 @@
           <div v-for="reciclajeText in reciclajeTexts" :key="reciclajeText.id">
             <div class="container-fluid child" :id="reciclajeText.id">
               <h2 class="text-center pt-4 pb-4"></h2>
-              <div v-scrollanimation>
+              <div class="before-enter">
                 <div class="fondoTarjeta">
                   <h4 class="pb-3 subtitulo">{{ reciclajeText.pregunta }}</h4>
                   <div class="overflow-auto pr-3 scrollArea">
@@ -208,7 +209,7 @@
           <div v-for="pescaText in pescaTexts" :key="pescaText.id">
             <div class="container-fluid child" :id="pescaText.id">
               <h2 class="text-center pt-4 pb-4"></h2>
-              <div v-scrollanimation>
+              <div class="before-enter">
                 <div class="fondoTarjeta">
                   <h4 class="pb-3 subtitulo">{{ pescaText.pregunta }}</h4>
                   <div class="overflow-auto pr-3 scrollArea">
@@ -254,7 +255,7 @@
         </b-container>
       </div>
 
-      <div class="pt-3" id="grad2">
+      <div  id="grad2">
         <div id="myModal" class="modal child">
           <div class="modalContent" id="GALERIA">
             <div class="mySlides" style="display:block">
@@ -620,9 +621,12 @@ export default {
     }
   },
   mounted: function() {
-    document
+    if(window.innerWidth>=700){
+      document
       .getElementsByClassName("snapSection")[0]
       .addEventListener("scroll", this.onScroll);
+
+    }  
     educacionTexts.onSnapshot(querySnapshot => {
       querySnapshot.forEach(doc => {
         let text = doc.data();
@@ -898,14 +902,14 @@ export default {
   }
 }
 .before-enter {
-  width: 900px;
-  height: 440px;
-  margin-left: 60%;
-  margin-top: 40%;
+  width: 60%;
+  height: 60%;
+  margin-left: 35%;
+  margin-top: 8%;
   padding-top: 2%;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 10%;
+
   background-color: rgba(0, 0, 0, 0.5);
 
   box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
@@ -965,9 +969,7 @@ export default {
 #grad1 {
   background-image: linear-gradient(white, #062d40);
 }
-#grad2 {
-  background-color: black;
-}
+
 #grad3 {
   background: linear-gradient(white, #062d40);
 }
@@ -1009,19 +1011,7 @@ export default {
   font-size: 25px;
   background-color: #03141d;
 }
-.stripe {
-  height: 3px;
-  background: rgb(180, 58, 58);
-  background: linear-gradient(
-    90deg,
-    rgba(180, 58, 58, 1) 0%,
-    rgba(145, 44, 192, 1) 25%,
-    rgba(81, 70, 169, 1) 40%,
-    rgba(29, 252, 253, 1) 57%,
-    rgba(49, 253, 144, 1) 75%,
-    rgba(184, 253, 49, 1) 89%
-  );
-}
+
 .parallax {
   /* The image used */
   background-image: url("https://imgur.com/nLylsqL.jpg");
@@ -1085,7 +1075,6 @@ export default {
   color: Black;
   /* Set a specific height */
   height: 100vh;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -1128,6 +1117,9 @@ export default {
   height: 900px;
   overflow: auto;
   background-color: black;
+}
+.fondoSide{
+  max-width: 150%;
 }
 .modal::-webkit-scrollbar {
   display: none;
@@ -1314,17 +1306,34 @@ export default {
     opacity: 0;
   }
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 500px) {
+
+  .titulo{
+    padding-top: 10%;
+    margin-right:25%;
+  }
   #video {
+    padding-top: 50%;
     padding-left: 0px;
     padding-right: 0px;
   }
+  .navbar {
+  background-color: #ffffff !important;
+  }
+ 
   .child {
+    margin-top: 0%;
     scroll-snap-align: start;
+    height: 100vh;
   }
   .before-enter {
-    display: none;
+    margin-left: 5%;
+    width: 90%;
+    height: 80%;
   }
+  .scrollArea{
+  height:500px
+}
   ::v-deep .b-sidebar {
     width: 55%;
   }
@@ -1332,8 +1341,15 @@ export default {
     margin-top: 20%;
   }
   .jumbo {
-    padding-top: 0%;
+    padding-top: 15%;
+
   }
+  .display-3{
+    font-size: 350%;
+  }
+  #myModal{
+  display: none;
+}
 }
 @media only screen and (min-width: 1260px) and (max-width: 1280px) {
   .child {
@@ -1380,8 +1396,8 @@ only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1260px)
 only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1260px),
 only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1260px),
 only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1260px),
-only screen and (                min-resolution: 192dpi) and (min-width: 1260px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 1260px) { 
+only screen and (                min-resolution: 192dpi) and (min-width: 1260px)
+ { 
 
     .child {
     scroll-snap-align: start;
@@ -1402,13 +1418,23 @@ display: none;
   .parallax{
     height: 100vh;
   }
+  .fondoSide{
+  max-width: 100%;
+}
   .jumbo{
-    margin-top: -5%;
+    margin-top: 3%;
   }
   .numbertext{
-    top: 60%;
-
+    top: 80%;
   }
+  .modal{
+    padding-top: 10%;
+  }
+.before-enter{
+  height: 65%;
+}
+  
+ 
 
   @keyframes enter {
   0% {
@@ -1464,52 +1490,18 @@ display: none;
   padding-right: 1%;
   font-size: 110%;
 }
-.before-enter {
-  width: 1200px;
-  height: 600px;
-  margin-left: 60%;
-  margin-top: 40%;
-  padding-top: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.5);
 
-  box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
-  color: white;
-  text-align: left;
-  text-transform: uppercase;
-}
-.enter {
-  -webkit-animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-  @keyframes enter {
-  0% {
-    -webkit-transform: translateY(0) translateX(0);
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    -webkit-transform: translateY(-00px) translateX(-400px);
-    transform: translateY(-600px) translateX(-400px);
-  }
-}
+
 #myModal{
   height: 100vh;
 }
 }
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 2300px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 2300px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 2300px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 2300px),
-only screen and (                min-resolution: 192dpi) and (min-width: 2300px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 2300px) { 
+@media screen 
+  and (min-device-width: 2300px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
 
-     #video{
-    padding-top: 10%;
-    
-  }
   .scrollArea{
     height: 1000px;
   }
@@ -1535,6 +1527,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 2300px)
   .jumbo{
     margin-top: 20%;
   }
+  .before-enter{
+  height: 55%;
+}
   .description {
   column-count: 2;
   column-gap: 40px;
@@ -1544,41 +1539,14 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 2300px)
   font-weight: 300;
   text-transform: none;
   padding-right: 1%;
-  font-size: 110%;
-}
-.before-enter {
-  width: 1200px;
-  height: 600px;
-  margin-left: 60%;
-  margin-top: 40%;
-  padding-top: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  box-shadow: 10px 10px 16px -4px rgba(0, 0, 0, 0.56);
-  color: white;
-  text-align: left;
-  text-transform: uppercase;
-}
-.enter {
-  -webkit-animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: enter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-  @keyframes enter {
-  0% {
-    -webkit-transform: translateY(0) translateX(0);
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    -webkit-transform: translateY(-00px) translateX(-400px);
-    transform: translateY(-600px) translateX(-400px);
-  }
+  font-size: 130%;
 }
 #myModal{
   height: 100vh;
 }
+.modal{
+    padding-top: 5%;
+  }
 
 }
 </style>

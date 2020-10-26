@@ -4,16 +4,16 @@
     <b-container fluid class="contenedorAbout">
       <b-row id="rows">
         <b-col lg="6" sm="12" id="colText">
-          <h3 class="mb-4 ml-5" style="font-weight:300">El Equipo</h3>
+          <h3 class="mb-4 " style="font-weight:300">El Equipo</h3>
           <b-row v-for="lideres in lideresPares" :key="lideres.id">
-            <b-col v-for="lider in lideres" :key="lider.id" cols="3" md="6">
+            <b-col v-for="lider in lideres" :key="lider.id" cols="12" md="6" sm="12">
               <b-row>
-                <b-col cols="3" md="6" class="py-2">
+                <b-col cols="12" md="6" sm="12" xs="10" class="py-2">
                   <b-avatar class="mx-5" size="5rem"></b-avatar>
                 </b-col>
-                <b-col cols="3" md="6" class="py-4">
-                  <h5>{{lider.nombre}}</h5>
-                  <p>{{lider.info}}</p>
+                <b-col cols="12" md="6" sm="12" xs="10" class="py-4">
+                  <h5 >{{lider.nombre}}</h5>
+                  <p >{{lider.info}}</p>
                 </b-col>
               </b-row>
             </b-col>
@@ -23,10 +23,10 @@
         <b-col id="containerLogos">
           <h3 class="mb-4 tituloPatrocinadores">Patrocinadores y Organizadores</h3>
           <b-row>
-            <b-col cols="12" md="6">
+            <b-col cols="12" md="6" sm="12">
               <b-img class="mb-4 imagen" src="../assets/img/logoUSFQ.png" alt="Image 1"></b-img>
             </b-col>
-            <b-col cols="12" md="6">
+            <b-col cols="12" md="6" sm="12">
               <b-img
                 class="mb-4 imagen"
                 id="community"
@@ -36,26 +36,26 @@
             </b-col>
           </b-row>
           <b-row>
-            <b-col cols="12" md="6">
+            <b-col cols="12" md="6" sm="12">
               <b-img class="imagen" src="../assets/img/DAAD_Logo.svg" alt="Image 1"></b-img>
             </b-col>
-            <b-col cols="12" md="6">
+            <b-col cols="12" md="6" sm="12">
               <b-img class="imagen" id="zmt" src="../assets/img/logoZMTdark.png" alt="Image 1"></b-img>
             </b-col>
           </b-row>
           <b-row align-h="center">
-            <b-col cols="12" md="4">
+            <b-col cols="12" md="4" sm="12">
               <b-img class="imagen3" src="../assets/img/logoCocibaDark.png" alt="Image 1"></b-img>
             </b-col>
-            <b-col cols="12" md="4">
+            <b-col cols="12" md="4" sm="12">
               <b-img class="imagen3" id="salud" src="../assets/img/logoSaludDark.png" alt="Image 1"></b-img>
             </b-col>
           </b-row>
-          <b-row align-h="center" class="mt-3">
+          <b-row align-h="center" class="mt-3" sm="12">
             <b-col cols="12" md="4">
               <b-img id="cocoa" src="../assets/img/logoCOCOAdark.png" alt="Image 1"></b-img>
             </b-col>
-            <b-col cols="12" md="4">
+            <b-col cols="12" md="4" sm="12">
               <b-img id="plastico" src="../assets/img/LogoPlastiCo.png" alt="Image 1"></b-img>
             </b-col>
           </b-row>
@@ -258,7 +258,7 @@ export default {
   margin-bottom: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .about {
     color: black;
     overflow: scroll;
@@ -279,5 +279,18 @@ export default {
   #containerLogos {
     padding-left: 10%;
   }
+  .persona{
+    margin-right: 10%;
+  }
+  #colText {
+
+  margin-left: 0%;
+  margin-right: 0%;
+}
+#containerLogos{
+  padding-right: 20%;
+  padding-left: 20%;
+  margin-bottom: 30%;
+}
 }
 </style>
