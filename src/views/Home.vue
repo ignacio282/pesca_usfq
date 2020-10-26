@@ -25,7 +25,7 @@
         <kinesis-element type="depth" :strength="10">
           <p class="tituloLanding">REGENERACIÓN</p>
         </kinesis-element>
-        <kinesis-element style="margin:-40px" type="depth" :strength="8">
+        <kinesis-element class="spaceTitulo" type="depth" :strength="8">
           <p class="tituloLandingS">DE</p>
         </kinesis-element>
         <kinesis-element type="depth_inv" :strength="10">
@@ -102,6 +102,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.spaceTitulo{
+  margin:-40px;
+}
 .home {
   height: 100vh;
   color: rgb(0, 0, 0);
@@ -173,5 +176,26 @@ export default {
   #googleForm {
     width: 75%;
   }
+}
+@media only screen and (max-width: 500px) {
+ .tituloLanding {
+  color: white;
+  font-size: 300%;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  letter-spacing: 5px;
+  
+}
+.contenedor{
+padding-top: 50%;
+padding-right:5% ;
+padding-left:2% ;
+}
+.spaceTitulo{
+  margin:-0px;
+}
+
+
 }
 </style>
