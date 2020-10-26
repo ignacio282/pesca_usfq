@@ -37,7 +37,7 @@
           </b-row>
           <b-row>
             <b-col cols="12" md="6" sm="12">
-              <b-img class="imagen" src="../assets/img/DAAD_Logo.svg" alt="Image 1"></b-img>
+              <b-img class="imagen" src="../assets/img/DAAD_Logo.png" alt="Image 1"></b-img>
             </b-col>
             <b-col cols="12" md="6" sm="12">
               <b-img class="imagen" id="zmt" src="../assets/img/logoZMTdark.png" alt="Image 1"></b-img>

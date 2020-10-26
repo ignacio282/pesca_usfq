@@ -38,8 +38,8 @@
             ></b-embed>
             <img
               v-if="pesca"
-              src="../assets/img/Screen Shot 2020-07-01 at 10.09.09 AM.png"
-              width="90%"
+              src="../assets/img/74989e7c-652e-4ef8-9ee3-c4b2590afbb6.jpg"
+              width="100%"
             />
             <div>
               <b-button v-b-toggle.sidebar-1 class="openSidebar"
@@ -735,6 +735,471 @@
               />
             </div>
 
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/8EF87609-71BE-4F8F-8C75-AE7C4CEDD815.jpg"
+                alt="Character"
+                style="width:50%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/74989e7c-652e-4ef8-9ee3-c4b2590afbb6.jpg"
+                alt="Character"
+                style="width:90%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0271.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0272.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0273.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0274.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0275.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0276.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0277.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0279.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0280.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0281.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0282.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0283.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0284.jpg"
+                alt="Character"
+                style="width:40%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN0285.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1908.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1909.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1910.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1911.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1912.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1918.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1919.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1920.jpg"
+                alt="Character"
+                style="width:40%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1921.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN1922.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2030.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2031.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2032.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2033.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2034.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2035.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2036.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2037.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2038.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2039.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2040.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2041.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2042.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2043.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2044.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2045.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2046.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2047.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2048.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2049.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2050.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2052.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2053.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2054.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2588.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2589.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/DSCN2590.jpg"
+                alt="Character"
+                style="width:70%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_6252.jpg"
+                alt="Character"
+                style="width:40%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_6257.jpg"
+                alt="Character"
+                style="width:40%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_9700.jpg"
+                alt="Character"
+                style="width:40%"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img
+                src="@/assets//img/IMG_9702.jpg"
+                alt="Character"
+                style="width:40%"
+              />
+            </div>
+            
+
             <!-- Next/previous controls -->
             <a class="prev" @click="plusSlides(-1)"
               ><b-img
@@ -954,11 +1419,11 @@ export default {
     }
     if (this.pesca) {
       document.getElementById("pregunta1").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0377.jpg") + ")";
+        "url(" + require("../assets/img/DSCN0271.jpg") + ")";
       document.getElementById("pregunta2").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0365.jpg") + ")";
+        "url(" + require("../assets/img/DSCN0272.jpg") + ")";
       document.getElementById("pregunta3").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0264.jpg") + ")";
+        "url(" + require("../assets/img/DSCN0273.jpg") + ")";
     }
   },
   beforeDestroy: function() {
