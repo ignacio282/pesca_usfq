@@ -1,5 +1,5 @@
 <template>
-  <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
+  <b-navbar id="myNav" fixed="top" type="light" toggleable="lg" >
     <b-row>
       <b-col>
         <b-navbar-brand style="line-height: 18px; text-align: left;">
@@ -13,7 +13,7 @@
       </b-col>
     </b-row>
 
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar-toggle  target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-item-dropdown
@@ -119,31 +119,31 @@
           right
           
         >
-          <b-dropdown-item class="colorGray dropMenu" href="https://dlab.usfq.edu.ec/">
+          <b-dropdown-item class="colorGray dropMenu" target="_blank" href="https://dlab.usfq.edu.ec/">
            D-Lab USFQ
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.plasticoproject.com/" >
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.plasticoproject.com/" >
             PlastiCO Project
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.facebook.com/USFQCOCOA">
+          <b-dropdown-item class="colorGray" target="_blank"  href="https://www.facebook.com/USFQCOCOA">
             COCOA USFQ
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.daad.de/en/">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.daad.de/en/">
             DAAD
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.facebook.com/proyectocetaceaecuador">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.facebook.com/proyectocetaceaecuador">
             CETACEA Ecuador
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.delaredalplato.com/">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.delaredalplato.com/">
             De la Red al Plato
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.facebook.com/USFQCOCIBA">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.facebook.com/USFQCOCIBA">
             COCIBA USFQ
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.leibniz-zmt.de/en/">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.leibniz-zmt.de/en/">
             ZMT Centre for Tropical Marine Ecology
           </b-dropdown-item>
-          <b-dropdown-item class="colorGray" href="https://www.facebook.com/TueriUSFQ">
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.facebook.com/TueriUSFQ">
             Hospital de Fauna Silvestre TUERI USFQ
           </b-dropdown-item>
         </b-nav-item-dropdown>
@@ -218,11 +218,13 @@ export default {
 }
 
 .navbar {
-  height: 12%;
+  
   color: black !important;
   padding-right: 14%;
   padding-left: 2%;
   transition: visibility 0.5s linear, opacity 0.5s linear;
+  
+  
 }
 #brand {
   font-weight: 300;

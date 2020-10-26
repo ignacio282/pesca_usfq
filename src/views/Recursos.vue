@@ -1,9 +1,9 @@
 <template>
   <div id="recursos">
     <NavBar />
-    <b-container fluid class="px-5 mt-5" id="tarjetas">
+    <b-container fluid class="px-5 mt-5 pt-5" id="tarjetas">
       <b-row>
-        <b-col>
+        <b-col cols="12" lg="4" >
           <b-card
           title="PDF"
           img-src="../assets/img/plasticoPDF.png"
@@ -16,14 +16,14 @@
           <b-button v-b-modal.modal-xl>VER</b-button>
           <b-modal id="modal-xl" hide-footer hide-header size="xl" centered>
             <b-row class="mx-4 my-5">
-              <b-col cols="8">
+              <b-col cols="12" lg="4">
                 <b-img
                   src="../assets/img/PlasticoPDFCompletoL.png"
                   fluid
                   alt="Responsive image"
                 ></b-img>
               </b-col>
-              <b-col cols="4" class="my-auto text-center">
+              <b-col cols="12" lg="4" class="my-auto text-center">
                 Ea nulla magna do veniam nostrud aliquip. Magna deserunt
                 proident cupidatat in amet. Aliqua occaecat irure dolore laboris
                 id eu veniam aliquip anim officia. Do sunt id dolor cupidatat.
@@ -52,14 +52,14 @@
           <b-button v-b-modal.modal-3>VER</b-button>
           <b-modal id="modal-3" hide-footer hide-header size="xl" centered>
             <b-row class="mx-4 my-5">
-              <b-col cols="8">
+              <b-col cols="12" lg="4">
                 <b-img
                   src="../assets/img/infoRedes.png"
                   fluid
                   alt="Responsive image"
                 ></b-img>
               </b-col>
-              <b-col cols="4" class="my-auto text-center">
+              <b-col cols="12" lg="4" class="my-auto text-center">
                 Ea nulla magna do veniam nostrud aliquip. Magna deserunt
                 proident cupidatat in amet. Aliqua occaecat irure dolore laboris
                 id eu veniam aliquip anim officia. Do sunt id dolor cupidatat.
@@ -77,7 +77,7 @@
           </b-modal>
         </b-card>
         </b-col>
-        <b-col>
+        <b-col cols="12" lg="4">
           <b-card
           title="Video"
           img-src="../assets/img/videoRedSS.png"
@@ -333,6 +333,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar {
+  background-color: #ffffff !important;
+}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
