@@ -1425,27 +1425,14 @@ display: none;
     margin-top: 3%;
   }
   .numbertext{
-    top: 80%;
+    top: 60%;
   }
-  .modal{
-    padding-top: 10%;
-  }
+
 .before-enter{
   height: 65%;
 }
   
- 
 
-  @keyframes enter {
-  0% {
-    -webkit-transform: translateY(0) translateX(0);
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    -webkit-transform: translateY(-400px) translateX(-400px);
-    transform: translateY(-400px) translateX(-500px);
-  }
-}
 
 }
 
@@ -1544,6 +1531,10 @@ display: none;
 #myModal{
   height: 100vh;
 }
+.numbertext{
+    top: 80%;
+    font-size: 200%;
+  }
 .modal{
     padding-top: 5%;
   }
