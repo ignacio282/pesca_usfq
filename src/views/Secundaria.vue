@@ -13,7 +13,6 @@
               aspect="16by9"
               src="../assets/video/1 Educacion_Ambiental.mp4"
               allowfullscreen
-
             ></b-embed>
             <b-embed
               v-if="redes"
@@ -41,6 +40,32 @@
               src="../assets/img/74989e7c-652e-4ef8-9ee3-c4b2590afbb6.jpg"
               width="100%"
             />
+            <h5 v-if="educacion && !eng" class="titulo text-uppercase">
+              Educación Ambiental
+            </h5>
+            <h5 v-if="educacion && eng" class="titulo text-uppercase">
+              Environmental Education
+            </h5>
+            <h5 v-if="redes && !eng" class="titulo text-uppercase">
+              Redes Fantasma
+            </h5>
+            <h5 v-if="redes && eng" class="titulo text-uppercase">
+              Ghost Nets
+            </h5>
+            <h5 v-if="plastico && !eng" class="titulo text-uppercase">
+              Plásticos
+            </h5>
+            <h5 v-if="plastico && eng" class="titulo text-uppercase">
+              Plastics
+            </h5>
+            <h5 v-if="reciclaje && !eng" class="titulo text-uppercase">
+              Reciclaje
+            </h5>
+            <h5 v-if="reciclaje && eng" class="titulo text-uppercase">
+              Recycling
+            </h5>
+            <h5 v-if="pesca && !eng" class="titulo text-uppercase">Pesca</h5>
+            <h5 v-if="pesca && eng" class="titulo text-uppercase">Fishing</h5>
             <div>
               <b-button v-b-toggle.sidebar-1 class="openSidebar"
                 ><b-icon-list
@@ -62,12 +87,7 @@
                   <b-nav-item href="#RECURSOS">RECURSOS</b-nav-item>
                   <b-nav-item href="#grad2">GALERIA</b-nav-item>
                 </b-nav>
-                <b-img
-                  src="@/assets//img/Barra.png"
-
-                  
-                  class="fondoSide"
-                ></b-img>
+                <b-img src="@/assets//img/Barra.png" class="fondoSide"></b-img>
               </b-sidebar>
               <b-sidebar
                 v-if="eng"
@@ -86,36 +106,10 @@
                   <b-nav-item href="#RECURSOS">RESOURCES</b-nav-item>
                   <b-nav-item href="#grad2">GALLERY</b-nav-item>
                 </b-nav>
-                <b-img
-                  src="@/assets//img/Barra.png"
-
-                  class="fondoSide"
-                ></b-img>
+                <b-img src="@/assets//img/Barra.png" class="fondoSide"></b-img>
               </b-sidebar>
             </div>
           </div>
-          <h5 v-if="educacion && !eng" class="titulo text-uppercase">
-            Educación Ambiental
-          </h5>
-          <h5 v-if="educacion && eng" class="titulo text-uppercase">
-            Environmental Education
-          </h5>
-          <h5 v-if="redes && !eng" class="titulo text-uppercase">
-            Redes Fantasma
-          </h5>
-          <h5 v-if="redes && eng" class="titulo text-uppercase">Ghost Nets</h5>
-          <h5 v-if="plastico && !eng" class="titulo text-uppercase">
-            Plásticos
-          </h5>
-          <h5 v-if="plastico && eng" class="titulo text-uppercase">Plastics</h5>
-          <h5 v-if="reciclaje && !eng" class="titulo text-uppercase">
-            Reciclaje
-          </h5>
-          <h5 v-if="reciclaje && eng" class="titulo text-uppercase">
-            Recycling
-          </h5>
-          <h5 v-if="pesca && !eng" class="titulo text-uppercase">Pesca</h5>
-          <h5 v-if="pesca && eng" class="titulo text-uppercase">Fishing</h5>
         </div>
       </div>
 
@@ -127,7 +121,7 @@
               <div class="before-enter">
                 <div class="fondoTarjeta">
                   <h4 class="pb-3">{{ educacionText.pregunta }}</h4>
-                  <div class="overflow-auto pr-3 scrollArea" >
+                  <div class="overflow-auto pr-3 scrollArea">
                     <p class="description">{{ educacionText.respuesta }}</p>
                   </div>
                 </div>
@@ -153,7 +147,7 @@
           </div>
         </div>
       </div>
-      <div v-if="redes">
+      <div v-if="redes && !eng" id="PREGUNTAS">
         <div v-if="redesTexts.length">
           <div v-for="redesText in redesTexts" :key="redesText.id">
             <div class="container-fluid child" :id="redesText.id">
@@ -170,7 +164,24 @@
           </div>
         </div>
       </div>
-      <div v-if="plastico" id="PREGUNTAS">
+      <div v-if="redes && eng" id="PREGUNTAS">
+        <div v-if="netsTexts.length">
+          <div v-for="netsText in netsTexts" :key="netsText.id">
+            <div class="container-fluid child" :id="netsText.id">
+              <h2 class="text-center pt-4 pb-4"></h2>
+              <div class="before-enter">
+                <div class="fondoTarjeta">
+                  <h4 class="pb-3">{{ netsText.pregunta }}</h4>
+                  <div class="overflow-auto pr-3 scrollArea">
+                    <p class="description">{{ netsText.respuesta }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="plastico && !eng" id="PREGUNTAS">
         <div v-if="plasticosTexts.length">
           <div v-for="plasticosText in plasticosTexts" :key="plasticosText.id">
             <div class="container-fluid child" :id="plasticosText.id">
@@ -180,6 +191,23 @@
                   <h4 class="pb-3">{{ plasticosText.pregunta }}</h4>
                   <div class="overflow-auto pr-3 scrollArea">
                     <p class="description">{{ plasticosText.respuesta }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="plastico && eng" id="PREGUNTAS">
+        <div v-if="plasticsTexts.length">
+          <div v-for="plasticsText in plasticsTexts" :key="plasticsText.id">
+            <div class="container-fluid child" :id="plasticsText.id">
+              <h2 class="text-center pt-4 pb-4"></h2>
+              <div class="before-enter">
+                <div class="fondoTarjeta">
+                  <h4 class="pb-3">{{ plasticsText.pregunta }}</h4>
+                  <div class="overflow-auto pr-3 scrollArea">
+                    <p class="description">{{ plasticsText.respuesta }}</p>
                   </div>
                 </div>
               </div>
@@ -255,7 +283,7 @@
         </b-container>
       </div>
 
-      <div  id="grad2">
+      <div id="grad2">
         <div id="myModal" class="modal child">
           <div class="modalContent" id="GALERIA">
             <div class="mySlides" style="display:block">
@@ -1198,7 +1226,6 @@
                 style="width:40%"
               />
             </div>
-            
 
             <!-- Next/previous controls -->
             <a class="prev" @click="plusSlides(-1)"
@@ -1235,12 +1262,13 @@
 </template>
 
 <script>
-import { educacionTexts } from "../firebase";
+import { educacionTexts, plasticsTexts } from "../firebase";
 import { redesTexts } from "../firebase";
 import { plasticosTexts } from "../firebase";
 import { reciclajeTexts } from "../firebase";
 import { pescaTexts } from "../firebase";
 import { educationTexts } from "../firebase";
+import { netsTexts } from "../firebase";
 export default {
   name: "Secundaria",
   watch: {
@@ -1320,12 +1348,11 @@ export default {
     }
   },
   mounted: function() {
-    if(window.innerWidth>=700){
+    if (window.innerWidth >= 700) {
       document
-      .getElementsByClassName("snapSection")[0]
-      .addEventListener("scroll", this.onScroll);
-
-    }  
+        .getElementsByClassName("snapSection")[0]
+        .addEventListener("scroll", this.onScroll);
+    }
     educacionTexts.onSnapshot(querySnapshot => {
       querySnapshot.forEach(doc => {
         let text = doc.data();
@@ -1340,11 +1367,25 @@ export default {
         this.redesTexts.push(text);
       });
     });
+    netsTexts.onSnapshot(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        let text = doc.data();
+        text.id = doc.id;
+        this.netsTexts.push(text);
+      });
+    });
     plasticosTexts.onSnapshot(querySnapshot => {
       querySnapshot.forEach(doc => {
         let text = doc.data();
         text.id = doc.id;
         this.plasticosTexts.push(text);
+      });
+    });
+    plasticsTexts.onSnapshot(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        let text = doc.data();
+        text.id = doc.id;
+        this.plasticsTexts.push(text);
       });
     });
     reciclajeTexts.onSnapshot(querySnapshot => {
@@ -1453,6 +1494,8 @@ export default {
       reciclajeTexts: [],
       pescaTexts: [],
       educationTexts: [],
+      netsTexts: [],
+      plasticsTexts: [],
       eng: false
     };
   },
@@ -1559,8 +1602,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.scrollArea{
-  height:300px
+.scrollArea {
+  height: 300px;
 }
 .sideMenu {
   font-size: 120%;
@@ -1654,8 +1697,7 @@ export default {
 .titulo {
   color: black;
   font-weight: 300;
-  margin-top: 1%;
-  margin-right: 19.25%;
+  margin-top: 2%;
   text-align: right;
 }
 .child {
@@ -1817,7 +1859,7 @@ export default {
   overflow: auto;
   background-color: black;
 }
-.fondoSide{
+.fondoSide {
   max-width: 150%;
 }
 .modal::-webkit-scrollbar {
@@ -2006,10 +2048,9 @@ export default {
   }
 }
 @media only screen and (max-width: 500px) {
-
-  .titulo{
+  .titulo {
     padding-top: 10%;
-    margin-right:25%;
+    margin-right: 25%;
   }
   #video {
     padding-top: 50%;
@@ -2017,9 +2058,9 @@ export default {
     padding-right: 0px;
   }
   .navbar {
-  background-color: #ffffff !important;
+    background-color: #ffffff !important;
   }
- 
+
   .child {
     margin-top: 0%;
     scroll-snap-align: start;
@@ -2030,9 +2071,9 @@ export default {
     width: 90%;
     height: 80%;
   }
-  .scrollArea{
-  height:500px
-}
+  .scrollArea {
+    height: 500px;
+  }
   ::v-deep .b-sidebar {
     width: 55%;
   }
@@ -2041,202 +2082,180 @@ export default {
   }
   .jumbo {
     padding-top: 15%;
-
   }
-  .display-3{
+  .display-3 {
     font-size: 350%;
   }
-  #myModal{
-  display: none;
-}
+  #myModal {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1260px) and (max-width: 1280px) {
   .child {
     scroll-snap-align: start;
-  } 
-  #video{
-    margin-bottom: 10%;
   }
-  .titulo{
-display: none;
+  #video {
+    margin-bottom: 10%;
   }
   ::v-deep .navbar {
     padding-right: 20%;
- 
   }
   ::v-deep .b-sidebar {
     width: 22%;
   }
-  .parallax{
+  .parallax {
     height: 100vh;
   }
-  .jumbo{
+  .jumbo {
     margin-top: -5%;
   }
-  .numbertext{
+  .numbertext {
     top: 60%;
-
   }
 
   @keyframes enter {
-  0% {
-    -webkit-transform: translateY(0) translateX(0);
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    -webkit-transform: translateY(-400px) translateX(-400px);
-    transform: translateY(-400px) translateX(-500px);
+    0% {
+      -webkit-transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      -webkit-transform: translateY(-400px) translateX(-400px);
+      transform: translateY(-400px) translateX(-500px);
+    }
   }
 }
-
-}
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1260px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1260px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1260px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1260px),
-only screen and (                min-resolution: 192dpi) and (min-width: 1260px)
- { 
-
-    .child {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1260px),
+  only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1260px),
+  only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1260px),
+  only screen and (min-device-pixel-ratio: 2) and (min-width: 1260px),
+  only screen and (min-resolution: 192dpi) and (min-width: 1260px) {
+  .child {
     scroll-snap-align: start;
-  } 
-  #video{
+  }
+  #video {
     margin-bottom: 10%;
   }
-  .titulo{
-display: none;
+  .titulo {
+    display: none;
   }
   ::v-deep .navbar {
     padding-right: 20%;
- 
   }
   ::v-deep .b-sidebar {
     width: 22%;
   }
-  .parallax{
+  .parallax {
     height: 100vh;
   }
-  .fondoSide{
-  max-width: 100%;
-}
-  .jumbo{
+  .fondoSide {
+    max-width: 100%;
+  }
+  .jumbo {
     margin-top: 3%;
   }
-  .numbertext{
+  .numbertext {
     top: 60%;
   }
 
-.before-enter{
-  height: 65%;
-}
-  
-
-
+  .before-enter {
+    height: 65%;
+  }
 }
 
 @media screen and (min-width: 2300px) and (max-width: 3000px) {
-  #video{
+  #video {
     padding-top: 10%;
-    
   }
-  .scrollArea{
+  .scrollArea {
     height: 1000px;
   }
   .child {
     scroll-snap-align: start;
   }
-  .titulo{
+  .titulo {
     margin-right: 30%;
     font-size: 200%;
   }
-  .sideMenu{
+  .sideMenu {
     font-size: 200%;
   }
-  .fondoSide{
+  .fondoSide {
     width: 100%;
   }
   ::v-deep .b-sidebar {
     width: 20%;
   }
-  .parallax{
+  .parallax {
     height: 100vh;
   }
-  .jumbo{
+  .jumbo {
     margin-top: 20%;
   }
   .description {
-  column-count: 2;
-  column-gap: 40px;
-  text-align: justify;
-  text-justify: inter-word;
-  color: white;
-  font-weight: 300;
-  text-transform: none;
-  padding-right: 1%;
-  font-size: 110%;
-}
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+    font-weight: 300;
+    text-transform: none;
+    padding-right: 1%;
+    font-size: 110%;
+  }
 
-
-#myModal{
-  height: 100vh;
+  #myModal {
+    height: 100vh;
+  }
 }
-}
-@media screen 
-  and (min-device-width: 2300px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-
-  .scrollArea{
+@media screen and (min-device-width: 2300px) and (max-device-width: 2600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .scrollArea {
     height: 1000px;
   }
   .child {
     scroll-snap-align: start;
   }
-  .titulo{
+  .titulo {
     margin-right: 30%;
     font-size: 200%;
   }
-  .sideMenu{
+  .sideMenu {
     font-size: 200%;
   }
-  .fondoSide{
+  .fondoSide {
     width: 100%;
   }
   ::v-deep .b-sidebar {
     width: 20%;
   }
-  .parallax{
+  .parallax {
     height: 100vh;
   }
-  .jumbo{
+  .jumbo {
     margin-top: 20%;
   }
-  .before-enter{
-  height: 55%;
-}
+  .before-enter {
+    height: 55%;
+  }
   .description {
-  column-count: 2;
-  column-gap: 40px;
-  text-align: justify;
-  text-justify: inter-word;
-  color: white;
-  font-weight: 300;
-  text-transform: none;
-  padding-right: 1%;
-  font-size: 130%;
-}
-#myModal{
-  height: 100vh;
-}
-.numbertext{
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+    font-weight: 300;
+    text-transform: none;
+    padding-right: 1%;
+    font-size: 130%;
+  }
+  #myModal {
+    height: 100vh;
+  }
+  .numbertext {
     top: 80%;
     font-size: 200%;
   }
-.modal{
+  .modal {
     padding-top: 5%;
   }
-
 }
 </style>

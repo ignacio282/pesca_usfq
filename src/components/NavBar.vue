@@ -65,6 +65,7 @@
           class="text-uppercase link colorWhite"
           text="Menu"
           right
+          toggle-class="colorWhite"
         >
           <b-dropdown-item>
             <router-link to="/menu/sucio" class="colorGray">MENU</router-link>
