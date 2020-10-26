@@ -439,7 +439,7 @@
             <div class="mySlides">
               <div class="numbertext">4 / 4</div>
               <img
-                src="@/assets//img/dardo muestra piel.jpg"
+                src="@/assets//img/dardo-muestra-piel.jpg"
                 alt="Character"
                 style="width:80%"
               />
@@ -691,13 +691,13 @@ export default {
     }
     if (this.plastico) {
       document.getElementById("pregunta1").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0377.jpg") + ")";
+        "url(" + require("../assets/img/DSC_6981.jpg") + ")";
       document.getElementById("pregunta2").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0365.jpg") + ")";
+        "url(" + require("../assets/img/DSC_7024.jpg") + ")";
       document.getElementById("pregunta3").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0264.jpg") + ")";
+        "url(" + require("../assets/img/DSC_7061.jpg") + ")";
       document.getElementById("pregunta4").style.backgroundImage =
-        "url(" + require("../assets/img/IMG_0236.jpg") + ")";
+        "url(" + require("../assets/img/DSC_7004.jpg") + ")";
     }
     if (this.reciclaje) {
       document.getElementById("pregunta1").style.backgroundImage =

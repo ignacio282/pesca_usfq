@@ -2,15 +2,11 @@
   <b-navbar id="myNav" fixed="top" type="dark" toggleable="lg">
     <b-row>
       <b-col>
-        <b-img src="@/assets//img/PulpoB.png" width="50%" class="pulpo"></b-img>
-      </b-col>
-      <b-col>
         <b-navbar-brand style="line-height: 18px; text-align: left;">
           <router-link to="/menu/limpio" id="brand" class="colorWhite">
             <div id="regen">
-              <span>REGEN</span><span>ERACIÓN</span><br />DE<br /><span
-                >ECO</span
-              ><span>SISTEMAS</span>
+              <b-img v-if="menu" src="@/assets//img/LogoCompletoL.png" width="200%" class="pulpo"></b-img>
+              <b-img v-if="!menu" src="@/assets//img/LogoCompleto.png" width="200%" class="pulpo"></b-img>
             </div></router-link
           >
         </b-navbar-brand>
@@ -164,11 +160,19 @@ export default {
   name: "NavBar",
   data: function(){
     return{
-      eng: false
+      eng: false,
+      menu: true
     }
   },
   props: {
     msg: String
+  },
+  mounted: function(){
+    if (this.$route.params.sucio === "limpio" || this.$route.params.sucio === "sucio"){
+      this.menu = true;
+    }else{
+      this.menu = false;
+    }
   },
   methods: {
     changeLang: function(lang, callback){
@@ -191,8 +195,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .pulpo {
-  margin-right: -70px;
-  padding-top: 5px;
+  margin-top: -23%;
 }
 #regen {
   margin: 0;
@@ -217,7 +220,6 @@ export default {
 .navbar {
   height: 12%;
   color: black !important;
-  font-weight: 300;
   padding-right: 14%;
   padding-left: 2%;
   transition: visibility 0.5s linear, opacity 0.5s linear;
@@ -231,21 +233,18 @@ export default {
 }
 ::v-deep .nav-link {
   color: rgba($color: black, $alpha: 1) !important;
+  font-weight: 500;
 }
 ::v-deep .colorWhite {
   color: black;
 }
 ::v-deep .colorGray {
   color: rgb(83, 81, 81);
-
   text-decoration: none;
 }
 .link {
   padding-left: 3%;
   padding-right: 3%;
-}
-
-.activo {
 }
 
 .language {

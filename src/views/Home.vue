@@ -23,13 +23,7 @@
       <kinesis-container  class="contenedor">
 
         <kinesis-element type="depth" :strength="10">
-          <p class="tituloLanding">REGENERACIÓN</p>
-        </kinesis-element>
-        <kinesis-element style="margin:-40px" type="depth" :strength="8">
-          <p class="tituloLandingS">DE</p>
-        </kinesis-element>
-        <kinesis-element type="depth_inv" :strength="10">
-          <p class="tituloLanding">ECOSISTEMAS</p>
+          <img src="../assets/img/LogoCompletoL.png" width="50%" class="logo">
         </kinesis-element>
       </kinesis-container>
 
@@ -55,20 +49,7 @@
           
         </b-col>
         <b-col col lg="2" class="respuestas">
-          IGUAL
-          <router-link to="/menu/sucio">
-          <b-form-checkbox
-            id="checkbox-2"
-            name="checkbox-2"
-            value="accepted"
-            unchecked-value="not_accepted"
-            style="margin:5px"
-            
-          ></b-form-checkbox>
-          </router-link>
-        </b-col>
-        <b-col col lg="2" class="respuestas">
-          MUY SUCIO
+          SUCIO
           <router-link to="/menu/sucio">
           <b-form-checkbox
             id="checkbox-3"
@@ -126,6 +107,10 @@ export default {
   letter-spacing: 5px;
 }
 
+.logo{
+  margin-right: 8%;
+}
+
 .tituloLandingS{
   color: white;
   font-size: 200%;
@@ -136,15 +121,16 @@ export default {
 .respuestas {
   color: white;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 150%;
 }
 .pregunta {
   color: white;
   font-size: 175%;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
+  margin-top: 4%;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 #titulo {
