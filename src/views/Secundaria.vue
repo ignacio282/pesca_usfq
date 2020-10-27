@@ -2069,10 +2069,10 @@ export default {
   .before-enter {
     margin-left: 5%;
     width: 90%;
-    height: 80%;
+    height: 85%;
   }
   .scrollArea {
-    height: 500px;
+    height: 350px;
   }
   ::v-deep .b-sidebar {
     width: 55%;
@@ -2090,7 +2090,7 @@ export default {
     display: none;
   }
 }
-@media only screen and (min-width: 1260px) and (max-width: 1280px) {
+@media only screen and (min-width: 700px) and (max-width: 1280px) {
   .child {
     scroll-snap-align: start;
   }
@@ -2102,6 +2102,9 @@ export default {
   }
   ::v-deep .b-sidebar {
     width: 22%;
+  }
+  .scrollArea {
+    height: 250px;
   }
   .parallax {
     height: 100vh;
@@ -2155,6 +2158,9 @@ export default {
   }
   .numbertext {
     top: 60%;
+  }
+  .scrollArea {
+    height: 300px;
   }
 
   .before-enter {

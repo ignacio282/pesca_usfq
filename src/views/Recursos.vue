@@ -8,7 +8,7 @@
             <div v-for="(pdf, index) in pdfs" :key="index">
               <b-card
                 :title="pdf.name"
-                :img-src="thumbnails[index]"
+                :img-src="sortedThumbnails[index]"
                 img-alt="Card image"
                 img-top
                 img-height="252px"
@@ -26,7 +26,7 @@
                     <b-col cols="12" lg="4">
                       <b-img
                         id="PDF1"
-                        :src="previews[index]"
+                        :src="sortedvPreviews[index]"
                         fluid
                         alt="Responsive image"
                       ></b-img>
@@ -48,7 +48,7 @@
                       <b-button
                         class="mt-5"
                         variant="dark"
-                        @click="downloadContent(pdfurls[index])"
+                        @click="downloadContent(sortedvPdfurls[index])"
                         >DESCARGAR</b-button
                       >
                     </b-col>
@@ -63,7 +63,7 @@
             <div v-for="(video, index) in videos" :key="index">
               <b-card
                 :title="video.name"
-                :img-src="vidthumb[index]"
+                :img-src="sortedvVidthumb[index]"
                 img-alt="Card image"
                 img-top
                 img-height="252px"
@@ -84,13 +84,13 @@
                         id="video1"
                         type="iframe"
                         aspect="16by9"
-                        :src="videourls[index]"
+                        :src="sortedvVideourls[index]"
                         allowfullscreen
                       ></b-embed>
                       <b-button
                         class="mt-3"
                         variant="dark"
-                        @click="downloadContent(videourls[index])"
+                        @click="downloadContent(sortedvVideourls[index])"
                         >DESCARGAR</b-button
                       >
                     </b-col>
@@ -128,6 +128,7 @@ import WaveSurfer from "wavesurfer.js";
 import { storage } from "../firebase";
 export default {
   name: "Recursos",
+  
   data: function() {
     return {
       storageRef: storage.ref(),
@@ -137,10 +138,12 @@ export default {
       videos: [],
       videourls: [],
       thumbnails: [],
-      vidthumb: []
+      vidthumb: [],
+    
     };
   },
   mounted: function() {
+
     this.storageRef
       .child("recursos/pdf")
       .listAll()
@@ -159,6 +162,7 @@ export default {
         res.items.forEach(itemRef => {
           itemRef.getDownloadURL().then(url => {
             this.previews.push(url);
+
           });
         });
       });
@@ -213,7 +217,11 @@ export default {
         "https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3"
       );
     });
+    
+    
+    
   },
+
   methods: {
     play: function(wave) {
       console.log(this.getThumbnail(this.pdfs[0].fullPath));
@@ -237,6 +245,29 @@ export default {
       xhr.open("GET", url);
       xhr.send();
     }
+  },
+  computed:{
+    sortedThumbnails: function() {
+      return this.thumbnails.sort();
+      console.log(this);
+    },
+    sortedvPreviews: function() {
+      return this.previews.sort();
+      console.log(this);
+    },
+    sortedvPdfurls: function() {
+      return this.pdfurls.sort();
+      console.log(this);
+    },
+    sortedvVidthumb: function() {
+      return this.vidthumb.sort();
+      console.log(this);
+    },
+    sortedvVideourls: function() {
+      return this.videourls.sort();
+      console.log(this);
+    },
+    
   }
 };
 </script>
