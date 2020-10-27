@@ -3,147 +3,118 @@
     <NavBar />
     <b-container fluid class="px-5 mt-5 pt-5" id="tarjetas">
       <b-row>
-        <b-col cols="12" lg="4" >
-          <b-card
-          title="PDF"
-          img-src="../assets/img/plasticoPDF.png"
-          img-alt="Card image"
-          img-top
-          img-height="252px"
-          class="mb-5"
-        >
-          <b-card-text>PDF para descargar</b-card-text>
-          <b-button v-b-modal.modal-xl>VER</b-button>
-          <b-modal id="modal-xl" hide-footer hide-header size="xl" centered>
-            <b-row class="mx-4 my-5">
-              <b-col cols="12" lg="4">
-                <b-img
-                  src="../assets/img/PlasticoPDFCompletoL.png"
-                  fluid
-                  alt="Responsive image"
-                ></b-img>
-              </b-col>
-              <b-col cols="12" lg="4" class="my-auto text-center">
-                Ea nulla magna do veniam nostrud aliquip. Magna deserunt
-                proident cupidatat in amet. Aliqua occaecat irure dolore laboris
-                id eu veniam aliquip anim officia. Do sunt id dolor cupidatat.
-                Voluptate occaecat incididunt duis laboris excepteur incididunt
-                culpa. Voluptate aliquip velit quis ut exercitation occaecat do
-                id ut sint duis aliqua minim. Sunt aliquip Lorem dolor et
-                consectetur.Enim incididunt minim do commodo consequat minim do
-                commodo nisi deserunt proident veniam. Dolore consequat nisi
-                commodo excepteur ipsum laborum. Sit magna pariatur pariatur
-                ullamco non ut dolore culpa exercitation minim ipsum aute est.
-                <br />
-                <b-button class="mt-5" variant="dark" @click="downloadContent(1);">DESCARGAR</b-button>
-              </b-col>
-            </b-row>
-          </b-modal>
-        </b-card>
-        <b-card
-          title="PDF"
-          img-src="../assets/img/infoRedes.png"
-          img-alt="Card image"
-          img-top
-          img-height="252px"
-          class="mb-1"
-        >
-          <b-card-text>PDF para descargar</b-card-text>
-          <b-button v-b-modal.modal-3>VER</b-button>
-          <b-modal id="modal-3" hide-footer hide-header size="xl" centered>
-            <b-row class="mx-4 my-5">
-              <b-col cols="12" lg="4">
-                <b-img
-                  src="../assets/img/infoRedes.png"
-                  fluid
-                  alt="Responsive image"
-                ></b-img>
-              </b-col>
-              <b-col cols="12" lg="4" class="my-auto text-center">
-                Ea nulla magna do veniam nostrud aliquip. Magna deserunt
-                proident cupidatat in amet. Aliqua occaecat irure dolore laboris
-                id eu veniam aliquip anim officia. Do sunt id dolor cupidatat.
-                Voluptate occaecat incididunt duis laboris excepteur incididunt
-                culpa. Voluptate aliquip velit quis ut exercitation occaecat do
-                id ut sint duis aliqua minim. Sunt aliquip Lorem dolor et
-                consectetur.Enim incididunt minim do commodo consequat minim do
-                commodo nisi deserunt proident veniam. Dolore consequat nisi
-                commodo excepteur ipsum laborum. Sit magna pariatur pariatur
-                ullamco non ut dolore culpa exercitation minim ipsum aute est.
-                <br />
-                <b-button class="mt-5" variant="dark" @click="downloadContent(4);">DESCARGAR</b-button>
-              </b-col>
-            </b-row>
-          </b-modal>
-        </b-card>
+        <b-col cols="12" lg="4">
+          <div v-if="pdfs.length">
+            <div v-for="(pdf, index) in pdfs" :key="index">
+              <b-card
+                :title="pdf.name"
+                :img-src="thumbnails[index]"
+                img-alt="Card image"
+                img-top
+                img-height="252px"
+                class="mb-5"
+              >
+                <b-button v-b-modal="'modal-x' + index">VER</b-button>
+                <b-modal
+                  :id="'modal-x' + index"
+                  hide-footer
+                  hide-header
+                  size="xl"
+                  centered
+                >
+                  <b-row class="mx-4 my-5">
+                    <b-col cols="12" lg="4">
+                      <b-img
+                        id="PDF1"
+                        :src="previews[index]"
+                        fluid
+                        alt="Responsive image"
+                      ></b-img>
+                    </b-col>
+                    <b-col cols="12" lg="4" class="my-auto text-center">
+                      Ea nulla magna do veniam nostrud aliquip. Magna deserunt
+                      proident cupidatat in amet. Aliqua occaecat irure dolore
+                      laboris id eu veniam aliquip anim officia. Do sunt id
+                      dolor cupidatat. Voluptate occaecat incididunt duis
+                      laboris excepteur incididunt culpa. Voluptate aliquip
+                      velit quis ut exercitation occaecat do id ut sint duis
+                      aliqua minim. Sunt aliquip Lorem dolor et consectetur.Enim
+                      incididunt minim do commodo consequat minim do commodo
+                      nisi deserunt proident veniam. Dolore consequat nisi
+                      commodo excepteur ipsum laborum. Sit magna pariatur
+                      pariatur ullamco non ut dolore culpa exercitation minim
+                      ipsum aute est.
+                      <br />
+                      <b-button
+                        class="mt-5"
+                        variant="dark"
+                        @click="downloadContent(pdfurls[index])"
+                        >DESCARGAR</b-button
+                      >
+                    </b-col>
+                  </b-row>
+                </b-modal>
+              </b-card>
+            </div>
+          </div>
         </b-col>
         <b-col cols="12" lg="4">
-          <b-card
-          title="Video"
-          img-src="../assets/img/videoRedSS.png"
-          img-alt="Card image"
-          img-top
-          img-height="252px"
-          class="mb-5 "
-        >
-          <b-card-text>Video para descargar</b-card-text>
-          <b-button v-b-modal.modal2 @click="setVideo(1)">VER</b-button>
-          <b-modal id="modal2" hide-footer hide-header size="xl" centered>
-            <b-row class="mx-4 my-2">
-              <b-col class="text-center">
-                <b-embed
-                  id="video1"
-                  type="iframe"
-                  aspect="16by9"
-                  src=""
-                  allowfullscreen
-                ></b-embed>
-                <b-button class="mt-3" variant="dark" @click="downloadContent(2);">DESCARGAR</b-button>
-              </b-col>
-            </b-row>
-          </b-modal>
-        </b-card>
-        <b-card
-          title="Video"
-          img-src="../assets/img/videoRed2SS.png"
-          img-alt="Card image"
-          img-top
-          img-height="252px"
-          class="mb-5"
-        >
-          <b-card-text>Video para descargar</b-card-text>
-          <b-button v-b-modal.modal2 @click="setVideo(1)">VER</b-button>
-          <b-modal id="modal2" hide-footer hide-header size="xl" centered>
-            <b-row class="mx-4 my-2">
-              <b-col class="text-center">
-                <b-embed
-                  id="video1"
-                  type="iframe"
-                  aspect="16by9"
-                  src=""
-                  allowfullscreen
-                ></b-embed>
-                <b-button class="mt-3" variant="dark" @click="downloadContent(5);">DESCARGAR</b-button>
-              </b-col>
-            </b-row>
-          </b-modal>
-        </b-card>
+          <div v-if="videos.length">
+            <div v-for="(video, index) in videos" :key="index">
+              <b-card
+                :title="video.name"
+                :img-src="vidthumb[index]"
+                img-alt="Card image"
+                img-top
+                img-height="252px"
+                class="mb-5 "
+              >
+                <b-card-text>Video para descargar</b-card-text>
+                <b-button v-b-modal="'modal' + index">VER</b-button>
+                <b-modal
+                  :id="'modal' + index"
+                  hide-footer
+                  hide-header
+                  size="xl"
+                  centered
+                >
+                  <b-row class="mx-4 my-2">
+                    <b-col class="text-center">
+                      <b-embed
+                        id="video1"
+                        type="iframe"
+                        aspect="16by9"
+                        :src="videourls[index]"
+                        allowfullscreen
+                      ></b-embed>
+                      <b-button
+                        class="mt-3"
+                        variant="dark"
+                        @click="downloadContent(videourls[index])"
+                        >DESCARGAR</b-button
+                      >
+                    </b-col>
+                  </b-row>
+                </b-modal>
+              </b-card>
+            </div>
+          </div>
         </b-col>
         <b-col>
           <b-card class="mb-5 ">
-          <div id="waveform" class="wave"></div>
-          <b-card-title>AUDIO</b-card-title>
-          <b-card-text>Audio para descargar</b-card-text>
-          <b-button @click="play(1)">PLAY</b-button>
-          <b-button @click="downloadContent(3);">DESCARGAR</b-button>
-        </b-card>
-        <b-card class="mb-5 ">
-          <div id="waveform2" class="wave"></div>
-          <b-card-title>AUDIO</b-card-title>
-          <b-card-text>Audio para descargar</b-card-text>
-          <b-button @click="play(1)">PLAY</b-button>
-          <b-button @click="downloadContent(6);">DESCARGAR</b-button>
-        </b-card>
+            <div id="waveform" class="wave"></div>
+            <b-card-title>AUDIO</b-card-title>
+            <b-card-text>Audio para descargar</b-card-text>
+            <b-button @click="play(1)">PLAY</b-button>
+            <b-button>DESCARGAR</b-button>
+          </b-card>
+          <b-card class="mb-5 ">
+            <div id="waveform2" class="wave"></div>
+            <b-card-title>AUDIO</b-card-title>
+            <b-card-text>Audio para descargar</b-card-text>
+            <b-button @click="play(1)">PLAY</b-button>
+            <b-button>DESCARGAR</b-button>
+          </b-card>
         </b-col>
       </b-row>
     </b-container>
@@ -159,10 +130,69 @@ export default {
   name: "Recursos",
   data: function() {
     return {
-      storageRef: storage.ref()
+      storageRef: storage.ref(),
+      pdfs: [],
+      pdfurls: [],
+      previews: [],
+      videos: [],
+      videourls: [],
+      thumbnails: [],
+      vidthumb: []
     };
   },
   mounted: function() {
+    this.storageRef
+      .child("recursos/pdf")
+      .listAll()
+      .then(res => {
+        res.items.forEach(itemRef => {
+          this.pdfs.push(itemRef);
+          itemRef.getDownloadURL().then(url => {
+            this.pdfurls.push(url);
+          });
+        });
+      });
+    this.storageRef
+      .child("recursos/previews")
+      .listAll()
+      .then(res => {
+        res.items.forEach(itemRef => {
+          itemRef.getDownloadURL().then(url => {
+            this.previews.push(url);
+          });
+        });
+      });
+    this.storageRef
+      .child("recursos/thumbnails")
+      .listAll()
+      .then(res => {
+        res.items.forEach(itemRef => {
+          itemRef.getDownloadURL().then(url => {
+            this.thumbnails.push(url);
+          });
+        });
+      });
+    this.storageRef
+      .child("recursos/videos")
+      .listAll()
+      .then(res => {
+        res.items.forEach(itemRef => {
+          this.videos.push(itemRef);
+          itemRef.getDownloadURL().then(url => {
+            this.videourls.push(url);
+          });
+        });
+      });
+    this.storageRef
+      .child("recursos/thumbnails/videos")
+      .listAll()
+      .then(res => {
+        res.items.forEach(itemRef => {
+          itemRef.getDownloadURL().then(url => {
+            this.vidthumb.push(url);
+          });
+        });
+      });
     this.$nextTick(() => {
       this.wavesurfer = WaveSurfer.create({
         container: "#waveform",
@@ -186,6 +216,7 @@ export default {
   },
   methods: {
     play: function(wave) {
+      console.log(this.getThumbnail(this.pdfs[0].fullPath));
       if (wave === 1) {
         this.wavesurfer.playPause();
       }
@@ -193,140 +224,18 @@ export default {
         this.wavesurfer2.playPause();
       }
     },
-    setVideo: function(num) {
-      if (num === 1) {
-        this.storageRef
-          .child("recursos/videos/VIDEO_REDES_1_FINAL_NOBORRAR.mp4")
-          .getDownloadURL()
-          .then(function(url) {
-            let video1 = document.getElementById("video1");
-            console.log(video1);
-            video1.src = url;
-          });
-      }
-      if (num === 2) {
-        this.storageRef
-          .child("recursos/videos/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
-          .getDownloadURL()
-          .then(function(url) {
-            let video2 = document.getElementById("video2");
-            video2.src = url;
-          });
-      }
-    },
-    downloadContent: function(id) {
-      switch (id) {
-        case 1:
-          this.storageRef
-            .child("recursos/pdf/PlasticoCompleto.pdf")
-            .getDownloadURL()
-            .then(function(url) {
-              let xhr = new XMLHttpRequest();
-              xhr.responseType = "blob";
-              xhr.onload = function(event) {
-                let blob = xhr.response;
-                let a = document.createElement("a");
-                a.href = window.URL.createObjectURL(blob);
-                a.download = "videoRedes2";
-                a.click();
-              };
-              xhr.open("GET", url);
-              xhr.send();
-            });
-            break;
-        case 2:
-          this.storageRef
-            .child("recursos/videos/VIDEO_REDES_1_FINAL_NOBORRAR.mp4")
-            .getDownloadURL()
-            .then(function(url) {
-              let xhr = new XMLHttpRequest();
-              xhr.responseType = "blob";
-              xhr.onload = function(event) {
-                let blob = xhr.response;
-                let a = document.createElement("a");
-                a.href = window.URL.createObjectURL(blob);
-                a.download = "videoRedes2";
-                a.click();
-              };
-              xhr.open("GET", url);
-              xhr.send();
-            });
-            break;
-        case 3:
-          /*this.storageRef
-            .child("recursos/img/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
-            .getDownloadURL()
-            .then(function(url) {
-              let xhr = new XMLHttpRequest();
-              xhr.responseType = "blob";
-              xhr.onload = function(event) {
-                let blob = xhr.response;
-                let a = document.createElement("a");
-                a.href = window.URL.createObjectURL(blob);
-                a.download = "videoRedes2";
-                a.click();
-              };
-              xhr.open("GET", url);
-              xhr.send();
-            });*/
-            console.log("descarga audio 1");
-            break;
-        case 4:
-          this.storageRef
-            .child("recursos/img/infoRedes.pdf")
-            .getDownloadURL()
-            .then(function(url) {
-              let xhr = new XMLHttpRequest();
-              xhr.responseType = "blob";
-              xhr.onload = function(event) {
-                let blob = xhr.response;
-                let a = document.createElement("a");
-                a.href = window.URL.createObjectURL(blob);
-                a.download = "videoRedes2";
-                a.click();
-              };
-              xhr.open("GET", url);
-              xhr.send();
-            });
-            break;
-        case 5:
-          this.storageRef
-            .child("recursos/videos/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
-            .getDownloadURL()
-            .then(function(url) {
-              let xhr = new XMLHttpRequest();
-              xhr.responseType = "blob";
-              xhr.onload = function(event) {
-                let blob = xhr.response;
-                let a = document.createElement("a");
-                a.href = window.URL.createObjectURL(blob);
-                a.download = "videoRedes2";
-                a.click();
-              };
-              xhr.open("GET", url);
-              xhr.send();
-            });
-            break;
-        case 6:
-          /*this.storageRef
-            .child("recursos/img/VIDEO_REDES_2_FINAL_NOBORRAR.mp4")
-            .getDownloadURL()
-            .then(function(url) {
-              let xhr = new XMLHttpRequest();
-              xhr.responseType = "blob";
-              xhr.onload = function(event) {
-                let blob = xhr.response;
-                let a = document.createElement("a");
-                a.href = window.URL.createObjectURL(blob);
-                a.download = "videoRedes2";
-                a.click();
-              };
-              xhr.open("GET", url);
-              xhr.send();
-            });*/
-            console.log("descarga audio 1");
-            break;
-      }
+    downloadContent: function(url) {
+      let xhr = new XMLHttpRequest();
+      xhr.responseType = "blob";
+      xhr.onload = function(event) {
+        let blob = xhr.response;
+        let a = document.createElement("a");
+        a.href = window.URL.createObjectURL(blob);
+        a.download = "download";
+        a.click();
+      };
+      xhr.open("GET", url);
+      xhr.send();
     }
   }
 };
