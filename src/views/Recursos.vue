@@ -141,12 +141,7 @@ import WaveSurfer from "wavesurfer.js";
 import { storage } from "../firebase";
 export default {
   name: "Recursos",
-<<<<<<< HEAD
-  
-  data: function() {
-=======
   data: function () {
->>>>>>> cfbb3bec5de32e0b84996323399e866d4c112193
     return {
       storageRef: storage.ref(),
       pdfs: [],
@@ -156,17 +151,9 @@ export default {
       videourls: [],
       thumbnails: [],
       vidthumb: [],
-<<<<<<< HEAD
-    
-    };
-  },
-  mounted: function() {
-
-=======
     };
   },
   mounted: function () {
->>>>>>> cfbb3bec5de32e0b84996323399e866d4c112193
     this.storageRef
       .child("recursos/pdf")
       .listAll()
@@ -267,36 +254,8 @@ export default {
       };
       xhr.open("GET", url);
       xhr.send();
-<<<<<<< HEAD
-    }
-  },
-  computed:{
-    sortedThumbnails: function() {
-      return this.thumbnails.sort();
-      console.log(this);
-    },
-    sortedvPreviews: function() {
-      return this.previews.sort();
-      console.log(this);
-    },
-    sortedvPdfurls: function() {
-      return this.pdfurls.sort();
-      console.log(this);
-    },
-    sortedvVidthumb: function() {
-      return this.vidthumb.sort();
-      console.log(this);
-    },
-    sortedvVideourls: function() {
-      return this.videourls.sort();
-      console.log(this);
-    },
-    
-  }
-=======
     },
   },
->>>>>>> cfbb3bec5de32e0b84996323399e866d4c112193
 };
 </script>
 
