@@ -1453,18 +1453,12 @@ export default {
         "url(" + require("../assets/img/DSC_6943.jpg") + ")";
       document.getElementById("pregunta4").style.backgroundImage =
         "url(" + require("../assets/img/DSC_6945.jpg") + ")";
-      document.getElementById("pregunta5").style.backgroundImage =
-        "url(" + require("../assets/img/DSC_6951.jpg") + ")";
-      document.getElementById("pregunta6").style.backgroundImage =
-        "url(" + require("../assets/img/DSC_6958.jpg") + ")";
     }
     if (this.pesca) {
       document.getElementById("pregunta1").style.backgroundImage =
         "url(" + require("../assets/img/DSCN0271.jpg") + ")";
       document.getElementById("pregunta2").style.backgroundImage =
         "url(" + require("../assets/img/DSCN0272.jpg") + ")";
-      document.getElementById("pregunta3").style.backgroundImage =
-        "url(" + require("../assets/img/DSCN0273.jpg") + ")";
     }
   },
   beforeDestroy: function() {
@@ -1645,7 +1639,7 @@ export default {
 }
 .before-enter {
   width: 60%;
-  height: 60%;
+  height: 50%;
   margin-left: 35%;
   margin-top: 8%;
   padding-top: 2%;
@@ -1799,31 +1793,6 @@ export default {
 }
 
 #pregunta4 {
-  /* The image used */
-  color: Black;
-  /* Set a specific height */
-  height: 100vh;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#pregunta5 {
-  /* The image used */
-  color: Black;
-  /* Set a specific height */
-  height: 100vh;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#pregunta6 {
   /* The image used */
   color: Black;
   /* Set a specific height */

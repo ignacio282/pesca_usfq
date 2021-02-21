@@ -148,6 +148,12 @@
           <b-dropdown-item class="colorGray" target="_blank" href="https://www.facebook.com/TueriUSFQ">
             Hospital de Fauna Silvestre TUERI USFQ
           </b-dropdown-item>
+          <b-dropdown-item class="colorGray" target="_blank" href="https://www.pucese.edu.ec/">
+            PUCESE
+          </b-dropdown-item>
+          <b-dropdown-item class="colorGray" target="_blank" href="http://areasprotegidas.ambiente.gob.ec/es/areas-protegidas/reserva-marina-galera-san-francisco-1">
+            Reserva Marina Galera San Francisco 
+          </b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item class="text-uppercase language colorWhite" link-classes="colorWhite" right @click="changeLang(1, emitLang);">ES</b-nav-item>
         <b-nav-text id="separador" right>|</b-nav-text>

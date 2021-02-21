@@ -2,6 +2,19 @@
   <div id="recursos">
     <NavBar />
     <b-container fluid class="px-5 mt-5 pt-5" id="tarjetas">
+      <b-card
+        img-top
+        class="mb-5 py-3"
+      >
+        <b-card-img
+          :src="require('../assets/img/Folder2.jpeg')"
+          height="100px"
+          style="padding-left: 45%; padding-right: 45%"
+          top
+        ></b-card-img>
+        <b-card-title class="mt-4">Material Educativo 'Del Océano a tu Casa - 2020'</b-card-title>
+        <b-button class="mb-0 mt-1">Descargar</b-button>
+      </b-card>
       <b-row>
         <b-col cols="12" lg="4">
           <div v-if="pdfs.length">
@@ -67,7 +80,7 @@
                 img-alt="Card image"
                 img-top
                 img-height="252px"
-                class="mb-5 "
+                class="mb-5"
               >
                 <b-card-text>Video para descargar</b-card-text>
                 <b-button v-b-modal="'modal' + index">VER</b-button>
@@ -101,14 +114,14 @@
           </div>
         </b-col>
         <b-col>
-          <b-card class="mb-5 ">
+          <b-card class="mb-5">
             <div id="waveform" class="wave"></div>
             <b-card-title>AUDIO</b-card-title>
             <b-card-text>Audio para descargar</b-card-text>
             <b-button @click="play(1)">PLAY</b-button>
             <b-button>DESCARGAR</b-button>
           </b-card>
-          <b-card class="mb-5 ">
+          <b-card class="mb-5">
             <div id="waveform2" class="wave"></div>
             <b-card-title>AUDIO</b-card-title>
             <b-card-text>Audio para descargar</b-card-text>
@@ -128,8 +141,12 @@ import WaveSurfer from "wavesurfer.js";
 import { storage } from "../firebase";
 export default {
   name: "Recursos",
+<<<<<<< HEAD
   
   data: function() {
+=======
+  data: function () {
+>>>>>>> cfbb3bec5de32e0b84996323399e866d4c112193
     return {
       storageRef: storage.ref(),
       pdfs: [],
@@ -139,18 +156,24 @@ export default {
       videourls: [],
       thumbnails: [],
       vidthumb: [],
+<<<<<<< HEAD
     
     };
   },
   mounted: function() {
 
+=======
+    };
+  },
+  mounted: function () {
+>>>>>>> cfbb3bec5de32e0b84996323399e866d4c112193
     this.storageRef
       .child("recursos/pdf")
       .listAll()
-      .then(res => {
-        res.items.forEach(itemRef => {
+      .then((res) => {
+        res.items.forEach((itemRef) => {
           this.pdfs.push(itemRef);
-          itemRef.getDownloadURL().then(url => {
+          itemRef.getDownloadURL().then((url) => {
             this.pdfurls.push(url);
           });
         });
@@ -158,9 +181,9 @@ export default {
     this.storageRef
       .child("recursos/previews")
       .listAll()
-      .then(res => {
-        res.items.forEach(itemRef => {
-          itemRef.getDownloadURL().then(url => {
+      .then((res) => {
+        res.items.forEach((itemRef) => {
+          itemRef.getDownloadURL().then((url) => {
             this.previews.push(url);
 
           });
@@ -169,9 +192,9 @@ export default {
     this.storageRef
       .child("recursos/thumbnails")
       .listAll()
-      .then(res => {
-        res.items.forEach(itemRef => {
-          itemRef.getDownloadURL().then(url => {
+      .then((res) => {
+        res.items.forEach((itemRef) => {
+          itemRef.getDownloadURL().then((url) => {
             this.thumbnails.push(url);
           });
         });
@@ -179,10 +202,10 @@ export default {
     this.storageRef
       .child("recursos/videos")
       .listAll()
-      .then(res => {
-        res.items.forEach(itemRef => {
+      .then((res) => {
+        res.items.forEach((itemRef) => {
           this.videos.push(itemRef);
-          itemRef.getDownloadURL().then(url => {
+          itemRef.getDownloadURL().then((url) => {
             this.videourls.push(url);
           });
         });
@@ -190,9 +213,9 @@ export default {
     this.storageRef
       .child("recursos/thumbnails/videos")
       .listAll()
-      .then(res => {
-        res.items.forEach(itemRef => {
-          itemRef.getDownloadURL().then(url => {
+      .then((res) => {
+        res.items.forEach((itemRef) => {
+          itemRef.getDownloadURL().then((url) => {
             this.vidthumb.push(url);
           });
         });
@@ -202,13 +225,13 @@ export default {
         container: "#waveform",
         waveColor: "#1381B5",
         progressColor: "#03141d",
-        barHeight: 3
+        barHeight: 3,
       });
       this.wavesurfer2 = WaveSurfer.create({
         container: "#waveform2",
         waveColor: "#1381B5",
         progressColor: "#03141d",
-        barHeight: 3
+        barHeight: 3,
       });
       this.wavesurfer.load(
         "https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3"
@@ -223,7 +246,7 @@ export default {
   },
 
   methods: {
-    play: function(wave) {
+    play: function (wave) {
       console.log(this.getThumbnail(this.pdfs[0].fullPath));
       if (wave === 1) {
         this.wavesurfer.playPause();
@@ -232,10 +255,10 @@ export default {
         this.wavesurfer2.playPause();
       }
     },
-    downloadContent: function(url) {
+    downloadContent: function (url) {
       let xhr = new XMLHttpRequest();
       xhr.responseType = "blob";
-      xhr.onload = function(event) {
+      xhr.onload = function (event) {
         let blob = xhr.response;
         let a = document.createElement("a");
         a.href = window.URL.createObjectURL(blob);
@@ -244,6 +267,7 @@ export default {
       };
       xhr.open("GET", url);
       xhr.send();
+<<<<<<< HEAD
     }
   },
   computed:{
@@ -269,6 +293,10 @@ export default {
     },
     
   }
+=======
+    },
+  },
+>>>>>>> cfbb3bec5de32e0b84996323399e866d4c112193
 };
 </script>
 
